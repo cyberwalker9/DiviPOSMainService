@@ -1,0 +1,7 @@
+[DBConfig]
+DBServerName=localhost
+DBServerPort=3310
+UserName=root
+Password=
+DBName=divipos
+

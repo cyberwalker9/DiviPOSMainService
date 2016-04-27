@@ -1,0 +1,11 @@
+{
+"method":"POST",
+"url":"http://api.myschool.id",
+"resource":"api/register",
+"contenttype":"application/x-www-form-urlencoded",
+"auth":{"method":"NONE","username":"","passwordkey":"","password":"","passwordkey":"","clientid":"","clientsecret":"","authcode":"","accesstoken":"","accesstokensecret":"","requesttoken":"","requesttokensecret":"","refreshtoken":"","signaturemethod":"","responsetype":"","endpointauth":"","endpointaccesstoken":"","endpointrequesttoken":"","endpointredirect":"","authscope":""},
+"parameters":[
+	{"name":"email","value":"budiono@gmail.com","kind":"GET/POST"},
+	{"name":"password","value":"secret","kind":"GET/POST"}
+	]
+,"body":""}

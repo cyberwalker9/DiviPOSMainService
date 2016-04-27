@@ -1,0 +1,11 @@
+{
+"method":"GET",
+"url":"http://api.myschool.id",
+"resource":"v1/agendafeed/{userid}/{lastfeed}",
+"contenttype":"",
+"auth":{"method":"NONE","username":"","passwordkey":"","password":"","passwordkey":"","clientid":"","clientsecret":"","authcode":"","accesstoken":"","accesstokensecret":"","requesttoken":"","requesttokensecret":"","refreshtoken":"","signaturemethod":"","responsetype":"","endpointauth":"","endpointaccesstoken":"","endpointrequesttoken":"","endpointredirect":"","authscope":""},
+"parameters":[
+	{"name":"userid","value":"72","kind":"URL-SEGMENT"},
+	{"name":"lastfeed","value":"0","kind":"URL-SEGMENT"}
+	]
+,"body":""}

@@ -1,0 +1,199 @@
+unit ServiceUtils;
+
+interface
+
+  uses Sysutils, Forms, IniFiles, WinSvc, Types, Classes, Windows;
+
+  type
+    EAppException = Class(Exception);
+
+    FileInfoPtr = ^FileInfoRec;
+     FileInfoRec = record
+       fName    : string;
+       typ      : byte;
+       Modified : TDateTime;
+     end;
+
+
+
+procedure CreateLogPerDay(AMsg : String);
+function GetConfig(AppExeName : String;Ext : String = '.cfg'): TIniFile;
+function ServiceRunning(sMachine, sService: PChar): Boolean;
+procedure HandledException(Sender: TObject; E: Exception);
+
+procedure GetDirList(dir : ShortString; AStringList : TStringList; recursive : Boolean; AExt : String = '.bzip');
+
+
+var
+  COnfig : TIniFile;
+  IsWritingLog : Boolean;
+
+const
+
+  FL_FOLDER      = 1;
+     FL_FILE        = FL_FOLDER + 1;
+
+    { File Date Types   }
+     FD_CREATED     = 1;
+     FD_ACCESSED    = FD_CREATED + 1;
+     FD_MODIFIED    = FD_ACCESSED + 1;
+
+
+implementation
+
+procedure HandledException(Sender: TObject; E: Exception);
+begin
+  CreateLogPerDay(E.Message);
+end;
+
+
+procedure CreateFolderPath(APathFolder : String);
+begin
+  if not DirectoryExists(APathFolder) then
+  if not CreateDir(APathFolder) then
+  raise Exception.Create('Cannot create '+APathFolder);
+end;
+
+procedure CreateLogPerDay(AMsg : String);
+var
+  fileName : String;
+  AppLog   : TextFile;
+  AppPath: string;
+begin
+  IsWritingLog := true;
+
+  AppPath := IncludeTrailingPathDelimiter(ExtractFilePath(Application.ExeName));
+  CreateFolderPath(AppPath+'log');
+  fileName := AppPath+'log\Applog_'+formatdatetime('yyyymmdd',Now)+'.log';
+  assignfile(AppLog,fileName);
+  try
+    if not FileExists(fileName) then
+      Rewrite(AppLog)
+    else
+      Append(AppLog);
+    writeln(AppLog,FormatdateTime('HH:MM:SS',now)+' :'+AMsg);
+  finally
+    CloseFile(AppLog);
+    IsWritingLog := false;
+  end;
+end;
+
+function GetConfig(AppExeName : String;Ext : String = '.cfg'): TIniFile;
+begin
+  if Not Assigned(Config) then
+    Config := TIniFile.Create(ChangeFileExt(AppExeName, Ext));
+  result := Config;
+end;
+
+function ServiceGetStatus(sMachine, sService: PChar): DWORD;
+  {******************************************}
+  {*** Parameters: ***}
+  {*** sService: specifies the name of the service to open
+  {*** sMachine: specifies the name of the target computer
+  {*** ***}
+  {*** Return Values: ***}
+  {*** -1 = Error opening service ***}
+  {*** 1 = SERVICE_STOPPED ***}
+  {*** 2 = SERVICE_START_PENDING ***}
+  {*** 3 = SERVICE_STOP_PENDING ***}
+  {*** 4 = SERVICE_RUNNING ***}
+  {*** 5 = SERVICE_CONTINUE_PENDING ***}
+  {*** 6 = SERVICE_PAUSE_PENDING ***}
+  {*** 7 = SERVICE_PAUSED ***}
+  {******************************************}
+var
+  SCManHandle, SvcHandle: SC_Handle;
+  SS: TServiceStatus;
+  dwStat: DWORD;
+begin
+  dwStat := 0;
+  // Open service manager handle.
+  SCManHandle := OpenSCManager(sMachine, nil, SC_MANAGER_CONNECT);
+  if (SCManHandle > 0) then
+  begin
+    SvcHandle := OpenService(SCManHandle, sService, SERVICE_QUERY_STATUS);
+    // if Service installed
+    if (SvcHandle > 0) then
+    begin
+      // SS structure holds the service status (TServiceStatus);
+      if (QueryServiceStatus(SvcHandle, SS)) then
+        dwStat := ss.dwCurrentState;
+      CloseServiceHandle(SvcHandle);
+    end;
+    CloseServiceHandle(SCManHandle);
+  end;
+  Result := dwStat;
+end;
+
+function ServiceRunning(sMachine, sService: PChar): Boolean;
+begin
+  Result := SERVICE_RUNNING = ServiceGetStatus(sMachine, sService);
+end;
+
+function GetFileTimes(FileName : ShortString; typ : byte; var fDate : TDateTime) : Boolean;
+var
+  fHandle : Integer;
+  fTimeC,
+  fTimeA,
+  fTimeM : TFileTime;
+  lTime  : TFileTime;
+  sTime  : TSystemTime;
+begin { GetFileTimes }
+  fHandle := FileOpen(FileName, fmShareDenyNone);
+  fDate := 0.0;
+  result := (fHandle >= 0);
+  if result
+  then begin GetFileTime(fHandle, @fTimeC, @fTimeA, @fTimeM);
+             FileClose(fHandle);
+             case typ of
+              FD_CREATED  : FileTimeToLocalFileTime(fTimeC, lTime);
+              FD_ACCESSED : FileTimeToLocalFileTime(fTimeA, lTime);
+              FD_MODIFIED : FileTimeToLocalFileTime(fTimeM, lTime);
+             end;
+             if FileTimeToSystemTime(lTime, sTime)
+              then fDate := EncodeDate(sTime.wYear, sTime.wMonth, sTime.wDay) + EncodeTime(sTime.wHour, sTime.wMinute, sTime.wSecond, sTime.wMilliSeconds);
+       end;
+end; { of GetFileTimes }
+
+
+procedure GetDirList(dir : ShortString; AStringList : TStringList; recursive : Boolean; AExt : String = '.bzip');
+var
+  fsRec : TSearchRec;
+  fIPtr : FileInfoPtr;
+begin { GetDirList }
+  if (dir = '')
+    then Exit;
+  if (dir[length(dir)] <> '\')
+    then dir := dir + '\';
+  try
+     if (FindFirst(dir + '*.*', faAnyFile, fsRec) = 0) then
+     repeat
+        if (fsRec.Name <> '') AND (fsRec.Name <> '.') AND (fsRec.Name <> '..') then
+        begin
+          fIPtr := AllocMem(SizeOf(FileInfoRec));
+          fIPtr^.fName := dir + fsRec.Name;
+          GetFileTimes(dir + fsRec.Name, FD_MODIFIED, fIPtr^.Modified);
+          if ((fsRec.Attr AND faDirectory) = faDirectory) then
+          begin
+            fIPtr^.typ := FL_FOLDER;
+            //List.Insert(0, fIPtr);
+            if recursive
+               then GetDirList(dir + fsRec.Name, AStringList, TRUE);
+          end
+          else
+          begin
+            fIPtr^.typ := FL_FILE;
+            //List.Add(fIPtr);
+          end;
+          if ExtractFileExt(fsRec.Name) = AExt then
+             AStringList.Add(fsRec.Name);
+      end;
+     until (FindNext(fsRec) <> 0);
+     FindClose(fsRec);
+  except
+
+  end;
+end; { of GetDirList }
+
+
+end.

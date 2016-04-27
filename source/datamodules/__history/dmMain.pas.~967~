@@ -1,0 +1,802 @@
+unit dmMain;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, DBAccess,
+  vcl.controls, System.UITypes, Uni, UniDacVcl, ConfigUtils,
+  MySQLuniProvider, MemDS, sSkinManager, Vcl.ImgList,
+  acAlphaImageList, Data.Win.ADODB, frxChart, frxClass, frxExportCSV,
+  frxExportImage, frxExportRTF, frxExportHTML, frxExportPDF, frxExportDBF,
+  frxExportODF, frxExportMail, frxExportXML, frxExportXLS, frxBarcode, frxDBSet,
+  frxExportXLSX, frxExportDOCX, MemData;
+
+{
+ --------------------------------------------------------------------------
+
+    TdmdMain
+
+
+    ex:
+    dmdMain := TdmdMain.Create(Application);
+    dmdMain.PathToConfig := ChangeFileExt(Application.ExeName,'.dbs');
+    dmdMain.ConnectMaster;
+
+
+ --------------------------------------------------------------------------
+}
+
+type
+  TdmdMain = class(TDataModule)
+    Conn: TUniConnection;
+    ConnDialog: TUniConnectDialog;
+    UserLog: TUniConnection;
+    QLogQuery: TUniQuery;
+    QInfo: TUniQuery;
+    SmallImage: TsAlphaImageList;
+    ConnExcel: TADOConnection;
+    SkinMgr: TsSkinManager;
+    rptMain: TfrxReport;
+    frxChartObject1: TfrxChartObject;
+    frxBarCodeObject1: TfrxBarCodeObject;
+    frxXLSExport1: TfrxXLSExport;
+    frxXMLExport1: TfrxXMLExport;
+    frxMailExport1: TfrxMailExport;
+    frxODSExport1: TfrxODSExport;
+    frxODTExport1: TfrxODTExport;
+    frxDBFExport1: TfrxDBFExport;
+    frxPDFExport1: TfrxPDFExport;
+    frxHTMLExport1: TfrxHTMLExport;
+    frxRTFExport1: TfrxRTFExport;
+    frxBMPExport1: TfrxBMPExport;
+    frxJPEGExport1: TfrxJPEGExport;
+    frxCSVExport1: TfrxCSVExport;
+    frxBarCodeObject2: TfrxBarCodeObject;
+    QCompany: TUniQuery;
+    dsCompany: TfrxDBDataset;
+    dsPOSStruk: TfrxDBDataset;
+    QSetupParameter: TUniQuery;
+    dsParameter: TfrxDBDataset;
+    frxDOCXExport1: TfrxDOCXExport;
+    frxXLSXExport1: TfrxXLSXExport;
+    rptStrukStrlist: TfrxReport;
+    StringDS: TfrxUserDataSet;
+    procedure DataModuleDestroy(Sender: TObject);
+    procedure ConnConnectionLost(Sender: TObject; Component: TComponent;
+      ConnLostCause: TConnLostCause; var RetryMode: TRetryMode);
+    procedure rptStrukStrlistGetValue(const VarName: string;
+      var Value: Variant);
+    procedure UserLogConnectionLost(Sender: TObject; Component: TComponent;
+      ConnLostCause: TConnLostCause; var RetryMode: TRetryMode);
+  private
+    RetryCount : integer;
+
+
+    FDBServerPort: cardinal;
+    FDBServerPasswd: string;
+    FDBUserName: string;
+    FDBServerName: string;
+    FDBName: string;
+    FPathToConfig: String;
+    FDBLogName: string;
+    procedure LoadConnSettings;
+    procedure SetDBName(const Value: string);
+    procedure SetDBServerName(const Value: string);
+    procedure SetDBServerPasswd(const Value: string);
+    procedure SetDBServerPort(const Value: cardinal);
+    procedure SetDBUserName(const Value: string);
+    procedure SetPathToConfig(const Value: String);
+    procedure InitLog;
+    procedure SetDBLogName(const Value: string);
+
+    { Private declarations }
+  public
+    FastReportLine : TStringList;
+
+    property DBServerName: string read FDBServerName write SetDBServerName;
+    property DBServerPort: cardinal read FDBServerPort write SetDBServerPort;
+    property DBUserName: string read FDBUserName write SetDBUserName;
+    property DBServerPasswd: string read FDBServerPasswd write SetDBServerPasswd;
+    property DBName: string read FDBName write SetDBName;
+    property DBLogName: string read FDBLogName write SetDBLogName;
+
+    property PathToConfig: String read FPathToConfig write SetPathToConfig;
+
+    procedure GetDatabaseList(var AList : TStringList; ADB: TUniConnection); overload;
+    procedure GetDatabaseList(var AList : TStringList); overload;
+    function ConnectParam(ADB: TUniConnection; AHOST: String; APORT: Cardinal;
+      AUNAME, AUPASSWD, ADBNAME: String): boolean;
+    function Connect(ADB: TUniConnection; ADBName: String): boolean;
+    function ConnectMaster: Boolean;
+    function Connected: Boolean;
+    function ShowDialogsConnectionSettings: TModalResult;
+    procedure SaveConnSettings(ADB: TUniConnection); overload;
+    procedure SaveConnSettings; overload;
+    function ValidateDatabase: Boolean;
+
+    procedure StartTrans;
+    procedure CommitTrans;
+    procedure RollbackTrans;
+
+    function IsKeyValueExist(ATableName, Akey, AValue: String): Boolean;
+    function GetFieldValueByKey(ATableName, AKeyField, AKeyValue, AFieldName : String): String;
+
+    function ExecQuery(const AQuery : String): Boolean;
+    function ExecQueryOther(const AQuery : String;pConn: TUniConnection): Boolean;
+    function OpenQuery(var QInfo :TUniQuery; AQuery : String):Boolean;
+    function OpenQueryOther(var QInfo :TUniQuery; AQuery : String;pConn: TUniConnection):Boolean;
+    function DeleteTable(const ATableName, AWhere: String): boolean;
+    function UpdateTable(const ATableName, ASet, AWhere: String): boolean;
+
+    function GetTempTableName(const ATableName: String): String;
+    function GetTempID: String;
+    procedure PrepareTemporaryTable(ATableName, AFilter : String);
+    procedure RestoreTemporaryTable(ATableName, AFilter : String);
+    function SelectTemporaryTable(var AQTempTable : TUniQuery; ATableName, AFilter : String):Boolean;
+    procedure UpdateKeys(ATableName, Akey, AOldValue, ANewValue : String);
+
+    function OpenLog(var QInfo: TUniQuery; AQuery: String): Boolean;
+    function ExecLog(const AQuery: String): Boolean;
+
+    function ConnectToExcel(ADOConn : TADOConnection;ExcelFilePath : String):Boolean;
+    procedure ReleaseExcel(ADOConn: TADOConnection);
+    function OpenADOQuery(Q:TADOQuery;const str:string;DB:TADOConnection):boolean;
+
+
+
+
+
+  end;
+
+  TOpenQuery = class helper for TUniQuery
+  public
+    function OpenQuery(AQuery : String):Boolean;
+    function OpenTable(const ATableName, AField: String;const AWhere: String = ''): Boolean;
+  end;
+
+var
+  dmdMain: TdmdMain;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses dSettingDB, AppUtils, DBUtils, AppUtils.Tools;
+
+{$R *.dfm}
+
+procedure TdmdMain.LoadConnSettings;
+var DBConfig : TConfig;
+begin
+  {
+    -----------------------------------------------------------------------
+
+    LoadConnSettings;
+    Load Connection Settings on cfg file
+    if not exists return false and will later created on DBSettings
+
+    1 dmdMain have 1 cfg file, ditentukan di luar procedure
+
+    -----------------------------------------------------------------------
+  }
+  DBConfig := TConfig.Create(FPathToConfig,'.dbs');
+  try
+    DBConfig.Section:= 'DBConfig';
+    FDBServerName   := DBConfig.GetConfigDefault('DBServerName','localhost');
+    FDBServerPort   := StrToIntDef(DBConfig.GetConfigDefault('DBServerPort'),3306);
+    FDBUserName     := DBConfig.GetConfigDefault('UserName');
+    FDBServerPasswd := DBConfig.GetConfigDefault('Password');
+    FDBName         := DBConfig.GetConfigDefault('DBName',DefaultDBName);
+  finally
+    DBConfig.Free;
+  end;
+end;
+
+function TdmdMain.OpenQuery(var QInfo :TUniQuery; AQuery : String): Boolean;
+begin
+  with QInfo do
+  try
+    Result := false;
+    try
+      Connection := Conn;
+      SQL.Text := AQuery;
+      Open;
+      Result := true;
+    except
+      on e:EUniError do
+        raise EAppDBException.Create('Gagal Buka Query :'+#13#10+AQuery+#13#10+e.Message);
+      else
+        raise;
+    end;
+  finally
+    {}
+  end;
+end;
+
+function TdmdMain.OpenQueryOther(var QInfo :TUniQuery; AQuery : String;pConn: TUniConnection): Boolean;
+begin
+  with QInfo do
+  try
+    Result := false;
+    try
+      Connection := pConn;
+      SQL.Text := AQuery;
+      Open;
+      Result := true;
+    except
+      on e:EUniError do
+        raise EAppDBException.Create('Gagal Buka Query :'+#13#10+AQuery+#13#10+e.Message);
+      else
+        raise;
+    end;
+  finally
+    {}
+  end;
+end;
+
+function TdmdMain.GetTempTableName(const ATableName : String):String;
+begin
+  Result := 'temp_'+ATableName;
+end;
+
+function TdmdMain.GetTempID(): String;
+begin
+  Randomize;
+  Result := IntToStr(Random(99))+'_'+FormatDateTime('ddmmyyhhnnss',now());
+end;
+
+procedure TdmdMain.PrepareTemporaryTable(ATableName, AFilter: String);
+var AQuery : String;
+    ATempTableName: String;
+begin
+  ATempTableName := GetTempTableName(ATableName);
+  AQuery := 'DROP TEMPORARY TABLE IF EXISTS '+ATempTableName;
+  dmdMain.ExecQuery(AQuery);
+  try
+    //debug//AQuery := 'CREATE TABLE '+ATempTableName+' LIKE '+ATableName+' ';
+    AQuery := 'CREATE TEMPORARY TABLE '+ATempTableName+' LIKE '+ATableName+' ';
+    if dmdMain.ExecQuery(AQuery) then
+    if AFilter <> '' then
+    begin
+      AQuery := 'INSERT INTO '+ATempTableName+' SELECT * FROM '+ATableName+' '+AFilter;
+      dmdMain.ExecQuery(AQuery);
+    end;
+  except
+    raise EAppDBException.CreateFmt(LangRes['failBckTempTable'],[ATempTableName]);
+  end;
+end;
+
+procedure TdmdMain.RestoreTemporaryTable(ATableName, AFilter : String);
+var AQuery : String;
+    ATempTableName : String;
+begin
+  ATempTableName := GetTempTableName(ATableName);
+  try
+      AQuery := 'DELETE FROM '+ATableName+' '+AFilter;
+      dmdMain.ExecQuery(AQuery);
+
+      AQuery := 'INSERT INTO '+ATableName+' SELECT * FROM '+ATempTableName+' '+AFilter;
+      dmdMain.ExecQuery(AQuery);
+  except
+      raise EAppDBException.CreateFmt(LangRes['FailRestoreTempTable'],[ATempTableName]);
+  end;
+end;
+
+function TdmdMain.SelectTemporaryTable(var AQTempTable : TUniQuery; ATableName, AFilter : String):Boolean;
+var AQuery : String;
+    ATempTableName : String;
+begin
+  ATempTableName := GetTempTableName(ATableName);
+  AQuery := 'SELECT * FROM '+ATempTableName+' '+AFilter;;
+  Result := AQTempTable.OpenQuery(AQuery);
+end;
+
+procedure TdmdMain.UpdateKeys(ATableName, Akey, AOldValue, ANewValue : String);
+var AQuery : String;
+begin
+    if AOldValue = ANewValue then exit;    
+    AQuery := 'UPDATE '+ATableName+' SET '+Akey+' = '+QuotedStr(ANewValue)+
+              ' WHERE '+Akey+' = '+QuotedStr(AOldValue);
+    dmdMain.ExecQuery(AQuery);
+end;
+
+
+procedure TdmdMain.RollbackTrans;
+begin
+  dmdMain.Conn.Rollback;
+end;
+
+procedure TdmdMain.rptStrukStrlistGetValue(const VarName: string;
+  var Value: Variant);
+begin
+  if CompareText(VarName, 'element') = 0 then
+    Value := FastReportLine[StringDS.RecNo];
+end;
+
+function TdmdMain.ShowDialogsConnectionSettings: TModalResult;
+begin
+  //Result := mrOk;
+  dlgSettingDB := TdlgSettingDB.Create(self);
+  with dlgSettingDB do
+  try
+    AConn := self.Conn;
+    ShowModal;
+    if ModalResult = mrOK then
+    begin
+      self.Conn := AConn;
+      SaveConnSettings(); {still try connecting}
+    end;
+    Result := ModalResult {and exit}
+  finally
+    free;
+  end;
+end;
+
+procedure TdmdMain.StartTrans;
+begin
+  dmdMain.Conn.StartTransaction;
+end;
+
+procedure TdmdMain.SaveConnSettings;
+begin
+  SaveConnSettings(conn);
+end;
+
+procedure TdmdMain.SaveConnSettings(ADB: TUniConnection);
+var DBConfig : TConfig;
+begin
+  DBConfig := TConfig.Create(FPathToConfig,'.dbs');
+  with DBConfig do
+  try
+    DBConfig.Section:= 'DBConfig';
+    DBConfig['DBServerName'] := ADB.Server;
+    DBConfig['DBServerPort'] := IntToStr(ADB.Port);
+    DBConfig['UserName'] := ADB.Username;
+    DBConfig['Password'] := ADB.Password;
+    DBConfig['DBName'] := ADB.Database;
+  finally
+    Free;
+  end;
+end;
+
+function TdmdMain.ConnectParam(ADB:TUniConnection; AHOST: String; APORT: Cardinal; AUNAME, AUPASSWD, ADBNAME : String): boolean;
+begin
+  with ADB do
+  begin
+    if Connected then Disconnect;
+
+    if AHOST = 'localhost' then
+      SpecificOptions.Values['ConnectionTimeout'] := '10'
+    else
+      SpecificOptions.Values['ConnectionTimeout'] := '30';
+
+    Server   := AHOST;
+    Port     := APORT;
+    UserName := AUNAME;
+    Password := AUPASSWD;
+    Database := ADBNAME;
+
+    try
+      Connected := true;
+      result := true;
+    except
+      on e:EUniError do
+      begin
+        //raise;
+        //Exception.Create('Gagal Koneksi dengan database `'+ADBNAME+'`'+ #13#10 + '' + e.Message);
+        result := false;
+      end
+      else
+        result := false;
+    end;
+  end;
+end;
+
+function TdmdMain.UpdateTable(const ATableName, ASet, AWhere: String): boolean;
+var AQuery : String;
+begin
+  Result := false;
+  if Trim(ATableName) <> '' then
+  begin
+    AQuery := 'UPDATE '+ATableName+' SET '+ASet+' WHERE '+AWhere;
+    Result := ExecQuery(AQuery);
+  end;
+end;
+
+procedure TdmdMain.UserLogConnectionLost(Sender: TObject; Component: TComponent;
+  ConnLostCause: TConnLostCause; var RetryMode: TRetryMode);
+begin
+  if RetryCount < 2 then begin
+    Inc(RetryCount);
+    RetryMode := rmReconnectExecute;
+  end
+  else begin
+    RetryCount := 0;
+    RetryMode := rmRaise;
+  end;
+end;
+
+procedure TdmdMain.DataModuleDestroy(Sender: TObject);
+begin
+  if Conn.Connected then
+    Conn.Connected := false;
+  if UserLog.Connected  then
+    UserLog.Connected := false;
+  inherited;
+end;
+
+function TdmdMain.DeleteTable(const ATableName, AWhere: String): boolean;
+var AQuery : String;
+begin
+  Result := false;
+  if Trim(ATableName) <> '' then
+  begin
+    AQuery := 'DELETE '+ATableName+' WHERE '+AWhere;
+    Result := ExecQuery(AQuery);
+  end;
+end;
+
+function TdmdMain.ExecQuery(const AQuery: String): Boolean;
+begin
+  Result := false;
+  if AQuery <> '' then
+  with TUniSQL.Create(self) do
+  try
+    try
+      Connection := dmdMain.Conn;
+      SQL.Text := ValidateStringData(AQuery);
+      Execute;
+      Result := true;
+    except
+      on e:EUniError do
+        raise EAppDBException.Create('Gagal Eksekusi Query :'+#13#10+SQL.Text+#13#10+e.Message);
+      else
+        raise;
+      Result := false;
+    end;
+  finally
+    free;
+  end;
+end;
+
+function TdmdMain.ExecQueryOther(const AQuery: String;pConn: TUniConnection): Boolean;
+begin
+  Result := false;
+  if AQuery <> '' then
+  with TUniSQL.Create(self) do
+  try
+    try
+      Connection := pConn;
+      SQL.Text := ValidateStringData(AQuery);
+      Execute;
+      Result := true;
+    except
+      on e:EUniError do
+        raise EAppDBException.Create('Gagal Eksekusi Query :'+#13#10+SQL.Text+#13#10+e.Message);
+      else
+        raise;
+      Result := false;
+    end;
+  finally
+    free;
+  end;
+end;
+
+function TdmdMain.OpenLog(var QInfo :TUniQuery; AQuery : String): Boolean;
+begin
+  with QInfo do
+  try
+    Result := false;
+    try
+      Connection := dmdMain.UserLog;
+      SQL.Text := AQuery;
+      Open;
+      Result := true;
+    except
+      on e:EUniError do
+        raise EAppDBException.Create('Gagal Buka Log Query :'+#13#10+AQuery+#13#10+e.Message);
+      else
+        raise;
+    end;
+  finally
+    {}
+  end;
+end;
+
+function TdmdMain.ExecLog(const AQuery: String): Boolean;
+begin
+  Result := false;
+  if AQuery <> '' then
+  with TUniSQL.Create(self) do
+  try
+    try
+      Connection := dmdMain.UserLog;
+      SQL.Text := AQuery;
+      Execute;
+      Result := true;
+    except
+      on e:EUniError do
+        raise EAppDBException.Create('Gagal Eksekusi Log Query :'+#13#10+AQuery+#13#10+e.Message);
+      else
+        raise;
+      Result := false;
+    end;
+  finally
+    free;
+  end;
+end;
+
+
+
+procedure TdmdMain.CommitTrans;
+begin
+  dmdMain.Conn.Commit;
+end;
+
+procedure TdmdMain.ConnConnectionLost(Sender: TObject; Component: TComponent;
+  ConnLostCause: TConnLostCause; var RetryMode: TRetryMode);
+begin
+  if RetryCount < 2 then begin
+    Inc(RetryCount);
+    RetryMode := rmReconnectExecute;
+  end
+  else begin
+    RetryCount := 0;
+    RetryMode := rmRaise;
+  end;
+end;
+
+function TdmdMain.Connect(ADB:TUniConnection; ADBName : String): boolean;
+begin
+  result := ConnectParam(ADB,FDBServerName,FDBServerPort,FDBUserName,FDBServerPasswd,ADBName);
+end;
+
+function TdmdMain.Connected: Boolean;
+begin
+  result := conn.Connected;
+end;
+
+Function TdmdMain.ConnectMaster: Boolean;
+begin
+  result := (FDBName <> '') AND Connect(Conn,FDBName);
+end;
+
+procedure TdmdMain.GetDatabaseList(var AList : TStringList; ADB: TUniConnection);
+begin
+  if ADB.Connected then
+    ADB.GetDatabaseNames(AList);
+end;
+
+procedure TdmdMain.GetDatabaseList(var AList : TStringList);
+begin
+  GetDatabaseList(AList, Conn);
+end;
+
+function TdmdMain.GetFieldValueByKey(ATableName, AKeyField, AKeyValue,
+  AFieldName: String): String;
+var QDirect : TUniQuery;
+begin
+  Result := '';
+  QDirect := TUniQuery.Create(self);
+  try
+    if QDirect.OpenTable(ATableName,AFieldName,' '+AKeyField+' = '+QuotedStr(AKeyValue)) then
+      Result := QDirect.FieldByName(AFieldName).AsString;
+  finally
+    QDirect.free;
+  end;
+end;
+
+procedure TdmdMain.SetDBLogName(const Value: string);
+begin
+  FDBLogName := Value;
+end;
+
+procedure TdmdMain.SetDBName(const Value: string);
+begin
+  FDBName := Value;
+end;
+
+procedure TdmdMain.SetDBServerName(const Value: string);
+begin
+  FDBServerName := Value;
+end;
+
+procedure TdmdMain.SetDBServerPasswd(const Value: string);
+begin
+  FDBServerPasswd := Value;
+end;
+
+procedure TdmdMain.SetDBServerPort(const Value: cardinal);
+begin
+  FDBServerPort := Value;
+end;
+
+procedure TdmdMain.SetDBUserName(const Value: string);
+begin
+  FDBUserName := Value;
+end;
+
+procedure TdmdMain.SetPathToConfig(const Value: String);
+begin
+  FPathToConfig := Value;
+  LoadConnSettings;
+end;
+
+function TdmdMain.ValidateDatabase : Boolean;
+var QInfo : TUniQuery;
+    AQuery : String;
+begin
+  QInfo := TUniQuery.Create(self);
+  try
+    Result := True;
+    AQuery:= 'SHOW TABLES like ''z_appparam'' ';
+    QInfo.OpenQuery(AQuery);
+    if QInfo.Eof then
+    begin
+      AppMgmt.ShowInfoMsg(LangRes['DBNotValid']);
+      Result := false
+    end
+    else
+    begin
+      AQuery := 'SELECT app_name FROM z_appparam WHERE app_name = '+QuotedStr(AppName)+'';
+      QInfo.OpenQuery(AQuery);
+      if QInfo.Eof then
+        AppMgmt.ShowInfoMsg(format(LangRes['DBAppNotValid'],[AppName]));
+      Result := not QInfo.Eof;
+    end;
+  finally
+    QInfo.Free;
+  end;
+  if Result then
+  begin
+    {runlog}
+    InitLog;
+  end;
+end;
+
+Procedure TdmdMain.InitLog;
+var
+  QCheckLog : TUniQuery;
+  AQuery : String;
+begin
+  if dmdMain.Connected then
+  begin
+    {check database exists}
+    QCheckLog := TUniQuery.Create(self);
+    QCheckLog.OpenQuery('SHOW DATABASES LIKE '''+FDBName+'_log'+''' ');
+    if QCheckLog.Eof then
+    begin
+      {create database}
+      ExecQuery('CREATE DATABASE `'+FDBName+'_log'+'`;');
+    end;
+  end;
+
+  if Connect(UserLog,FDBName+'_log') then
+  begin
+    AQuery := 'CREATE TABLE IF NOT EXISTS `m_activity` ( '
+             +'  `transid` tinyint(3) unsigned NOT NULL DEFAULT 0, '
+             +'  `remarks` varchar(255) COLLATE latin1_swedish_ci NOT NULL DEFAULT '''', '
+             +'  PRIMARY KEY (`transid`) '
+             +') ENGINE=MyISAM;';
+    ExecLog(AQuery);
+
+    {create Database Logging}
+    DBLogName := '`userlog_'+FormatDateTime('yyyyMM',now())+'`';
+    AQuery := 'CREATE TABLE IF NOT EXISTS '+DBLogName+' ( '
+             +'  `Id` int(11) NOT NULL AUTO_INCREMENT, '
+             +'  `sessionid` bigint(20) unsigned NOT NULL DEFAULT 0, '
+             +'  `userid` varchar(20) COLLATE latin1_swedish_ci NULL DEFAULT NULL, '
+             +'  `log_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, '
+             +'  `activity` tinyint(2) NOT NULL DEFAULT 0, '
+             +'  `refdoc` varchar(255) COLLATE latin1_swedish_ci NULL DEFAULT NULL, '
+             +'  `transid` tinyint(3) unsigned NOT NULL DEFAULT 99, '
+             +'  PRIMARY KEY (`Id`), '
+             +'  INDEX `userid` (`userid`(20)), '
+             +'  INDEX `usertime` (`userid`(20),`log_timestamp`) '
+             +') ENGINE=MyISAM; '
+             +' ';
+    ExecLog(AQuery);
+  end;
+end;
+
+function TdmdMain.IsKeyValueExist(ATableName, Akey, AValue : String):Boolean;
+var
+    AQuery : String;
+begin
+  AQuery := 'SELECT '+Akey+' FROM '+ATableName+
+            ' WHERE '+Akey+' = '+QuotedStr(AValue);
+  QInfo.OpenQuery(AQuery);
+  Result := not QInfo.Eof;
+end;
+
+{ TOpenQuery }
+
+function TOpenQuery.OpenQuery(AQuery: String): Boolean;
+begin
+  try
+    Connection := dmdMain.Conn;
+    SQL.Text := AQuery;
+    Open;
+    Result := true;
+  except
+    on e:EUniError do
+      raise EAppDBException.Create('Gagal Buka Query :'+#13#10+AQuery+#13#10+e.Message);
+    else
+      raise;
+    Result := false;
+  end;
+end;
+
+function TOpenQuery.OpenTable(const ATableName, AField: String;const AWhere: String = ''): Boolean;
+var AQuery : String;
+begin
+  Result := false;
+  if Trim(ATableName) <> '' then
+  begin
+    AQuery := 'SELECT '+AField+' FROM '+ATableName+' ';
+    if Trim(AWhere) <> '' then
+      AQuery := AQuery + ' WHERE '+AWhere;
+    Result := OpenQuery(AQuery);
+  end;
+end;
+
+function TdmdMain.ConnectToExcel(ADOConn : TADOConnection;ExcelFilePath : String):Boolean;
+var strConn : String;
+begin
+  if ExcelFilePath <> '' then
+  begin
+    if ADOConn.Connected then
+      ADOConn.Connected := false;
+
+    strConn := 'Provider = Microsoft.jet.OLEDB.4.0;'+
+               'Data Source=' + ExcelFilePath + ';' +
+               'Extended Properties = Excel 8.0;';
+    ADOConn.ConnectionString := strConn;
+    try
+      ADOConn.Connected := true;
+      result := true;
+    except
+      AppMgmt.ShowInfoMsg('File gagal di buka!, '+#13#10+'Mohon tutup dahulu bila file sedang di gunakan!');
+      result := false;
+    end;
+  end;
+end;
+
+procedure TdmdMain.ReleaseExcel(ADOConn : TADOConnection);
+begin
+  if ADOConn.Connected then
+      ADOConn.Connected := false;
+end;
+
+function TdmdMain.OpenADOQuery(Q:TADOQuery;const str:string;DB:TADOConnection):boolean;
+var DefCursor : TCursor;
+begin
+  with Q do
+  begin
+    Connection := DB;
+    Close;
+    SQL.Clear;
+    SQL.Text := str;
+    Result := true;
+
+    //DefCursor := Screen.Cursor;
+    try
+      ///Screen.Cursor := crHourGlass;
+      Active := True;
+    except
+      on e:Exception do
+      begin
+        {
+        AppMgmt.ShowInfoMsg('SQL Error','DmdMain','OpenQuery',str
+                     +#10#13+' on Database '+dmdMain.DBName
+                     +#10#13+e.Message,0);
+         }
+        AppMgmt.ShowInfoMsg(e.Message);
+        Result := false;
+      end;
+    end;
+    //Screen.Cursor := DefCursor;
+  end;
+end;
+
+end.

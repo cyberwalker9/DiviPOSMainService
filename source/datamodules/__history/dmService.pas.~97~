@@ -1,0 +1,575 @@
+unit dmService;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, sSkinManager, Data.DB, MemDS, DBAccess, Uni,
+  UniDacVcl, StrUtils, ServiceUtils, ConfigUtils;
+
+type
+  TdmdService = class(TDataModule)
+    Conn: TUniConnection;
+    ConnDialog: TUniConnectDialog;
+    QInfo: TUniQuery;
+    QCompany: TUniQuery;
+    SkinMgr: TsSkinManager;
+    UserLog: TUniConnection;
+    QLogQuery: TUniQuery;
+  private
+    FDBServerPort: cardinal;
+    FPathToConfig: String;
+    FDBLogName: string;
+    FDBServerPasswd: string;
+    FDBUserName: string;
+    FDBServerName: string;
+    FDBName: string;
+    procedure SetDBLogName(const Value: string);
+    procedure SetDBName(const Value: string);
+    procedure SetDBServerName(const Value: string);
+    procedure SetDBServerPasswd(const Value: string);
+    procedure SetDBServerPort(const Value: cardinal);
+    procedure SetDBUserName(const Value: string);
+    procedure SetPathToConfig(const Value: String);
+    function ValidateStringData(ADataStr: String): String;
+    { Private declarations }
+  public
+    { Public declarations }
+    property DBServerName: string read FDBServerName write SetDBServerName;
+    property DBServerPort: cardinal read FDBServerPort write SetDBServerPort;
+    property DBUserName: string read FDBUserName write SetDBUserName;
+    property DBServerPasswd: string read FDBServerPasswd write SetDBServerPasswd;
+    property DBName: string read FDBName write SetDBName;
+    property DBLogName: string read FDBLogName write SetDBLogName;
+
+    property PathToConfig: String read FPathToConfig write SetPathToConfig;
+
+
+    function ConnectParam(ADB: TUniConnection; AHOST: String; APORT: Cardinal;
+      AUNAME, AUPASSWD, ADBNAME: String): boolean;
+    function Connect(ADB: TUniConnection; ADBName: String): boolean;
+    function ConnectMaster: Boolean;
+    function ConnectLog: Boolean;
+    function Connected: Boolean;
+    function LogConnected: Boolean;
+
+    procedure StartTrans;
+    procedure CommitTrans;
+    procedure RollbackTrans;
+
+    function IsKeyValueExist(ATableName, Akey, AValue: String): Boolean;
+    function GetFieldValueByKey(ATableName, AKeyField, AKeyValue, AFieldName : String): String;
+
+    function ExecQuery(const AQuery : String): Boolean;
+    function ExecQueryOther(const AQuery : String;pConn: TUniConnection): Boolean;
+    function OpenQuery(var QInfo :TUniQuery; AQuery : String):Boolean;
+    function OpenQueryOther(var QInfo :TUniQuery; AQuery : String;pConn: TUniConnection):Boolean;
+    function DeleteTable(const ATableName, AWhere: String): boolean;
+    function UpdateTable(const ATableName, ASet, AWhere: String): boolean;
+
+    function OpenLog(var QInfo: TUniQuery; AQuery: String): Boolean;
+    function ExecLog(const AQuery: String): Boolean;
+
+
+    function GetTempTableName(const ATableName: String): String;
+    function GetTempID: String;
+    procedure PrepareTemporaryTable(ATableName, AFilter : String);
+    procedure RestoreTemporaryTable(ATableName, AFilter : String);
+    function SelectTemporaryTable(var AQTempTable : TUniQuery; ATableName, AFilter : String):Boolean;
+    procedure UpdateKeys(ATableName, Akey, AOldValue, ANewValue : String);
+
+    function InitServiceDatabase(): boolean;
+    procedure LoadConnSettings;
+
+  end;
+
+  TOpenQuery = class helper for TUniQuery
+  public
+    function OpenQuery(AQuery : String):Boolean;
+    function OpenLogQuery(AQuery: String): Boolean;
+    function OpenTable(const ATableName, AField: String;const AWhere: String = ''): Boolean;
+  end;
+
+  EAppDBException = Class(EAppException);
+
+var
+  dmdService: TdmdService;
+
+const
+  DefaultDBName = 'divipos';
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses DBUtils;
+
+{$R *.dfm}
+
+{ TdmdService }
+
+procedure TdmdService.CommitTrans;
+begin
+  Conn.Commit;
+end;
+
+function TdmdService.Connect(ADB: TUniConnection; ADBName: String): boolean;
+begin
+  result := ConnectParam(ADB,FDBServerName,FDBServerPort,FDBUserName,FDBServerPasswd,ADBName);
+end;
+
+function TdmdService.Connected: Boolean;
+begin
+  result := conn.Connected;
+end;
+
+function TdmdService.ConnectLog: Boolean;
+begin
+  result := (FDBName <> '') AND Connect(UserLog,FDBName+'_log');
+end;
+
+function TdmdService.ConnectMaster: Boolean;
+begin
+  result := (FDBName <> '') AND Connect(Conn,FDBName);
+end;
+
+function TdmdService.ConnectParam(ADB: TUniConnection; AHOST: String;
+  APORT: Cardinal; AUNAME, AUPASSWD, ADBNAME: String): boolean;
+begin
+  with ADB do
+  begin
+    if Connected then Disconnect;
+
+    if AHOST = 'localhost' then
+      SpecificOptions.Values['ConnectionTimeout'] := '10'
+    else
+      SpecificOptions.Values['ConnectionTimeout'] := '30';
+
+    Server   := AHOST;
+    Port     := APORT;
+    UserName := AUNAME;
+    Password := AUPASSWD;
+    Database := ADBNAME;
+
+    try
+      Connected := true;
+      result := true;
+    except
+      on e:EUniError do
+      begin
+        result := false;
+      end
+      else
+        result := false;
+    end;
+  end;
+end;
+
+function TdmdService.DeleteTable(const ATableName, AWhere: String): boolean;
+var AQuery : String;
+begin
+  Result := false;
+  if Trim(ATableName) <> '' then
+  begin
+    AQuery := 'DELETE '+ATableName+' WHERE '+AWhere;
+    Result := ExecQuery(AQuery);
+  end;
+end;
+
+function TdmdService.ValidateStringData(ADataStr: String): String;
+begin
+  ADataStr := ReplaceStr(ADataStr, '\', '\\');
+  Result := ADataStr;
+end;
+
+
+function TdmdService.ExecLog(const AQuery: String): Boolean;
+begin
+  Result := false;
+  if AQuery <> '' then
+  with TUniSQL.Create(self) do
+  try
+    try
+      Connection := dmdService.UserLog;
+      SQL.Text := AQuery;
+      Execute;
+      Result := true;
+    except
+      on e:EUniError do
+        raise EAppDBException.Create('Gagal Eksekusi Log Query :'+#13#10+AQuery+#13#10+e.Message);
+      else
+        raise;
+      Result := false;
+    end;
+  finally
+    free;
+  end;
+end;
+
+function TdmdService.ExecQuery(const AQuery: String): Boolean;
+begin
+  Result := false;
+  if AQuery <> '' then
+  with TUniSQL.Create(self) do
+  try
+    try
+      Connection := Conn;
+      SQL.Text := ValidateStringData(AQuery);
+      Execute;
+      Result := true;
+    except
+      on e:EUniError do
+        raise EAppDBException.Create('Gagal Eksekusi Query :'+#13#10+SQL.Text+#13#10+e.Message);
+      else
+        raise;
+      Result := false;
+    end;
+  finally
+    free;
+  end;
+end;
+
+function TdmdService.ExecQueryOther(const AQuery: String;
+  pConn: TUniConnection): Boolean;
+begin
+  Result := false;
+  if AQuery <> '' then
+  with TUniSQL.Create(self) do
+  try
+    try
+      Connection := pConn;
+      SQL.Text := ValidateStringData(AQuery);
+      Execute;
+      Result := true;
+    except
+      on e:EUniError do
+        raise EAppDBException.Create('Gagal Eksekusi Query :'+#13#10+SQL.Text+#13#10+e.Message);
+      else
+        raise;
+      Result := false;
+    end;
+  finally
+    free;
+  end;
+end;
+
+function TdmdService.GetFieldValueByKey(ATableName, AKeyField, AKeyValue,
+  AFieldName: String): String;
+var QDirect : TUniQuery;
+begin
+  Result := '';
+  QDirect := TUniQuery.Create(self);
+  try
+    if QDirect.OpenTable(ATableName,AFieldName,' '+AKeyField+' = '+QuotedStr(AKeyValue)) then
+      Result := QDirect.FieldByName(AFieldName).AsString;
+  finally
+    QDirect.free;
+  end;
+end;
+
+function TdmdService.GetTempID: String;
+begin
+  Randomize;
+  Result := IntToStr(Random(99))+'_'+FormatDateTime('ddmmyyhhnnss',now());
+end;
+
+function TdmdService.GetTempTableName(const ATableName: String): String;
+begin
+  Result := 'temp_'+ATableName;
+end;
+
+
+function TdmdService.InitServiceDatabase: boolean;
+var
+  CurrDBVersion: integer;
+  RunAPP: Boolean;
+begin
+  //initial if service started and connected
+  if not LogConnected then
+    ConnectLog;
+
+  if LogConnected then
+  begin
+    if not ValidateDatabase then exit(false);
+
+    CurrDBVersion := GetDBServerVersion;
+    while (AppDBVersion > CurrDBVersion) AND RunAPP do
+    begin
+      RunApp := UpdateDBServiceVersion(CurrDBVersion);
+      CurrDBVersion := GetDBServerVersion;
+    end;
+
+
+
+  end;
+end;
+
+function TdmdService.IsKeyValueExist(ATableName, Akey, AValue: String): Boolean;
+var
+    AQuery : String;
+begin
+  AQuery := 'SELECT '+Akey+' FROM '+ATableName+
+            ' WHERE '+Akey+' = '+QuotedStr(AValue);
+  QInfo.OpenQuery(AQuery);
+  Result := not QInfo.Eof;
+end;
+
+procedure TdmdService.LoadConnSettings;
+var DBConfig : TConfig;
+begin
+  {
+    -----------------------------------------------------------------------
+
+    LoadConnSettings;
+    Load Connection Settings on cfg file
+    if not exists return false and will later created on DBSettings
+
+    1 dmdMain have 1 cfg file, ditentukan di luar procedure
+
+    -----------------------------------------------------------------------
+  }
+  DBConfig := TConfig.Create(FPathToConfig,'.dbs');
+  try
+    DBConfig.Section:= 'DBConfig';
+    FDBServerName   := DBConfig.GetConfigDefault('DBServerName','localhost');
+    FDBServerPort   := StrToIntDef(DBConfig.GetConfigDefault('DBServerPort','3306'),3306);
+    FDBUserName     := DBConfig.GetConfigDefault('UserName');
+    FDBServerPasswd := DBConfig.GetConfigDefault('Password');
+    FDBName         := DBConfig.GetConfigDefault('DBName',DefaultDBName);
+  finally
+    DBConfig.Free;
+  end;
+end;
+
+function TdmdService.LogConnected: Boolean;
+begin
+  result := UserLog.Connected;
+end;
+
+function TdmdService.OpenLog(var QInfo: TUniQuery; AQuery: String): Boolean;
+begin
+  with QInfo do
+  try
+    Result := false;
+    try
+      Connection := dmdService.UserLog;
+      SQL.Text := AQuery;
+      Open;
+      Result := true;
+    except
+      on e:EUniError do
+        raise EAppDBException.Create('Gagal Buka Log Query :'+#13#10+AQuery+#13#10+e.Message);
+      else
+        raise;
+    end;
+  finally
+    {}
+  end;
+end;
+
+function TdmdService.OpenQuery(var QInfo: TUniQuery; AQuery: String): Boolean;
+begin
+  with QInfo do
+  try
+    Result := false;
+    try
+      Connection := Conn;
+      SQL.Text := AQuery;
+      Open;
+      Result := true;
+    except
+      on e:EUniError do
+        raise EAppDBException.Create('Gagal Buka Query :'+#13#10+AQuery+#13#10+e.Message);
+      else
+        raise;
+    end;
+  finally
+    {}
+  end;
+end;
+
+function TdmdService.OpenQueryOther(var QInfo: TUniQuery; AQuery: String;
+  pConn: TUniConnection): Boolean;
+begin
+  with QInfo do
+  try
+    Result := false;
+    try
+      Connection := pConn;
+      SQL.Text := AQuery;
+      Open;
+      Result := true;
+    except
+      on e:EUniError do
+        raise EAppDBException.Create('Gagal Buka Query :'+#13#10+AQuery+#13#10+e.Message);
+      else
+        raise;
+    end;
+  finally
+    {}
+  end;
+end;
+
+procedure TdmdService.PrepareTemporaryTable(ATableName, AFilter: String);
+var AQuery : String;
+    ATempTableName: String;
+begin
+  ATempTableName := GetTempTableName(ATableName);
+  AQuery := 'DROP TEMPORARY TABLE IF EXISTS '+ATempTableName;
+  ExecQuery(AQuery);
+  try
+    //debug//AQuery := 'CREATE TABLE '+ATempTableName+' LIKE '+ATableName+' ';
+    AQuery := 'CREATE TEMPORARY TABLE '+ATempTableName+' LIKE '+ATableName+' ';
+    if ExecQuery(AQuery) then
+    if AFilter <> '' then
+    begin
+      AQuery := 'INSERT INTO '+ATempTableName+' SELECT * FROM '+ATableName+' '+AFilter;
+      ExecQuery(AQuery);
+    end;
+  except
+    raise EAppDBException.CreateFmt('Error fail create Temp Table : %s',[ATempTableName]);
+  end;
+end;
+
+procedure TdmdService.RestoreTemporaryTable(ATableName, AFilter: String);
+var AQuery : String;
+    ATempTableName : String;
+begin
+  ATempTableName := GetTempTableName(ATableName);
+  try
+      AQuery := 'DELETE FROM '+ATableName+' '+AFilter;
+      ExecQuery(AQuery);
+
+      AQuery := 'INSERT INTO '+ATableName+' SELECT * FROM '+ATempTableName+' '+AFilter;
+      ExecQuery(AQuery);
+  except
+      raise EAppDBException.CreateFmt('Fail Restore TempTable : %s',[ATempTableName]);
+  end;
+end;
+
+procedure TdmdService.RollbackTrans;
+begin
+  Conn.Rollback;
+end;
+
+function TdmdService.SelectTemporaryTable(var AQTempTable: TUniQuery;
+  ATableName, AFilter: String): Boolean;
+var AQuery : String;
+    ATempTableName : String;
+begin
+  ATempTableName := GetTempTableName(ATableName);
+  AQuery := 'SELECT * FROM '+ATempTableName+' '+AFilter;;
+  Result := AQTempTable.OpenQuery(AQuery);
+end;
+
+procedure TdmdService.SetDBLogName(const Value: string);
+begin
+  FDBLogName := Value;
+end;
+
+procedure TdmdService.SetDBName(const Value: string);
+begin
+  FDBName := Value;
+end;
+
+procedure TdmdService.SetDBServerName(const Value: string);
+begin
+  FDBServerName := Value;
+end;
+
+procedure TdmdService.SetDBServerPasswd(const Value: string);
+begin
+  FDBServerPasswd := Value;
+end;
+
+procedure TdmdService.SetDBServerPort(const Value: cardinal);
+begin
+  FDBServerPort := Value;
+end;
+
+procedure TdmdService.SetDBUserName(const Value: string);
+begin
+  FDBUserName := Value;
+end;
+
+procedure TdmdService.SetPathToConfig(const Value: String);
+begin
+  FPathToConfig := Value;
+  LoadConnSettings;
+end;
+
+procedure TdmdService.StartTrans;
+begin
+  Conn.StartTransaction;
+end;
+
+procedure TdmdService.UpdateKeys(ATableName, Akey, AOldValue,
+  ANewValue: String);
+var AQuery : String;
+begin
+    if AOldValue = ANewValue then exit;
+    AQuery := 'UPDATE '+ATableName+' SET '+Akey+' = '+QuotedStr(ANewValue)+
+              ' WHERE '+Akey+' = '+QuotedStr(AOldValue);
+    ExecQuery(AQuery);
+end;
+
+function TdmdService.UpdateTable(const ATableName, ASet,
+  AWhere: String): boolean;
+var AQuery : String;
+begin
+  Result := false;
+  if Trim(ATableName) <> '' then
+  begin
+    AQuery := 'UPDATE '+ATableName+' SET '+ASet+' WHERE '+AWhere;
+    Result := ExecQuery(AQuery);
+  end;
+end;
+
+{ TOpenQuery }
+
+function TOpenQuery.OpenLogQuery(AQuery: String): Boolean;
+begin
+  try
+    Connection := dmdService.UserLog;
+    SQL.Text := AQuery;
+    Open;
+    Result := true;
+  except
+    on e:EUniError do
+      raise EAppDBException.Create('Gagal Buka Query :'+#13#10+AQuery+#13#10+e.Message);
+    else
+      raise;
+    Result := false;
+  end;
+end;
+
+function TOpenQuery.OpenQuery(AQuery: String): Boolean;
+begin
+  try
+    Connection := dmdService.Conn;
+    SQL.Text := AQuery;
+    Open;
+    Result := true;
+  except
+    on e:EUniError do
+      raise EAppDBException.Create('Gagal Buka Query :'+#13#10+AQuery+#13#10+e.Message);
+    else
+      raise;
+    Result := false;
+  end;
+end;
+
+function TOpenQuery.OpenTable(const ATableName, AField,
+  AWhere: String): Boolean;
+var AQuery : String;
+begin
+  Result := false;
+  if Trim(ATableName) <> '' then
+  begin
+    AQuery := 'SELECT '+AField+' FROM '+ATableName+' ';
+    if Trim(AWhere) <> '' then
+      AQuery := AQuery + ' WHERE '+AWhere;
+    Result := OpenQuery(AQuery);
+  end;
+end;
+
+end.

@@ -1,0 +1,8 @@
+object DiviPOSMainService: TDiviPOSMainService
+  OldCreateOrder = False
+  DisplayName = 'DiviPOS Backservice'
+  AfterInstall = ServiceAfterInstall
+  OnStart = ServiceStart
+  Height = 150
+  Width = 215
+end

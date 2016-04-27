@@ -1,0 +1,21 @@
+[{
+  "recno": 1,
+  "y_pos": [{"branchid":"DDR","kassa":"1","strukno":"1604000002","sessionid":2,"nonota":57,"strukdate":"2016-04-12","struktime":"16:57:49","tableid":"010","guestno":1,"customerid":"99","subtotal":94000,"discpercent":0,"discamount":0,"discamount2":0,"svcchgpercent":10,"svcchgamount":9400,"vatpercent":10,"vatamount":10340,"pembulatan":0,"xtrchgpercent":0,"xtrchgamount":0,"shippingamount":0,"discamount_promototal":0,"totalstruk":113740,"advancepay":0,"cash":113740,"card1":0,"card2":0,"voucher":0,"sisa_voucher":0,"point":0,"housecharge":0,"piutang":0,"kembalian":0,"lastpoint":0,"getpoint":0,"transferno":0,"user_id":"admin","isWorkOrder":0,"isDelivery":0,"wodelivery_status":0,"deliverypickup":0}]
+  "y_posdetail": [{"branchid": "DDR","kassa": "1","strukno": "1604000002"},
+				  {"branchid": "DDR","kassa": "1","strukno": "1604000002"}]	
+},
+{
+  "recno": 2,
+  "y_pos": [{"branchid":"DDR","kassa":"1","strukno":"1604000002","sessionid":2,"nonota":57,"strukdate":"2016-04-12","struktime":"16:57:49","tableid":"010","guestno":1,"customerid":"99","subtotal":94000,"discpercent":0,"discamount":0,"discamount2":0,"svcchgpercent":10,"svcchgamount":9400,"vatpercent":10,"vatamount":10340,"pembulatan":0,"xtrchgpercent":0,"xtrchgamount":0,"shippingamount":0,"discamount_promototal":0,"totalstruk":113740,"advancepay":0,"cash":113740,"card1":0,"card2":0,"voucher":0,"sisa_voucher":0,"point":0,"housecharge":0,"piutang":0,"kembalian":0,"lastpoint":0,"getpoint":0,"transferno":0,"user_id":"admin","isWorkOrder":0,"isDelivery":0,"wodelivery_status":0,"deliverypickup":0}]
+  "y_posdetail": [{"branchid": "DDR","kassa": "1","strukno": "1604000002"},
+				  {"branchid": "DDR","kassa": "1","strukno": "1604000002"}]	
+}]
+
+
+
+[{
+"y_pos": [{...}, {...}],
+"y_pos_detail": [{...}, {...}]
+}]
+
+

@@ -1,0 +1,38 @@
+unit RestAPIInterface;
+
+interface
+
+    uses uRESTObjects, System.Classes;
+
+    function SendJson(AResources: String; Const AJsonString : String):Boolean;
+
+implementation
+
+uses uMainService;
+
+function SendJson(AResources: String; Const AJsonString : String):Boolean;
+var
+  RESTParams : TRESTRequestParams;
+  tmpStream : TStream;
+begin
+  RESTParams := TRESTRequestParams.Create;
+  with RESTParams do
+  begin
+    URL := DiviPOSMainService.URLAddress;
+    Resource := AResources;
+    ContentType := 'application/json';
+
+    tmpStream.Write(Point(AJsonString)^,length(AJsonString));
+    CustomBody.LoadFromStream(tmpStream);
+  end;
+
+  UpdateComponentProperties;
+
+  if RESTParams <> Nil then
+  begin
+
+  end;
+
+end;
+
+end.
