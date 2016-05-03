@@ -1,0 +1,252 @@
+unit uMainService;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes,
+  Vcl.Graphics, Vcl.Controls, Vcl.SvcMgr, Vcl.Dialogs, Registry, Vcl.Forms,
+  IPPeerClient, REST.Response.Adapter, REST.Client, Datasnap.DSClientRest,
+  Data.Bind.Components, Data.Bind.ObjectScope, Cromis.Scheduler;
+
+type
+  TDiviPOSMainService = class(TService)
+    RESTClient1: TRESTClient;
+    RESTResponse1: TRESTResponse;
+    RESTRequest1: TRESTRequest;
+    RESTResponseDataSetAdapter1: TRESTResponseDataSetAdapter;
+    procedure ServiceAfterInstall(Sender: TService);
+    procedure ServiceStart(Sender: TService; var Started: Boolean);
+    procedure ServiceAfterUninstall(Sender: TService);
+    procedure ServiceStop(Sender: TService; var Stopped: Boolean);
+    procedure ServiceShutdown(Sender: TService);
+    procedure ServiceDestroy(Sender: TObject);
+  private
+    FUpdateStatus: String;
+    FDebugMode: Boolean;
+    FAppPath: String;
+
+    EventList: TSchEventList;
+    FBranchID: String;
+    FURLAddress: String;
+
+    procedure SetUpdateStatus(const Value: String);
+
+    procedure initServiceTask();
+
+    procedure OnScheduleOneTrigger(Sender: TScheduledEvent);
+    procedure OnScheduleImportTrigger(Sender: TScheduledEvent);
+    procedure ShowErrorMsg(AErrorID: Integer);
+    procedure SetBranchID(const Value: String);
+    procedure SetURLAddress(const Value: String);
+    { Private declarations }
+  public
+    CriticalSection: TRTLCriticalSection;
+
+    isImportRun : Boolean;
+
+    function GetServiceController: TServiceController; override;
+    { Public declarations }
+    procedure UpdateLog(OnlyDebugMode : boolean = false);
+
+
+    property PAppPath : String read FAppPath write FAppPath;
+    property UpdateStatus : String read FUpdateStatus write SetUpdateStatus;
+    property DebugMode : Boolean read FDebugMode write FDebugMode;
+
+    property BranchID : String read FBranchID write SetBranchID;
+    property URLAddress : String read FURLAddress write SetURLAddress;
+  end;
+
+var
+  DiviPOSMainService: TDiviPOSMainService;
+
+const
+  RunDebugMode = True; //true to print Debug log to filelog
+  MaxAttemp = 3;
+  ServiceDescr = 'Datadigi DiviPOS Backservice Application. Provide support for DiviPOS Application to Connect to Main Web Service';
+
+implementation
+
+{$R *.dfm}
+
+uses ServiceUtils, dmService, DBUtils;
+
+procedure ServiceController(CtrlCode: DWord); stdcall;
+begin
+  DiviPOSMainService.Controller(CtrlCode);
+end;
+
+function TDiviPOSMainService.GetServiceController: TServiceController;
+begin
+  Result := ServiceController;
+end;
+
+procedure TDiviPOSMainService.initServiceTask;
+var
+  NewSchedule: TScheduledEvent;
+begin
+  {
+     Register Task / Job Here
+  }
+
+  if BranchID = '' then
+  begin
+    UpdateStatus := '[Error] BranchID is Empty';
+    Exit;
+  end;
+
+
+  UpdateStatus := 'DiviPOS Backservice initServiceTask';
+  EventList := TSchEventList.Create;
+
+  {run every 15 sec}
+  NewSchedule := EventList.Add('HeartBeatPOS');
+  NewSchedule.Schedule.EventPlan := '*/20 * * * * * *';
+  NewSchedule.OnScheduleEvent := OnScheduleOneTrigger;
+  NewSchedule.Run;
+
+  {run every 5 min later must set to dailly at 0 am and }
+  NewSchedule := EventList.Add('ImportMasterfromServer');
+  NewSchedule.Schedule.EventPlan := '*/20 * * * * * *';
+  NewSchedule.OnScheduleEvent := OnScheduleImportTrigger;
+  NewSchedule.Run;
+
+
+  ServiceThread.ProcessRequests(false);
+end;
+
+procedure TDiviPOSMainService.OnScheduleImportTrigger(Sender: TScheduledEvent);
+begin
+  UpdateStatus := 'Import Server Running '+isImportRun;
+  if isImportRun then exit;
+
+  UpdateStatus := 'Import Server Run';
+  ImportFromServer;
+end;
+
+procedure TDiviPOSMainService.OnScheduleOneTrigger(Sender: TScheduledEvent);
+begin
+  UpdateStatus := 'Heartbeat POS Run';
+  SendPOSTransaction();
+end;
+
+procedure TDiviPOSMainService.ServiceAfterInstall(Sender: TService);
+var
+  Reg: TRegistry;
+begin
+  UpdateStatus := 'DiviPOS Backservice Installed';
+  Reg := TRegistry.Create(KEY_READ or KEY_WRITE);
+  try
+    Reg.RootKey := HKEY_LOCAL_MACHINE;
+    if Reg.OpenKey('\SYSTEM\CurrentControlSet\Services\' + Name, false) then
+    begin
+      Reg.WriteString('Description', ServiceDescr);
+      Reg.CloseKey;
+    end;
+  finally
+    Reg.Free;
+  end;
+  //Application.OnException := HandledException;
+end;
+
+procedure TDiviPOSMainService.ServiceAfterUninstall(Sender: TService);
+begin
+  UpdateStatus := 'DiviPOS Backservice Uninstalled';
+end;
+
+procedure TDiviPOSMainService.ServiceDestroy(Sender: TObject);
+begin
+  FreeAndNil(EventList);
+end;
+
+procedure TDiviPOSMainService.ServiceShutdown(Sender: TService);
+begin
+  UpdateStatus := 'DiviPOS Backservice Shutdown';
+end;
+
+procedure TDiviPOSMainService.ServiceStart(Sender: TService; var Started: Boolean);
+var
+  ServiceRun: integer;
+  attempStart : Integer;
+begin
+  InitializeCriticalSection(CriticalSection);
+
+  DebugMode := RunDebugMode;
+
+  PAppPath := IncludeTrailingPathDelimiter(ExtractFilePath(Application.ExeName));
+
+  attempStart := 0;
+  ServiceRun := 99;
+  while ServiceRun > 0 do
+  begin
+    inc(attempStart);
+    ServiceRun := DBUtils.InitDBConnection(self);
+
+    if (ServiceRun > 0) then
+    begin
+      UpdateStatus := 'DiviPOS Backservice fail to Start, attemp : '+attempStart.ToString+'/'+MaxAttemp.ToString;
+      if (attempStart = MaxAttemp) then
+      begin
+        ShowErrorMsg(ServiceRun);
+        Started := False;
+        Exit;
+      end;
+      Sleep(3000);
+    end;
+  end;
+
+  if (ServiceRun = 0) then
+  begin
+    UpdateStatus := 'DiviPOS Backservice Started';
+    LoadParameter;
+    initServiceTask;
+  end;
+end;
+
+procedure TDiviPOSMainService.ShowErrorMsg(AErrorID : Integer);
+begin
+  case AErrorID of
+    1 : UpdateStatus := '[error] Shogun.dbs not found, please copy from installed DiviPOS!';
+    2 : UpdateStatus := '[error] Main Database cannot connect, please make sure connection configured properly! ';
+    3 : UpdateStatus := '[error] Log Database cannot connect, please make sure connection configured properly! ';
+    4 : UpdateStatus := '[error] Wrong Database Selected, please make sure connection configured properly!';
+    5 : UpdateStatus := '[error] update database fail!';
+  end;
+end;
+
+procedure TDiviPOSMainService.ServiceStop(Sender: TService;
+  var Stopped: Boolean);
+begin
+  UpdateStatus := 'DiviPOS Backservice Stopped';
+end;
+
+procedure TDiviPOSMainService.SetBranchID(const Value: String);
+begin
+  FBranchID := Value;
+end;
+
+procedure TDiviPOSMainService.SetUpdateStatus(const Value: String);
+var
+  debugOnly: Boolean;
+begin
+  FUpdateStatus := Value;
+  debugOnly := Pos('[Debug]',Value) > 0;
+  DiviPOSMainService.UpdateLog(debugOnly);
+end;
+
+procedure TDiviPOSMainService.SetURLAddress(const Value: String);
+begin
+  FURLAddress := Value;
+end;
+
+procedure TDiviPOSMainService.UpdateLog(OnlyDebugMode: boolean);
+begin
+  if ((Not DiviPOSMainService.DebugMode) AND (OnlyDebugMode)) then Exit;
+
+  //EnterCriticalSection(DiviPOSMainService.CriticalSection);
+  while IsWritingLog do sleep(100);
+    CreateLogPerDay(FUpdateStatus);
+  //LeaveCriticalSection(DiviPOSMainService.CriticalSection);
+end;
+
+end.

@@ -1,0 +1,2489 @@
+14:42:08 :Config Path :D:\Projects\DiviPOS_BackService\bin\Win64\Shogun.dbs Found
+14:42:08 :Database Successfull connected
+14:42:08 :Database Version is 1
+14:42:08 :Current Database Version is 1
+14:42:08 :DiviPOS Backservice Started
+14:42:08 :Load parameter
+14:42:08 :Load parameter Success : Branchid = DDR URLAddress = http://divipos.app/
+14:42:08 :DiviPOS Backservice initServiceTask
+14:42:20 :Import Server Running 0
+14:42:20 :Import Server Run
+14:42:20 :Start Import 
+14:42:21 :[Debug] {"hbe_exportedtoken":"uNr5AOsE4IdKnoo3vqmXTmGPsczOQS","hbe_currexporteddt":"2016-05-02 07:42:21"}
+14:42:21 :Token : uNr5AOsE4IdKnoo3vqmXTmGPsczOQS
+14:42:21 :[Debug] Kitchen : []
+14:42:21 :[Debug] Locations : []
+14:42:22 :[Debug] Tables : []
+14:42:22 :[Debug] EDCs : []
+14:42:23 :[Debug] Jabatan : []
+14:42:24 :[Debug] Kru/Karyawan : []
+14:42:24 :[Debug] Customer/member : []
+14:42:24 :Finish Import 
+14:42:25 :Export Server Running 0
+14:42:25 :Heartbeat POS Run
+14:42:25 :[Debug] Captured Time : 5/2/2016 2:42:25 PM
+14:42:25 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:42:25 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:42:25 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:42:25 :[Debug] Selected Record : 0
+14:42:40 :Import Server Running 0
+14:42:40 :Import Server Run
+14:42:40 :Start Import 
+14:42:41 :[Debug] {"hbe_exportedtoken":"JjtBZvXKFG3GtHaBHa8Tx8CbAybTyD","hbe_currexporteddt":"2016-05-02 07:42:41"}
+14:42:41 :Token : JjtBZvXKFG3GtHaBHa8Tx8CbAybTyD
+14:42:41 :[Debug] Kitchen : []
+14:42:42 :[Debug] Locations : []
+14:42:42 :[Debug] Tables : []
+14:42:43 :[Debug] EDCs : []
+14:42:44 :[Debug] Jabatan : []
+14:42:44 :[Debug] Kru/Karyawan : []
+14:42:45 :[Debug] Customer/member : []
+14:42:45 :Finish Import 
+14:42:45 :Export Server Running 0
+14:42:45 :Heartbeat POS Run
+14:42:45 :[Debug] Captured Time : 5/2/2016 2:42:45 PM
+14:42:45 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:42:45 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:42:45 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:42:45 :[Debug] Selected Record : 0
+14:43:00 :Import Server Running 0
+14:43:00 :Import Server Run
+14:43:00 :Start Import 
+14:43:01 :[Debug] {"hbe_exportedtoken":"GMqYxlJnErX5iFgo6FQc94DdH4aIrM","hbe_currexporteddt":"2016-05-02 07:43:01"}
+14:43:01 :Token : GMqYxlJnErX5iFgo6FQc94DdH4aIrM
+14:43:01 :[Debug] Kitchen : []
+14:43:02 :[Debug] Locations : []
+14:43:02 :[Debug] Tables : []
+14:43:03 :[Debug] EDCs : []
+14:43:04 :[Debug] Jabatan : []
+14:43:05 :[Debug] Kru/Karyawan : []
+14:43:05 :[Debug] Customer/member : []
+14:43:05 :Finish Import 
+14:43:05 :Export Server Running 0
+14:43:05 :Heartbeat POS Run
+14:43:05 :[Debug] Captured Time : 5/2/2016 2:43:05 PM
+14:43:05 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:43:05 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:43:05 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:43:05 :[Debug] Selected Record : 0
+14:43:20 :Export Server Running 0
+14:43:20 :Heartbeat POS Run
+14:43:20 :[Debug] Captured Time : 5/2/2016 2:43:20 PM
+14:43:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:43:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:43:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:43:20 :[Debug] Selected Record : 0
+14:43:20 :Import Server Running 0
+14:43:20 :Import Server Run
+14:43:20 :Start Import 
+14:43:20 :[Debug] {"hbe_exportedtoken":"iUto5Jdf0cOMHMsziFESPQvG6UjdZ1","hbe_currexporteddt":"2016-05-02 07:43:20"}
+14:43:20 :Token : iUto5Jdf0cOMHMsziFESPQvG6UjdZ1
+14:43:21 :[Debug] Kitchen : []
+14:43:22 :[Debug] Locations : []
+14:43:22 :[Debug] Tables : []
+14:43:22 :[Debug] EDCs : []
+14:43:23 :[Debug] Jabatan : []
+14:43:23 :[Debug] Kru/Karyawan : []
+14:43:24 :[Debug] Customer/member : []
+14:43:24 :Finish Import 
+14:43:40 :Import Server Running 0
+14:43:40 :Import Server Run
+14:43:40 :Start Import 
+14:43:41 :[Debug] {"hbe_exportedtoken":"iG1Q5hTQt6lya4jePjZfvfX5Z5WRSM","hbe_currexporteddt":"2016-05-02 07:43:41"}
+14:43:41 :Token : iG1Q5hTQt6lya4jePjZfvfX5Z5WRSM
+14:43:41 :[Debug] Kitchen : [{"mkc_code":"004","mkc_name":"Kitchen pantry"}]
+14:43:41 :[Debug] 004 : Kitchen pantry
+14:43:45 :[Debug] Locations : []
+14:43:46 :[Debug] Tables : []
+14:43:46 :[Debug] EDCs : []
+14:43:47 :[Debug] Jabatan : []
+14:43:47 :[Debug] Kru/Karyawan : []
+14:43:47 :[Debug] Customer/member : []
+14:43:47 :Finish Import 
+14:43:48 :Export Server Running 0
+14:43:48 :Heartbeat POS Run
+14:43:48 :[Debug] Captured Time : 5/2/2016 2:43:48 PM
+14:43:48 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:43:48 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:43:48 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:43:48 :[Debug] Selected Record : 0
+14:44:00 :Export Server Running 0
+14:44:00 :Heartbeat POS Run
+14:44:00 :[Debug] Captured Time : 5/2/2016 2:44:00 PM
+14:44:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:44:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:44:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:44:00 :[Debug] Selected Record : 0
+14:44:00 :Import Server Running 0
+14:44:00 :Import Server Run
+14:44:00 :Start Import 
+14:44:01 :[Debug] {"hbe_exportedtoken":"rLtK2wdMWEK2ZhVytxe4JhOt55Juxg","hbe_currexporteddt":"2016-05-02 07:44:00"}
+14:44:01 :Token : rLtK2wdMWEK2ZhVytxe4JhOt55Juxg
+14:44:01 :[Debug] Kitchen : []
+14:44:01 :[Debug] Locations : []
+14:44:02 :[Debug] Tables : []
+14:44:02 :[Debug] EDCs : []
+14:44:03 :[Debug] Jabatan : []
+14:44:04 :[Debug] Kru/Karyawan : []
+14:44:04 :[Debug] Customer/member : []
+14:44:04 :Finish Import 
+14:44:20 :Import Server Running 0
+14:44:20 :Import Server Run
+14:44:20 :Start Import 
+14:44:21 :[Debug] {"hbe_exportedtoken":"yfaHraE43tMcgWKdAgYj8d55pSVWkl","hbe_currexporteddt":"2016-05-02 07:44:20"}
+14:44:21 :Token : yfaHraE43tMcgWKdAgYj8d55pSVWkl
+14:44:21 :[Debug] Kitchen : []
+14:44:21 :[Debug] Locations : []
+14:44:22 :[Debug] Tables : []
+14:44:22 :[Debug] EDCs : []
+14:44:23 :[Debug] Jabatan : []
+14:44:24 :[Debug] Kru/Karyawan : []
+14:44:27 :[Debug] Customer/member : []
+14:44:27 :Finish Import 
+14:44:29 :Export Server Running 0
+14:44:29 :Heartbeat POS Run
+14:44:29 :[Debug] Captured Time : 5/2/2016 2:44:29 PM
+14:44:29 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:44:29 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:44:29 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:44:29 :[Debug] Selected Record : 0
+14:44:40 :Export Server Running 0
+14:44:40 :Heartbeat POS Run
+14:44:40 :[Debug] Captured Time : 5/2/2016 2:44:40 PM
+14:44:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:44:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:44:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:44:40 :[Debug] Selected Record : 0
+14:44:40 :Import Server Running 0
+14:44:40 :Import Server Run
+14:44:40 :Start Import 
+14:44:41 :[Debug] {"hbe_exportedtoken":"43uksSalPYYvDorcafQJsdDWHb8UcZ","hbe_currexporteddt":"2016-05-02 07:44:41"}
+14:44:41 :Token : 43uksSalPYYvDorcafQJsdDWHb8UcZ
+14:44:42 :[Debug] Kitchen : []
+14:44:42 :[Debug] Locations : []
+14:44:42 :[Debug] Tables : []
+14:44:43 :[Debug] EDCs : []
+14:44:45 :[Debug] Jabatan : []
+14:44:45 :[Debug] Kru/Karyawan : []
+14:44:45 :[Debug] Customer/member : []
+14:44:45 :Finish Import 
+14:45:00 :Import Server Running 0
+14:45:00 :Import Server Run
+14:45:00 :Start Import 
+14:45:02 :[Debug] {"hbe_exportedtoken":"UVyXhiYBv4u578Rd36xbpEIs3L5h8P","hbe_currexporteddt":"2016-05-02 07:45:01"}
+14:45:02 :Token : UVyXhiYBv4u578Rd36xbpEIs3L5h8P
+14:45:02 :[Debug] Kitchen : []
+14:45:03 :[Debug] Locations : []
+14:45:05 :[Debug] Tables : []
+14:45:06 :[Debug] EDCs : []
+14:45:07 :[Debug] Jabatan : []
+14:45:08 :[Debug] Kru/Karyawan : []
+14:45:08 :[Debug] Customer/member : []
+14:45:08 :Finish Import 
+14:45:09 :Export Server Running 0
+14:45:09 :Heartbeat POS Run
+14:45:09 :[Debug] Captured Time : 5/2/2016 2:45:09 PM
+14:45:09 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:45:09 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:45:09 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:45:09 :[Debug] Selected Record : 0
+14:45:20 :Export Server Running 0
+14:45:20 :Heartbeat POS Run
+14:45:20 :[Debug] Captured Time : 5/2/2016 2:45:20 PM
+14:45:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:45:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:45:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:45:20 :[Debug] Selected Record : 0
+14:45:20 :Import Server Running 0
+14:45:20 :Import Server Run
+14:45:20 :Start Import 
+14:45:21 :[Debug] {"hbe_exportedtoken":"8OjDUG5LfyB4gfV7BfihTWLCFKuHIl","hbe_currexporteddt":"2016-05-02 07:45:21"}
+14:45:21 :Token : 8OjDUG5LfyB4gfV7BfihTWLCFKuHIl
+14:45:22 :[Debug] Kitchen : []
+14:45:22 :[Debug] Locations : []
+14:45:22 :[Debug] Tables : []
+14:45:24 :[Debug] EDCs : [{"med_code":"PANIN","med_name":"EDC Panin","med_pcharge":0}]
+14:45:24 :[Debug] PANIN : EDC Panin
+14:45:25 :[Debug] Jabatan : []
+14:45:25 :[Debug] Kru/Karyawan : []
+14:45:25 :[Debug] Customer/member : []
+14:45:25 :Finish Import 
+14:45:40 :Import Server Running 0
+14:45:40 :Import Server Run
+14:45:40 :Start Import 
+14:45:41 :[Debug] {"hbe_exportedtoken":"kwdfVjkk4xuTjzgvKnYLK0Nw8r4JHa","hbe_currexporteddt":"2016-05-02 07:45:41"}
+14:45:41 :Token : kwdfVjkk4xuTjzgvKnYLK0Nw8r4JHa
+14:45:42 :[Debug] Kitchen : []
+14:45:42 :[Debug] Locations : []
+14:45:42 :[Debug] Tables : []
+14:45:43 :[Debug] EDCs : []
+14:45:44 :[Debug] Jabatan : []
+14:45:45 :[Debug] Kru/Karyawan : []
+14:45:45 :[Debug] Customer/member : []
+14:45:45 :Finish Import 
+14:45:45 :Export Server Running 0
+14:45:45 :Heartbeat POS Run
+14:45:45 :[Debug] Captured Time : 5/2/2016 2:45:45 PM
+14:45:45 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:45:45 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:45:45 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:45:45 :[Debug] Selected Record : 0
+14:46:00 :Export Server Running 0
+14:46:00 :Heartbeat POS Run
+14:46:00 :[Debug] Captured Time : 5/2/2016 2:46:00 PM
+14:46:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:46:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:46:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:46:00 :[Debug] Selected Record : 0
+14:46:00 :Import Server Running 0
+14:46:00 :Import Server Run
+14:46:00 :Start Import 
+14:46:01 :[Debug] {"hbe_exportedtoken":"VzLvLXeORMfSO3GPbkA9jyrO9Rn2UZ","hbe_currexporteddt":"2016-05-02 07:46:01"}
+14:46:01 :Token : VzLvLXeORMfSO3GPbkA9jyrO9Rn2UZ
+14:46:01 :[Debug] Kitchen : []
+14:46:02 :[Debug] Locations : []
+14:46:02 :[Debug] Tables : []
+14:46:03 :[Debug] EDCs : []
+14:46:04 :[Debug] Jabatan : []
+14:46:05 :[Debug] Kru/Karyawan : []
+14:46:05 :[Debug] Customer/member : []
+14:46:05 :Finish Import 
+14:46:20 :Import Server Running 0
+14:46:20 :Import Server Run
+14:46:20 :Start Import 
+14:46:21 :[Debug] {"hbe_exportedtoken":"N3y8AgdUXTTnbUg4yGpHOde8JNSu8M","hbe_currexporteddt":"2016-05-02 07:46:20"}
+14:46:21 :Token : N3y8AgdUXTTnbUg4yGpHOde8JNSu8M
+14:46:21 :[Debug] Kitchen : []
+14:46:21 :[Debug] Locations : []
+14:46:22 :[Debug] Tables : []
+14:46:25 :[Debug] EDCs : []
+14:46:26 :[Debug] Jabatan : []
+14:46:26 :[Debug] Kru/Karyawan : []
+14:46:27 :[Debug] Customer/member : []
+14:46:27 :Finish Import 
+14:46:27 :Export Server Running 0
+14:46:27 :Heartbeat POS Run
+14:46:27 :[Debug] Captured Time : 5/2/2016 2:46:27 PM
+14:46:27 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:46:27 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:46:27 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:46:27 :[Debug] Selected Record : 1
+14:46:27 :[Debug] Selected Record : 5
+14:46:27 :[Debug] Selected Record : 0
+14:46:27 :[Debug] [{"branchid":"DDR","kassa":"1","strukno":"1605000009","sessionid":2,"nonota":1,"strukdate":"2016-05-02","struktime":"14:46:07","tableid":"004","guestno":1,"customerid":"99","subtotal":42000,"discpercent":0,"discamount":0,"discamount2":0,"svcchgpercent":10,"svcchgamount":4200,"vatpercent":10,"vatamount":4620,"pembulatan":0,"xtrchgpercent":0,"xtrchgamount":0,"shippingamount":0,"discamount_promototal":0,"totalstruk":50820,"advancepay":0,"cash":50820,"card1":0,"card2":0,"voucher":0,"sisa_voucher":0,"point":0,"housecharge":0,"piutang":0,"kembalian":0,"lastpoint":0,"getpoint":0,"transferno":0,"user_id":"admin","isWorkOrder":0,"isDelivery":0,"wodelivery_status":0,"deliverypickup":0}]
+14:46:27 :[Debug] [{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000009","nonota":"1","menuid":"502","seqno":1,"detailseqno":0,"menuname":"Cup Small","qty":1,"hjual":10000,"oldhjual":10000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":10000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000009","nonota":"1","menuid":"511","ref_menuid":"502","seqno":1,"detailseqno":1,"menuname":" - Flv. Strawberry","qty":1,"hjual":0,"oldhjual":0,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":0,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000009","nonota":"1","menuid":"108","seqno":2,"detailseqno":0,"menuname":"Ayam Goreng Tep","qty":1,"hjual":10000,"oldhjual":10000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":10000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000009","nonota":"1","menuid":"302","seqno":3,"detailseqno":0,"menuname":"Pudding Coklat","qty":1,"hjual":5000,"oldhjual":5000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":5000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000009","nonota":"1","menuid":"102","seqno":4,"detailseqno":0,"menuname":"Ayam Goreng","qty":1,"hjual":17000,"oldhjual":17000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":17000,"discamount_promo":0}]
+14:46:27 :[Debug] 
+14:46:27 :PostJson to : http://divipos.app/post_pos
+14:46:27 :[Debug] {"y_pos":[{"branchid":"DDR","kassa":"1","strukno":"1605000009","sessionid":2,"nonota":1,"strukdate":"2016-05-02","struktime":"14:46:07","tableid":"004","guestno":1,"customerid":"99","subtotal":42000,"discpercent":0,"discamount":0,"discamount2":0,"svcchgpercent":10,"svcchgamount":4200,"vatpercent":10,"vatamount":4620,"pembulatan":0,"xtrchgpercent":0,"xtrchgamount":0,"shippingamount":0,"discamount_promototal":0,"totalstruk":50820,"advancepay":0,"cash":50820,"card1":0,"card2":0,"voucher":0,"sisa_voucher":0,"point":0,"housecharge":0,"piutang":0,"kembalian":0,"lastpoint":0,"getpoint":0,"transferno":0,"user_id":"admin","isWorkOrder":0,"isDelivery":0,"wodelivery_status":0,"deliverypickup":0}], "y_pos_detail":[{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000009","nonota":"1","menuid":"502","seqno":1,"detailseqno":0,"menuname":"Cup Small","qty":1,"hjual":10000,"oldhjual":10000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":10000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000009","nonota":"1","menuid":"511","ref_menuid":"502","seqno":1,"detailseqno":1,"menuname":" - Flv. Strawberry","qty":1,"hjual":0,"oldhjual":0,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":0,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000009","nonota":"1","menuid":"108","seqno":2,"detailseqno":0,"menuname":"Ayam Goreng Tep","qty":1,"hjual":10000,"oldhjual":10000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":10000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000009","nonota":"1","menuid":"302","seqno":3,"detailseqno":0,"menuname":"Pudding Coklat","qty":1,"hjual":5000,"oldhjual":5000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":5000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000009","nonota":"1","menuid":"102","seqno":4,"detailseqno":0,"menuname":"Ayam Goreng","qty":1,"hjual":17000,"oldhjual":17000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":17000,"discamount_promo":0}]}
+14:46:28 :Request Success
+14:46:28 :[Debug] strukno = 1605000009<br/>menu = 502<br/>menu = 511<br/>menu = 108<br/>menu = 302<br/>menu = 102<br/>
+14:46:28 :[Debug] PostTest Return : -1
+14:46:28 :[Debug]  UPDATE userlog_201604  SET stasend = 1  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:46:27 PM' 
+14:46:28 :[Debug]  UPDATE userlog_201605  SET stasend = 1  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:46:27 PM' 
+14:46:40 :Export Server Running 0
+14:46:40 :Heartbeat POS Run
+14:46:40 :[Debug] Captured Time : 5/2/2016 2:46:40 PM
+14:46:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:46:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:46:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:46:40 :[Debug] Selected Record : 0
+14:46:40 :Import Server Running 0
+14:46:40 :Import Server Run
+14:46:40 :Start Import 
+14:46:41 :[Debug] {"hbe_exportedtoken":"oFLJXr7KF92TYlDFEQBRcxb9tk6U0o","hbe_currexporteddt":"2016-05-02 07:46:41"}
+14:46:41 :Token : oFLJXr7KF92TYlDFEQBRcxb9tk6U0o
+14:46:42 :[Debug] Kitchen : []
+14:46:42 :[Debug] Locations : []
+14:46:42 :[Debug] Tables : []
+14:46:43 :[Debug] EDCs : []
+14:46:44 :[Debug] Jabatan : []
+14:46:44 :[Debug] Kru/Karyawan : []
+14:46:45 :[Debug] Customer/member : []
+14:46:45 :Finish Import 
+14:47:00 :Import Server Running 0
+14:47:00 :Import Server Run
+14:47:00 :Start Import 
+14:47:01 :[Debug] {"hbe_exportedtoken":"KFdaRJIy0ozDK61wGnIR6Dh8tihxcN","hbe_currexporteddt":"2016-05-02 07:47:01"}
+14:47:01 :Token : KFdaRJIy0ozDK61wGnIR6Dh8tihxcN
+14:47:02 :[Debug] Kitchen : []
+14:47:02 :[Debug] Locations : []
+14:47:02 :[Debug] Tables : []
+14:47:05 :[Debug] EDCs : []
+14:47:06 :[Debug] Jabatan : []
+14:47:07 :[Debug] Kru/Karyawan : []
+14:47:07 :[Debug] Customer/member : []
+14:47:07 :Finish Import 
+14:47:08 :Export Server Running 0
+14:47:08 :Heartbeat POS Run
+14:47:08 :[Debug] Captured Time : 5/2/2016 2:47:08 PM
+14:47:08 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:47:08 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:47:08 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:47:08 :[Debug] Selected Record : 0
+14:47:20 :Export Server Running 0
+14:47:20 :Heartbeat POS Run
+14:47:20 :[Debug] Captured Time : 5/2/2016 2:47:20 PM
+14:47:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:47:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:47:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:47:20 :[Debug] Selected Record : 0
+14:47:20 :Import Server Running 0
+14:47:20 :Import Server Run
+14:47:20 :Start Import 
+14:47:21 :[Debug] {"hbe_exportedtoken":"MMdwM7hIcBlGxcw3RWxQ2E3q8SfsOi","hbe_currexporteddt":"2016-05-02 07:47:21"}
+14:47:21 :Token : MMdwM7hIcBlGxcw3RWxQ2E3q8SfsOi
+14:47:22 :[Debug] Kitchen : []
+14:47:22 :[Debug] Locations : []
+14:47:22 :[Debug] Tables : []
+14:47:23 :[Debug] EDCs : []
+14:47:24 :[Debug] Jabatan : []
+14:47:24 :[Debug] Kru/Karyawan : []
+14:47:25 :[Debug] Customer/member : []
+14:47:25 :Finish Import 
+14:47:40 :Export Server Running 0
+14:47:40 :Heartbeat POS Run
+14:47:40 :[Debug] Captured Time : 5/2/2016 2:47:40 PM
+14:47:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:47:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:47:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:47:40 :[Debug] Selected Record : 0
+14:47:40 :Import Server Running 0
+14:47:40 :Import Server Run
+14:47:40 :Start Import 
+14:47:41 :[Debug] {"hbe_exportedtoken":"AcnWCPpkkHbiVxbFG8X2YLWEJs6p4Y","hbe_currexporteddt":"2016-05-02 07:47:41"}
+14:47:41 :Token : AcnWCPpkkHbiVxbFG8X2YLWEJs6p4Y
+14:47:42 :[Debug] Kitchen : []
+14:47:42 :[Debug] Locations : []
+14:47:43 :[Debug] Tables : []
+14:47:44 :[Debug] EDCs : []
+14:47:45 :[Debug] Jabatan : []
+14:47:45 :[Debug] Kru/Karyawan : []
+14:47:45 :[Debug] Customer/member : []
+14:47:45 :Finish Import 
+14:48:00 :Import Server Running 0
+14:48:00 :Import Server Run
+14:48:00 :Start Import 
+14:48:01 :[Debug] {"hbe_exportedtoken":"rX0iFCigXKfwq8v5WJvVR71Kpsbucn","hbe_currexporteddt":"2016-05-02 07:48:01"}
+14:48:01 :Token : rX0iFCigXKfwq8v5WJvVR71Kpsbucn
+14:48:02 :[Debug] Kitchen : []
+14:48:02 :[Debug] Locations : []
+14:48:03 :[Debug] Tables : []
+14:48:05 :[Debug] EDCs : []
+14:48:05 :[Debug] Jabatan : []
+14:48:06 :[Debug] Kru/Karyawan : []
+14:48:08 :[Debug] Customer/member : []
+14:48:08 :Finish Import 
+14:48:08 :Export Server Running 0
+14:48:08 :Heartbeat POS Run
+14:48:08 :[Debug] Captured Time : 5/2/2016 2:48:08 PM
+14:48:08 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:48:08 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:48:08 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:48:08 :[Debug] Selected Record : 0
+14:48:20 :Export Server Running 0
+14:48:20 :Heartbeat POS Run
+14:48:20 :[Debug] Captured Time : 5/2/2016 2:48:20 PM
+14:48:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:48:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:48:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:48:20 :[Debug] Selected Record : 0
+14:48:20 :Import Server Running 0
+14:48:20 :Import Server Run
+14:48:20 :Start Import 
+14:48:22 :[Debug] {"hbe_exportedtoken":"Av0IgdIpUkEV74XrXxRgUlujaSGGsH","hbe_currexporteddt":"2016-05-02 07:48:22"}
+14:48:22 :Token : Av0IgdIpUkEV74XrXxRgUlujaSGGsH
+14:48:22 :[Debug] Kitchen : []
+14:48:23 :[Debug] Locations : []
+14:48:24 :[Debug] Tables : []
+14:48:25 :[Debug] EDCs : []
+14:48:25 :[Debug] Jabatan : []
+14:48:25 :[Debug] Kru/Karyawan : []
+14:48:26 :[Debug] Customer/member : []
+14:48:26 :Finish Import 
+14:48:40 :Import Server Running 0
+14:48:40 :Import Server Run
+14:48:40 :Start Import 
+14:48:41 :[Debug] {"hbe_exportedtoken":"UJKQMdxHoRDKICTg6vIQj4rqg9wfYg","hbe_currexporteddt":"2016-05-02 07:48:41"}
+14:48:41 :Token : UJKQMdxHoRDKICTg6vIQj4rqg9wfYg
+14:48:41 :[Debug] Kitchen : []
+14:48:42 :[Debug] Locations : []
+14:48:42 :[Debug] Tables : []
+14:48:43 :[Debug] EDCs : []
+14:48:45 :[Debug] Jabatan : []
+14:48:45 :[Debug] Kru/Karyawan : []
+14:48:46 :[Debug] Customer/member : []
+14:48:46 :Finish Import 
+14:48:48 :Export Server Running 0
+14:48:48 :Heartbeat POS Run
+14:48:48 :[Debug] Captured Time : 5/2/2016 2:48:48 PM
+14:48:48 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:48:48 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:48:48 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:48:48 :[Debug] Selected Record : 0
+14:49:00 :Export Server Running 0
+14:49:00 :Heartbeat POS Run
+14:49:00 :[Debug] Captured Time : 5/2/2016 2:49:00 PM
+14:49:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:49:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:49:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:49:00 :[Debug] Selected Record : 0
+14:49:00 :Import Server Running 0
+14:49:00 :Import Server Run
+14:49:00 :Start Import 
+14:49:21 :[Error] GetToken: REST request failed: Socket Error # 10060
+Connection timed out.
+14:49:21 :Token : 
+14:49:21 :Import Server Running 0
+14:49:21 :Import Server Run
+14:49:21 :Start Import 
+14:49:42 :[Error] GetToken: REST request failed: Socket Error # 10060
+Connection timed out.
+14:49:42 :Token : 
+14:49:42 :Export Server Running 0
+14:49:42 :Heartbeat POS Run
+14:49:42 :[Debug] Captured Time : 5/2/2016 2:49:42 PM
+14:49:42 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:49:42 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:49:42 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:49:42 :[Debug] Selected Record : 0
+14:49:42 :Export Server Running 0
+14:49:42 :Heartbeat POS Run
+14:49:42 :[Debug] Captured Time : 5/2/2016 2:49:42 PM
+14:49:42 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:49:42 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:49:42 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:49:42 :[Debug] Selected Record : 0
+14:49:42 :Import Server Running 0
+14:49:42 :Import Server Run
+14:49:42 :Start Import 
+14:50:03 :[Error] GetToken: REST request failed: Socket Error # 10060
+Connection timed out.
+14:50:03 :Token : 
+14:50:03 :Import Server Running 0
+14:50:03 :Import Server Run
+14:50:03 :Start Import 
+14:50:24 :[Error] GetToken: REST request failed: Socket Error # 10060
+Connection timed out.
+14:50:24 :Token : 
+14:50:24 :Export Server Running 0
+14:50:24 :Heartbeat POS Run
+14:50:24 :[Debug] Captured Time : 5/2/2016 2:50:24 PM
+14:50:24 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:50:24 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:50:24 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:50:24 :[Debug] Selected Record : 1
+14:50:24 :[Debug] Selected Record : 4
+14:50:24 :[Debug] Selected Record : 0
+14:50:24 :[Debug] [{"branchid":"DDR","kassa":"1","strukno":"1605000010","sessionid":2,"nonota":2,"strukdate":"2016-05-02","struktime":"14:49:46","tableid":"017","guestno":1,"customerid":"99","subtotal":37000,"discpercent":0,"discamount":0,"discamount2":0,"svcchgpercent":10,"svcchgamount":3700,"vatpercent":10,"vatamount":4070,"pembulatan":0,"xtrchgpercent":0,"xtrchgamount":0,"shippingamount":0,"discamount_promototal":0,"totalstruk":44770,"advancepay":0,"cash":44770,"card1":0,"card2":0,"voucher":0,"sisa_voucher":0,"point":0,"housecharge":0,"piutang":0,"kembalian":0,"lastpoint":0,"getpoint":0,"transferno":0,"user_id":"admin","isWorkOrder":0,"isDelivery":0,"wodelivery_status":0,"deliverypickup":0}]
+14:50:24 :[Debug] [{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"102","seqno":1,"detailseqno":0,"menuname":"Ayam Goreng","qty":1,"hjual":17000,"oldhjual":17000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":17000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"302","seqno":2,"detailseqno":0,"menuname":"Pudding Coklat","qty":1,"hjual":5000,"oldhjual":5000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":5000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"301","seqno":3,"detailseqno":0,"menuname":"Pudding Stberry","qty":1,"hjual":5000,"oldhjual":5000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":5000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"108","seqno":4,"detailseqno":0,"menuname":"Ayam Goreng Tep","qty":1,"hjual":10000,"oldhjual":10000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":10000,"discamount_promo":0}]
+14:50:24 :[Debug] 
+14:50:24 :PostJson to : http://divipos.app/post_pos
+14:50:24 :[Debug] {"y_pos":[{"branchid":"DDR","kassa":"1","strukno":"1605000010","sessionid":2,"nonota":2,"strukdate":"2016-05-02","struktime":"14:49:46","tableid":"017","guestno":1,"customerid":"99","subtotal":37000,"discpercent":0,"discamount":0,"discamount2":0,"svcchgpercent":10,"svcchgamount":3700,"vatpercent":10,"vatamount":4070,"pembulatan":0,"xtrchgpercent":0,"xtrchgamount":0,"shippingamount":0,"discamount_promototal":0,"totalstruk":44770,"advancepay":0,"cash":44770,"card1":0,"card2":0,"voucher":0,"sisa_voucher":0,"point":0,"housecharge":0,"piutang":0,"kembalian":0,"lastpoint":0,"getpoint":0,"transferno":0,"user_id":"admin","isWorkOrder":0,"isDelivery":0,"wodelivery_status":0,"deliverypickup":0}], "y_pos_detail":[{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"102","seqno":1,"detailseqno":0,"menuname":"Ayam Goreng","qty":1,"hjual":17000,"oldhjual":17000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":17000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"302","seqno":2,"detailseqno":0,"menuname":"Pudding Coklat","qty":1,"hjual":5000,"oldhjual":5000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":5000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"301","seqno":3,"detailseqno":0,"menuname":"Pudding Stberry","qty":1,"hjual":5000,"oldhjual":5000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":5000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"108","seqno":4,"detailseqno":0,"menuname":"Ayam Goreng Tep","qty":1,"hjual":10000,"oldhjual":10000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":10000,"discamount_promo":0}]}
+14:50:45 :REST request failed: Socket Error # 10060
+Connection timed out.
+14:50:45 :Export Server Running 0
+14:50:45 :Heartbeat POS Run
+14:50:45 :[Debug] Captured Time : 5/2/2016 2:50:45 PM
+14:50:45 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:50:45 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:50:45 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:50:45 :[Debug] Selected Record : 1
+14:50:45 :[Debug] Selected Record : 4
+14:50:45 :[Debug] Selected Record : 0
+14:50:45 :[Debug] [{"branchid":"DDR","kassa":"1","strukno":"1605000010","sessionid":2,"nonota":2,"strukdate":"2016-05-02","struktime":"14:49:46","tableid":"017","guestno":1,"customerid":"99","subtotal":37000,"discpercent":0,"discamount":0,"discamount2":0,"svcchgpercent":10,"svcchgamount":3700,"vatpercent":10,"vatamount":4070,"pembulatan":0,"xtrchgpercent":0,"xtrchgamount":0,"shippingamount":0,"discamount_promototal":0,"totalstruk":44770,"advancepay":0,"cash":44770,"card1":0,"card2":0,"voucher":0,"sisa_voucher":0,"point":0,"housecharge":0,"piutang":0,"kembalian":0,"lastpoint":0,"getpoint":0,"transferno":0,"user_id":"admin","isWorkOrder":0,"isDelivery":0,"wodelivery_status":0,"deliverypickup":0}]
+14:50:45 :[Debug] [{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"102","seqno":1,"detailseqno":0,"menuname":"Ayam Goreng","qty":1,"hjual":17000,"oldhjual":17000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":17000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"302","seqno":2,"detailseqno":0,"menuname":"Pudding Coklat","qty":1,"hjual":5000,"oldhjual":5000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":5000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"301","seqno":3,"detailseqno":0,"menuname":"Pudding Stberry","qty":1,"hjual":5000,"oldhjual":5000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":5000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"108","seqno":4,"detailseqno":0,"menuname":"Ayam Goreng Tep","qty":1,"hjual":10000,"oldhjual":10000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":10000,"discamount_promo":0}]
+14:50:45 :[Debug] 
+14:50:45 :PostJson to : http://divipos.app/post_pos
+14:50:45 :[Debug] {"y_pos":[{"branchid":"DDR","kassa":"1","strukno":"1605000010","sessionid":2,"nonota":2,"strukdate":"2016-05-02","struktime":"14:49:46","tableid":"017","guestno":1,"customerid":"99","subtotal":37000,"discpercent":0,"discamount":0,"discamount2":0,"svcchgpercent":10,"svcchgamount":3700,"vatpercent":10,"vatamount":4070,"pembulatan":0,"xtrchgpercent":0,"xtrchgamount":0,"shippingamount":0,"discamount_promototal":0,"totalstruk":44770,"advancepay":0,"cash":44770,"card1":0,"card2":0,"voucher":0,"sisa_voucher":0,"point":0,"housecharge":0,"piutang":0,"kembalian":0,"lastpoint":0,"getpoint":0,"transferno":0,"user_id":"admin","isWorkOrder":0,"isDelivery":0,"wodelivery_status":0,"deliverypickup":0}], "y_pos_detail":[{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"102","seqno":1,"detailseqno":0,"menuname":"Ayam Goreng","qty":1,"hjual":17000,"oldhjual":17000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":17000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"302","seqno":2,"detailseqno":0,"menuname":"Pudding Coklat","qty":1,"hjual":5000,"oldhjual":5000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":5000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"301","seqno":3,"detailseqno":0,"menuname":"Pudding Stberry","qty":1,"hjual":5000,"oldhjual":5000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":5000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"108","seqno":4,"detailseqno":0,"menuname":"Ayam Goreng Tep","qty":1,"hjual":10000,"oldhjual":10000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":10000,"discamount_promo":0}]}
+14:51:06 :REST request failed: Socket Error # 10060
+Connection timed out.
+14:51:06 :Import Server Running 0
+14:51:06 :Import Server Run
+14:51:06 :Start Import 
+14:51:27 :[Error] GetToken: REST request failed: Socket Error # 10060
+Connection timed out.
+14:51:27 :Token : 
+14:51:27 :Import Server Running 0
+14:51:27 :Import Server Run
+14:51:27 :Start Import 
+14:51:48 :[Error] GetToken: REST request failed: Socket Error # 10060
+Connection timed out.
+14:51:48 :Token : 
+14:51:48 :Export Server Running 0
+14:51:48 :Heartbeat POS Run
+14:51:48 :[Debug] Captured Time : 5/2/2016 2:51:48 PM
+14:51:48 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:51:48 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:51:48 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:51:48 :[Debug] Selected Record : 2
+14:51:48 :[Debug] Selected Record : 8
+14:51:48 :[Debug] Selected Record : 0
+14:51:48 :[Debug] [{"branchid":"DDR","kassa":"1","strukno":"1605000010","sessionid":2,"nonota":2,"strukdate":"2016-05-02","struktime":"14:49:46","tableid":"017","guestno":1,"customerid":"99","subtotal":37000,"discpercent":0,"discamount":0,"discamount2":0,"svcchgpercent":10,"svcchgamount":3700,"vatpercent":10,"vatamount":4070,"pembulatan":0,"xtrchgpercent":0,"xtrchgamount":0,"shippingamount":0,"discamount_promototal":0,"totalstruk":44770,"advancepay":0,"cash":44770,"card1":0,"card2":0,"voucher":0,"sisa_voucher":0,"point":0,"housecharge":0,"piutang":0,"kembalian":0,"lastpoint":0,"getpoint":0,"transferno":0,"user_id":"admin","isWorkOrder":0,"isDelivery":0,"wodelivery_status":0,"deliverypickup":0},{"branchid":"DDR","kassa":"1","strukno":"1605000011","sessionid":2,"nonota":3,"strukdate":"2016-05-02","struktime":"14:51:09","tableid":"017","guestno":1,"customerid":"99","subtotal":77000,"discpercent":0,"discamount":0,"discamount2":0,"svcchgpercent":10,"svcchgamount":7700,"vatpercent":10,"vatamount":8470,"pembulatan":0,"xtrchgpercent":0,"xtrchgamount":0,"shippingamount":0,"discamount_promototal":0,"totalstruk":93170,"advancepay":0,"cash":93170,"card1":0,"card2":0,"voucher":0,"sisa_voucher":0,"point":0,"housecharge":0,"piutang":0,"kembalian":0,"lastpoint":0,"getpoint":0,"transferno":0,"user_id":"admin","isWorkOrder":0,"isDelivery":0,"wodelivery_status":0,"deliverypickup":0}]
+14:51:48 :[Debug] [{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"102","seqno":1,"detailseqno":0,"menuname":"Ayam Goreng","qty":1,"hjual":17000,"oldhjual":17000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":17000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"302","seqno":2,"detailseqno":0,"menuname":"Pudding Coklat","qty":1,"hjual":5000,"oldhjual":5000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":5000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"301","seqno":3,"detailseqno":0,"menuname":"Pudding Stberry","qty":1,"hjual":5000,"oldhjual":5000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":5000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"108","seqno":4,"detailseqno":0,"menuname":"Ayam Goreng Tep","qty":1,"hjual":10000,"oldhjual":10000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":10000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000011","nonota":"3","menuid":"108","seqno":1,"detailseqno":0,"menuname":"Ayam Goreng Tep","qty":1,"hjual":10000,"oldhjual":10000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":10000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000011","nonota":"3","menuid":"105","seqno":2,"detailseqno":0,"menuname":"Ayam Sambal Ijo","qty":1,"hjual":19000,"oldhjual":19000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":19000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000011","nonota":"3","menuid":"109","seqno":3,"detailseqno":0,"menuname":"Ayam Kuluyuk","qty":1,"hjual":24000,"oldhjual":24000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":24000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000011","nonota":"3","menuid":"110","seqno":4,"detailseqno":0,"menuname":"Ayam Balado","qty":1,"hjual":24000,"oldhjual":24000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":24000,"discamount_promo":0}]
+14:51:48 :[Debug] 
+14:51:48 :PostJson to : http://divipos.app/post_pos
+14:51:48 :[Debug] {"y_pos":[{"branchid":"DDR","kassa":"1","strukno":"1605000010","sessionid":2,"nonota":2,"strukdate":"2016-05-02","struktime":"14:49:46","tableid":"017","guestno":1,"customerid":"99","subtotal":37000,"discpercent":0,"discamount":0,"discamount2":0,"svcchgpercent":10,"svcchgamount":3700,"vatpercent":10,"vatamount":4070,"pembulatan":0,"xtrchgpercent":0,"xtrchgamount":0,"shippingamount":0,"discamount_promototal":0,"totalstruk":44770,"advancepay":0,"cash":44770,"card1":0,"card2":0,"voucher":0,"sisa_voucher":0,"point":0,"housecharge":0,"piutang":0,"kembalian":0,"lastpoint":0,"getpoint":0,"transferno":0,"user_id":"admin","isWorkOrder":0,"isDelivery":0,"wodelivery_status":0,"deliverypickup":0},{"branchid":"DDR","kassa":"1","strukno":"1605000011","sessionid":2,"nonota":3,"strukdate":"2016-05-02","struktime":"14:51:09","tableid":"017","guestno":1,"customerid":"99","subtotal":77000,"discpercent":0,"discamount":0,"discamount2":0,"svcchgpercent":10,"svcchgamount":7700,"vatpercent":10,"vatamount":8470,"pembulatan":0,"xtrchgpercent":0,"xtrchgamount":0,"shippingamount":0,"discamount_promototal":0,"totalstruk":93170,"advancepay":0,"cash":93170,"card1":0,"card2":0,"voucher":0,"sisa_voucher":0,"point":0,"housecharge":0,"piutang":0,"kembalian":0,"lastpoint":0,"getpoint":0,"transferno":0,"user_id":"admin","isWorkOrder":0,"isDelivery":0,"wodelivery_status":0,"deliverypickup":0}], "y_pos_detail":[{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"102","seqno":1,"detailseqno":0,"menuname":"Ayam Goreng","qty":1,"hjual":17000,"oldhjual":17000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":17000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"302","seqno":2,"detailseqno":0,"menuname":"Pudding Coklat","qty":1,"hjual":5000,"oldhjual":5000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":5000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"301","seqno":3,"detailseqno":0,"menuname":"Pudding Stberry","qty":1,"hjual":5000,"oldhjual":5000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":5000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000010","nonota":"2","menuid":"108","seqno":4,"detailseqno":0,"menuname":"Ayam Goreng Tep","qty":1,"hjual":10000,"oldhjual":10000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":10000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000011","nonota":"3","menuid":"108","seqno":1,"detailseqno":0,"menuname":"Ayam Goreng Tep","qty":1,"hjual":10000,"oldhjual":10000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":10000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000011","nonota":"3","menuid":"105","seqno":2,"detailseqno":0,"menuname":"Ayam Sambal Ijo","qty":1,"hjual":19000,"oldhjual":19000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":19000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000011","nonota":"3","menuid":"109","seqno":3,"detailseqno":0,"menuname":"Ayam Kuluyuk","qty":1,"hjual":24000,"oldhjual":24000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":24000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000011","nonota":"3","menuid":"110","seqno":4,"detailseqno":0,"menuname":"Ayam Balado","qty":1,"hjual":24000,"oldhjual":24000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":24000,"discamount_promo":0}]}
+14:51:50 :Request Success
+14:51:50 :[Debug] strukno = 1605000010<br/>strukno = 1605000011<br/>menu = 102<br/>menu = 302<br/>menu = 301<br/>menu = 108<br/>menu = 108<br/>menu = 105<br/>menu = 109<br/>menu = 110<br/>
+14:51:50 :[Debug] PostTest Return : -1
+14:51:50 :[Debug]  UPDATE userlog_201604  SET stasend = 1  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:51:48 PM' 
+14:51:50 :[Debug]  UPDATE userlog_201605  SET stasend = 1  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:51:48 PM' 
+14:51:50 :Export Server Running 0
+14:51:50 :Heartbeat POS Run
+14:51:50 :[Debug] Captured Time : 5/2/2016 2:51:50 PM
+14:51:50 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:51:50 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:51:50 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:51:50 :[Debug] Selected Record : 0
+14:51:50 :Import Server Running 0
+14:51:50 :Import Server Run
+14:51:50 :Start Import 
+14:51:50 :[Debug] {"hbe_exportedtoken":"pJ6DQ4sfPt2Pjy06bpapr2aFCDyK51","hbe_currexporteddt":"2016-05-02 07:51:50"}
+14:51:50 :Token : pJ6DQ4sfPt2Pjy06bpapr2aFCDyK51
+14:51:51 :[Debug] Kitchen : []
+14:51:52 :[Debug] Locations : []
+14:51:52 :[Debug] Tables : []
+14:51:53 :[Debug] EDCs : []
+14:51:53 :[Debug] Jabatan : []
+14:51:54 :[Debug] Kru/Karyawan : []
+14:51:55 :[Debug] Customer/member : []
+14:51:55 :Finish Import 
+14:51:55 :Import Server Running 0
+14:51:55 :Import Server Run
+14:51:55 :Start Import 
+14:51:56 :[Debug] {"hbe_exportedtoken":"5nmhSBB8yKFld89ZLSjzCTxSdxrIp5","hbe_currexporteddt":"2016-05-02 07:51:56"}
+14:51:56 :Token : 5nmhSBB8yKFld89ZLSjzCTxSdxrIp5
+14:51:56 :[Debug] Kitchen : []
+14:51:56 :[Debug] Locations : []
+14:51:58 :[Debug] Tables : []
+14:51:58 :[Debug] EDCs : []
+14:51:58 :[Debug] Jabatan : []
+14:51:59 :[Debug] Kru/Karyawan : []
+14:51:59 :[Debug] Customer/member : []
+14:51:59 :Finish Import 
+14:52:00 :Export Server Running 0
+14:52:00 :Heartbeat POS Run
+14:52:00 :[Debug] Captured Time : 5/2/2016 2:52:00 PM
+14:52:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:52:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:52:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:52:00 :[Debug] Selected Record : 0
+14:52:00 :Export Server Running 0
+14:52:00 :Heartbeat POS Run
+14:52:00 :[Debug] Captured Time : 5/2/2016 2:52:00 PM
+14:52:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:52:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:52:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:52:00 :[Debug] Selected Record : 0
+14:52:00 :Import Server Running 0
+14:52:00 :Import Server Run
+14:52:00 :Start Import 
+14:52:01 :[Debug] {"hbe_exportedtoken":"JUZ4jLt8GqV3PqayvfLQdGZyMiXRCr","hbe_currexporteddt":"2016-05-02 07:52:01"}
+14:52:01 :Token : JUZ4jLt8GqV3PqayvfLQdGZyMiXRCr
+14:52:04 :[Debug] Kitchen : []
+14:52:05 :[Debug] Locations : []
+14:52:06 :[Debug] Tables : []
+14:52:06 :[Debug] EDCs : []
+14:52:07 :[Debug] Jabatan : []
+14:52:08 :[Debug] Kru/Karyawan : []
+14:52:08 :[Debug] Customer/member : []
+14:52:08 :Finish Import 
+14:52:09 :Import Server Running 0
+14:52:09 :Import Server Run
+14:52:09 :Start Import 
+14:52:09 :[Debug] {"hbe_exportedtoken":"HMKb6oxQDYTLmF3SJQwFubbi8D1HiQ","hbe_currexporteddt":"2016-05-02 07:52:09"}
+14:52:09 :Token : HMKb6oxQDYTLmF3SJQwFubbi8D1HiQ
+14:52:10 :[Debug] Kitchen : []
+14:52:11 :[Debug] Locations : []
+14:52:11 :[Debug] Tables : []
+14:52:12 :[Debug] EDCs : []
+14:52:12 :[Debug] Jabatan : []
+14:52:12 :[Debug] Kru/Karyawan : []
+14:52:14 :[Debug] Customer/member : []
+14:52:14 :Finish Import 
+14:52:15 :Export Server Running 0
+14:52:15 :Heartbeat POS Run
+14:52:15 :[Debug] Captured Time : 5/2/2016 2:52:15 PM
+14:52:15 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:52:15 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:52:15 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:52:15 :[Debug] Selected Record : 0
+14:52:20 :Export Server Running 0
+14:52:20 :Heartbeat POS Run
+14:52:20 :[Debug] Captured Time : 5/2/2016 2:52:20 PM
+14:52:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:52:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:52:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:52:20 :[Debug] Selected Record : 0
+14:52:20 :Import Server Running 0
+14:52:20 :Import Server Run
+14:52:20 :Start Import 
+14:52:21 :[Debug] {"hbe_exportedtoken":"4CLWBWS8UlA01KxggujKeoBb4xC2Cy","hbe_currexporteddt":"2016-05-02 07:52:21"}
+14:52:21 :Token : 4CLWBWS8UlA01KxggujKeoBb4xC2Cy
+14:52:21 :[Debug] Kitchen : []
+14:52:22 :[Debug] Locations : []
+14:52:22 :[Debug] Tables : []
+14:52:22 :[Debug] EDCs : []
+14:52:24 :[Debug] Jabatan : []
+14:52:24 :[Debug] Kru/Karyawan : []
+14:52:24 :[Debug] Customer/member : []
+14:52:24 :Finish Import 
+14:52:40 :Import Server Running 0
+14:52:40 :Import Server Run
+14:52:40 :Start Import 
+14:52:41 :[Debug] {"hbe_exportedtoken":"vaviRU29D0DtfOnKRFuJurv7dtLbAQ","hbe_currexporteddt":"2016-05-02 07:52:41"}
+14:52:41 :Token : vaviRU29D0DtfOnKRFuJurv7dtLbAQ
+14:52:41 :[Debug] Kitchen : []
+14:52:42 :[Debug] Locations : []
+14:52:42 :[Debug] Tables : []
+14:52:43 :[Debug] EDCs : []
+14:52:44 :[Debug] Jabatan : []
+14:52:44 :[Debug] Kru/Karyawan : []
+14:52:45 :[Debug] Customer/member : []
+14:52:45 :Finish Import 
+14:52:45 :Export Server Running 0
+14:52:45 :Heartbeat POS Run
+14:52:45 :[Debug] Captured Time : 5/2/2016 2:52:45 PM
+14:52:45 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:52:45 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:52:45 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:52:45 :[Debug] Selected Record : 1
+14:52:45 :[Debug] Selected Record : 2
+14:52:45 :[Debug] Selected Record : 0
+14:52:45 :[Debug] [{"branchid":"DDR","kassa":"1","strukno":"1605000012","sessionid":2,"nonota":4,"strukdate":"2016-05-02","struktime":"14:52:27","tableid":"013","guestno":1,"customerid":"99","subtotal":42000,"discpercent":0,"discamount":0,"discamount2":0,"svcchgpercent":10,"svcchgamount":4200,"vatpercent":10,"vatamount":4620,"pembulatan":0,"xtrchgpercent":0,"xtrchgamount":0,"shippingamount":0,"discamount_promototal":0,"totalstruk":50820,"advancepay":0,"cash":50820,"card1":0,"card2":0,"voucher":0,"sisa_voucher":0,"point":0,"housecharge":0,"piutang":0,"kembalian":0,"lastpoint":0,"getpoint":0,"transferno":0,"user_id":"admin","isWorkOrder":0,"isDelivery":0,"wodelivery_status":0,"deliverypickup":0}]
+14:52:45 :[Debug] [{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000012","nonota":"4","menuid":"107","seqno":1,"detailseqno":0,"menuname":"Sate Ayam","qty":1,"hjual":24000,"oldhjual":24000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":24000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000012","nonota":"4","menuid":"104","seqno":2,"detailseqno":0,"menuname":"Ayam Penyet","qty":1,"hjual":18000,"oldhjual":18000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":18000,"discamount_promo":0}]
+14:52:45 :[Debug] 
+14:52:45 :PostJson to : http://divipos.app/post_pos
+14:52:45 :[Debug] {"y_pos":[{"branchid":"DDR","kassa":"1","strukno":"1605000012","sessionid":2,"nonota":4,"strukdate":"2016-05-02","struktime":"14:52:27","tableid":"013","guestno":1,"customerid":"99","subtotal":42000,"discpercent":0,"discamount":0,"discamount2":0,"svcchgpercent":10,"svcchgamount":4200,"vatpercent":10,"vatamount":4620,"pembulatan":0,"xtrchgpercent":0,"xtrchgamount":0,"shippingamount":0,"discamount_promototal":0,"totalstruk":50820,"advancepay":0,"cash":50820,"card1":0,"card2":0,"voucher":0,"sisa_voucher":0,"point":0,"housecharge":0,"piutang":0,"kembalian":0,"lastpoint":0,"getpoint":0,"transferno":0,"user_id":"admin","isWorkOrder":0,"isDelivery":0,"wodelivery_status":0,"deliverypickup":0}], "y_pos_detail":[{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000012","nonota":"4","menuid":"107","seqno":1,"detailseqno":0,"menuname":"Sate Ayam","qty":1,"hjual":24000,"oldhjual":24000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":24000,"discamount_promo":0},{"sessionid":2,"branchid":"DDR","kassa":"1","strukno":"1605000012","nonota":"4","menuid":"104","seqno":2,"detailseqno":0,"menuname":"Ayam Penyet","qty":1,"hjual":18000,"oldhjual":18000,"hpp":0,"discpercent":0,"discamount":0,"discamount2":0,"ppn_detail":0,"totalamount":18000,"discamount_promo":0}]}
+14:52:47 :Request Success
+14:52:47 :[Debug] strukno = 1605000012<br/>menu = 107<br/>menu = 104<br/>
+14:52:47 :[Debug] PostTest Return : -1
+14:52:47 :[Debug]  UPDATE userlog_201604  SET stasend = 1  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:52:45 PM' 
+14:52:47 :[Debug]  UPDATE userlog_201605  SET stasend = 1  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:52:45 PM' 
+14:53:00 :Export Server Running 0
+14:53:00 :Heartbeat POS Run
+14:53:00 :[Debug] Captured Time : 5/2/2016 2:53:00 PM
+14:53:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:53:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:53:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:53:00 :[Debug] Selected Record : 0
+14:53:00 :Import Server Running 0
+14:53:00 :Import Server Run
+14:53:00 :Start Import 
+14:53:01 :[Debug] {"hbe_exportedtoken":"l5PAK0VldXWzZl58QHgP6hKyv8rX2l","hbe_currexporteddt":"2016-05-02 07:53:01"}
+14:53:01 :Token : l5PAK0VldXWzZl58QHgP6hKyv8rX2l
+14:53:02 :[Debug] Kitchen : []
+14:53:02 :[Debug] Locations : []
+14:53:03 :[Debug] Tables : []
+14:53:04 :[Debug] EDCs : []
+14:53:04 :[Debug] Jabatan : []
+14:53:05 :[Debug] Kru/Karyawan : []
+14:53:05 :[Debug] Customer/member : []
+14:53:05 :Finish Import 
+14:53:20 :Import Server Running 0
+14:53:20 :Import Server Run
+14:53:20 :Start Import 
+14:53:21 :[Debug] {"hbe_exportedtoken":"bTsHH72vtGJ2TNk4bGJ0pMhX4zXqIA","hbe_currexporteddt":"2016-05-02 07:53:21"}
+14:53:21 :Token : bTsHH72vtGJ2TNk4bGJ0pMhX4zXqIA
+14:53:22 :[Debug] Kitchen : []
+14:53:22 :[Debug] Locations : []
+14:53:23 :[Debug] Tables : []
+14:53:24 :[Debug] EDCs : []
+14:53:24 :[Debug] Jabatan : []
+14:53:24 :[Debug] Kru/Karyawan : []
+14:53:25 :[Debug] Customer/member : []
+14:53:25 :Finish Import 
+14:53:25 :Export Server Running 0
+14:53:25 :Heartbeat POS Run
+14:53:25 :[Debug] Captured Time : 5/2/2016 2:53:25 PM
+14:53:25 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:53:25 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:53:25 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:53:25 :[Debug] Selected Record : 0
+14:53:40 :Export Server Running 0
+14:53:40 :Heartbeat POS Run
+14:53:40 :[Debug] Captured Time : 5/2/2016 2:53:40 PM
+14:53:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:53:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:53:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:53:40 :[Debug] Selected Record : 0
+14:53:40 :Import Server Running 0
+14:53:40 :Import Server Run
+14:53:40 :Start Import 
+14:53:41 :[Debug] {"hbe_exportedtoken":"B8ZzkKCtDWTCudkHhr2GwQvUVIg0E4","hbe_currexporteddt":"2016-05-02 07:53:41"}
+14:53:41 :Token : B8ZzkKCtDWTCudkHhr2GwQvUVIg0E4
+14:53:42 :[Debug] Kitchen : []
+14:53:42 :[Debug] Locations : []
+14:53:43 :[Debug] Tables : []
+14:53:46 :[Debug] EDCs : []
+14:53:47 :[Debug] Jabatan : []
+14:53:48 :[Debug] Kru/Karyawan : []
+14:53:48 :[Debug] Customer/member : []
+14:53:48 :Finish Import 
+14:54:00 :Import Server Running 0
+14:54:00 :Import Server Run
+14:54:00 :Start Import 
+14:54:01 :[Debug] {"hbe_exportedtoken":"L5vm3SOeR9PubImqptNoB4tqmqwHoa","hbe_currexporteddt":"2016-05-02 07:54:01"}
+14:54:01 :Token : L5vm3SOeR9PubImqptNoB4tqmqwHoa
+14:54:02 :[Debug] Kitchen : []
+14:54:02 :[Debug] Locations : []
+14:54:02 :[Debug] Tables : []
+14:54:04 :[Debug] EDCs : []
+14:54:05 :[Debug] Jabatan : []
+14:54:05 :[Debug] Kru/Karyawan : []
+14:54:05 :[Debug] Customer/member : []
+14:54:05 :Finish Import 
+14:54:06 :Export Server Running 0
+14:54:07 :Heartbeat POS Run
+14:54:07 :[Debug] Captured Time : 5/2/2016 2:54:07 PM
+14:54:07 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:54:07 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:54:07 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:54:07 :[Debug] Selected Record : 0
+14:54:20 :Export Server Running 0
+14:54:20 :Heartbeat POS Run
+14:54:20 :[Debug] Captured Time : 5/2/2016 2:54:20 PM
+14:54:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:54:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:54:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:54:20 :[Debug] Selected Record : 0
+14:54:20 :Import Server Running 0
+14:54:20 :Import Server Run
+14:54:20 :Start Import 
+14:54:21 :[Debug] {"hbe_exportedtoken":"1p8Y0jIGc82AcG554wUAPUZJoYC7hs","hbe_currexporteddt":"2016-05-02 07:54:21"}
+14:54:21 :Token : 1p8Y0jIGc82AcG554wUAPUZJoYC7hs
+14:54:21 :[Debug] Kitchen : []
+14:54:22 :[Debug] Locations : []
+14:54:22 :[Debug] Tables : []
+14:54:22 :[Debug] EDCs : []
+14:54:23 :[Debug] Jabatan : []
+14:54:24 :[Debug] Kru/Karyawan : []
+14:54:24 :[Debug] Customer/member : []
+14:54:24 :Finish Import 
+14:54:40 :Import Server Running 0
+14:54:40 :Import Server Run
+14:54:40 :Start Import 
+14:54:41 :[Debug] {"hbe_exportedtoken":"10Be84o0OnYroygw4tjdFHNnoereEa","hbe_currexporteddt":"2016-05-02 07:54:41"}
+14:54:41 :Token : 10Be84o0OnYroygw4tjdFHNnoereEa
+14:54:41 :[Debug] Kitchen : []
+14:54:41 :[Debug] Locations : []
+14:54:42 :[Debug] Tables : []
+14:54:42 :[Debug] EDCs : []
+14:54:43 :[Debug] Jabatan : []
+14:54:44 :[Debug] Kru/Karyawan : []
+14:54:44 :[Debug] Customer/member : []
+14:54:44 :Finish Import 
+14:54:45 :Export Server Running 0
+14:54:45 :Heartbeat POS Run
+14:54:45 :[Debug] Captured Time : 5/2/2016 2:54:45 PM
+14:54:45 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:54:45 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:54:45 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:54:45 :[Debug] Selected Record : 0
+14:55:00 :Export Server Running 0
+14:55:00 :Heartbeat POS Run
+14:55:00 :[Debug] Captured Time : 5/2/2016 2:55:00 PM
+14:55:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:55:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:55:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:55:00 :[Debug] Selected Record : 0
+14:55:00 :Import Server Running 0
+14:55:00 :Import Server Run
+14:55:00 :Start Import 
+14:55:01 :[Debug] {"hbe_exportedtoken":"dI8w7d24g9wNAkjpjvlAlzqQS6XpdM","hbe_currexporteddt":"2016-05-02 07:55:01"}
+14:55:01 :Token : dI8w7d24g9wNAkjpjvlAlzqQS6XpdM
+14:55:01 :[Debug] Kitchen : []
+14:55:02 :[Debug] Locations : []
+14:55:03 :[Debug] Tables : []
+14:55:05 :[Debug] EDCs : []
+14:55:05 :[Debug] Jabatan : []
+14:55:06 :[Debug] Kru/Karyawan : []
+14:55:08 :[Debug] Customer/member : []
+14:55:08 :Finish Import 
+14:55:20 :Import Server Running 0
+14:55:20 :Import Server Run
+14:55:20 :Start Import 
+14:55:21 :[Debug] {"hbe_exportedtoken":"xAJMB714mXirHzuvNVRyw9Nb6Nk3zH","hbe_currexporteddt":"2016-05-02 07:55:21"}
+14:55:21 :Token : xAJMB714mXirHzuvNVRyw9Nb6Nk3zH
+14:55:21 :[Debug] Kitchen : []
+14:55:21 :[Debug] Locations : []
+14:55:22 :[Debug] Tables : []
+14:55:22 :[Debug] EDCs : []
+14:55:23 :[Debug] Jabatan : []
+14:55:24 :[Debug] Kru/Karyawan : []
+14:55:24 :[Debug] Customer/member : []
+14:55:24 :Finish Import 
+14:55:25 :Export Server Running 0
+14:55:25 :Heartbeat POS Run
+14:55:25 :[Debug] Captured Time : 5/2/2016 2:55:25 PM
+14:55:25 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:55:25 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:55:25 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:55:25 :[Debug] Selected Record : 0
+14:55:40 :Export Server Running 0
+14:55:40 :Heartbeat POS Run
+14:55:40 :[Debug] Captured Time : 5/2/2016 2:55:40 PM
+14:55:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:55:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:55:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:55:40 :[Debug] Selected Record : 0
+14:55:40 :Import Server Running 0
+14:55:40 :Import Server Run
+14:55:40 :Start Import 
+14:55:41 :[Debug] {"hbe_exportedtoken":"jTwmbTDYBVEO9iq0Md5vjQyNnfoOrJ","hbe_currexporteddt":"2016-05-02 07:55:41"}
+14:55:41 :Token : jTwmbTDYBVEO9iq0Md5vjQyNnfoOrJ
+14:55:41 :[Debug] Kitchen : []
+14:55:42 :[Debug] Locations : []
+14:55:42 :[Debug] Tables : []
+14:55:42 :[Debug] EDCs : []
+14:55:44 :[Debug] Jabatan : []
+14:55:44 :[Debug] Kru/Karyawan : []
+14:55:47 :[Debug] Customer/member : []
+14:55:47 :Finish Import 
+14:56:00 :Export Server Running 0
+14:56:00 :Heartbeat POS Run
+14:56:00 :[Debug] Captured Time : 5/2/2016 2:56:00 PM
+14:56:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:56:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:56:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:56:00 :[Debug] Selected Record : 0
+14:56:00 :Import Server Running 0
+14:56:00 :Import Server Run
+14:56:00 :Start Import 
+14:56:01 :[Debug] {"hbe_exportedtoken":"1JW4D55wbSVqcryz5BE6MWwGpVlpvd","hbe_currexporteddt":"2016-05-02 07:56:01"}
+14:56:01 :Token : 1JW4D55wbSVqcryz5BE6MWwGpVlpvd
+14:56:01 :[Debug] Kitchen : []
+14:56:01 :[Debug] Locations : []
+14:56:02 :[Debug] Tables : []
+14:56:02 :[Debug] EDCs : []
+14:56:03 :[Debug] Jabatan : []
+14:56:04 :[Debug] Kru/Karyawan : []
+14:56:04 :[Debug] Customer/member : []
+14:56:04 :Finish Import 
+14:56:20 :Import Server Running 0
+14:56:20 :Import Server Run
+14:56:20 :Start Import 
+14:56:20 :[Debug] {"hbe_exportedtoken":"mfWMgnzYn6Wm16EUWYbOKnnqSWvuRE","hbe_currexporteddt":"2016-05-02 07:56:20"}
+14:56:20 :Token : mfWMgnzYn6Wm16EUWYbOKnnqSWvuRE
+14:56:21 :[Debug] Kitchen : []
+14:56:21 :[Debug] Locations : []
+14:56:22 :[Debug] Tables : []
+14:56:23 :[Debug] EDCs : []
+14:56:23 :[Debug] Jabatan : []
+14:56:23 :[Debug] Kru/Karyawan : []
+14:56:24 :[Debug] Customer/member : []
+14:56:24 :Finish Import 
+14:56:24 :Export Server Running 0
+14:56:24 :Heartbeat POS Run
+14:56:24 :[Debug] Captured Time : 5/2/2016 2:56:24 PM
+14:56:24 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:56:24 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:56:24 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:56:24 :[Debug] Selected Record : 0
+14:56:40 :Export Server Running 0
+14:56:40 :Heartbeat POS Run
+14:56:40 :[Debug] Captured Time : 5/2/2016 2:56:40 PM
+14:56:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:56:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:56:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:56:40 :[Debug] Selected Record : 0
+14:56:40 :Import Server Running 0
+14:56:40 :Import Server Run
+14:56:40 :Start Import 
+14:56:41 :[Debug] {"hbe_exportedtoken":"qFUmy1GUbck4GERQQwxXrz2i6V1YKy","hbe_currexporteddt":"2016-05-02 07:56:41"}
+14:56:41 :Token : qFUmy1GUbck4GERQQwxXrz2i6V1YKy
+14:56:42 :[Debug] Kitchen : []
+14:56:42 :[Debug] Locations : []
+14:56:42 :[Debug] Tables : []
+14:56:44 :[Debug] EDCs : []
+14:56:44 :[Debug] Jabatan : []
+14:56:44 :[Debug] Kru/Karyawan : []
+14:56:45 :[Debug] Customer/member : []
+14:56:45 :Finish Import 
+14:57:00 :Import Server Running 0
+14:57:00 :Import Server Run
+14:57:00 :Start Import 
+14:57:01 :[Debug] {"hbe_exportedtoken":"KPTTHwe33djAkOdUGornRfrq85P6xH","hbe_currexporteddt":"2016-05-02 07:57:01"}
+14:57:01 :Token : KPTTHwe33djAkOdUGornRfrq85P6xH
+14:57:02 :[Debug] Kitchen : []
+14:57:02 :[Debug] Locations : []
+14:57:03 :[Debug] Tables : []
+14:57:04 :[Debug] EDCs : []
+14:57:04 :[Debug] Jabatan : []
+14:57:04 :[Debug] Kru/Karyawan : []
+14:57:05 :[Debug] Customer/member : []
+14:57:05 :Finish Import 
+14:57:05 :Export Server Running 0
+14:57:05 :Heartbeat POS Run
+14:57:05 :[Debug] Captured Time : 5/2/2016 2:57:05 PM
+14:57:05 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:57:05 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:57:05 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:57:05 :[Debug] Selected Record : 0
+14:57:20 :Export Server Running 0
+14:57:20 :Heartbeat POS Run
+14:57:20 :[Debug] Captured Time : 5/2/2016 2:57:20 PM
+14:57:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:57:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:57:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:57:20 :[Debug] Selected Record : 0
+14:57:20 :Import Server Running 0
+14:57:20 :Import Server Run
+14:57:20 :Start Import 
+14:57:21 :[Debug] {"hbe_exportedtoken":"FXfEVg4tqpZqCwR505nUxXIG4rTRuA","hbe_currexporteddt":"2016-05-02 07:57:21"}
+14:57:21 :Token : FXfEVg4tqpZqCwR505nUxXIG4rTRuA
+14:57:22 :[Debug] Kitchen : []
+14:57:22 :[Debug] Locations : []
+14:57:22 :[Debug] Tables : []
+14:57:24 :[Debug] EDCs : []
+14:57:24 :[Debug] Jabatan : []
+14:57:24 :[Debug] Kru/Karyawan : []
+14:57:25 :[Debug] Customer/member : []
+14:57:25 :Finish Import 
+14:57:40 :Import Server Running 0
+14:57:40 :Import Server Run
+14:57:40 :Start Import 
+14:57:42 :[Debug] {"hbe_exportedtoken":"qZ9qOtWcmlUKkMvaXkVfgQ94eQ4el5","hbe_currexporteddt":"2016-05-02 07:57:42"}
+14:57:42 :Token : qZ9qOtWcmlUKkMvaXkVfgQ94eQ4el5
+14:57:43 :[Debug] Kitchen : []
+14:57:46 :[Debug] Locations : []
+14:57:47 :[Debug] Tables : []
+14:57:47 :[Debug] EDCs : []
+14:57:48 :[Debug] Jabatan : []
+14:57:48 :[Debug] Kru/Karyawan : []
+14:57:49 :[Debug] Customer/member : []
+14:57:49 :Finish Import 
+14:57:50 :Export Server Running 0
+14:57:50 :Heartbeat POS Run
+14:57:50 :[Debug] Captured Time : 5/2/2016 2:57:50 PM
+14:57:50 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:57:50 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:57:50 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:57:50 :[Debug] Selected Record : 0
+14:58:00 :Export Server Running 0
+14:58:00 :Heartbeat POS Run
+14:58:00 :[Debug] Captured Time : 5/2/2016 2:58:00 PM
+14:58:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:58:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:58:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:58:00 :[Debug] Selected Record : 0
+14:58:00 :Import Server Running 0
+14:58:00 :Import Server Run
+14:58:00 :Start Import 
+14:58:01 :[Debug] {"hbe_exportedtoken":"pWTQ6nsqM1hFOLBR7OYq8KyP9HLFpZ","hbe_currexporteddt":"2016-05-02 07:58:01"}
+14:58:01 :Token : pWTQ6nsqM1hFOLBR7OYq8KyP9HLFpZ
+14:58:02 :[Debug] Kitchen : []
+14:58:02 :[Debug] Locations : []
+14:58:03 :[Debug] Tables : []
+14:58:04 :[Debug] EDCs : []
+14:58:05 :[Debug] Jabatan : []
+14:58:05 :[Debug] Kru/Karyawan : []
+14:58:05 :[Debug] Customer/member : []
+14:58:05 :Finish Import 
+14:58:20 :Import Server Running 0
+14:58:20 :Import Server Run
+14:58:20 :Start Import 
+14:58:23 :[Debug] {"hbe_exportedtoken":"sS7y12affGTBehgjrzIEWDQ9t9UtJU","hbe_currexporteddt":"2016-05-02 07:58:21"}
+14:58:23 :Token : sS7y12affGTBehgjrzIEWDQ9t9UtJU
+14:58:24 :[Debug] Kitchen : []
+14:58:25 :[Debug] Locations : []
+14:58:25 :[Debug] Tables : []
+14:58:26 :[Debug] EDCs : []
+14:58:26 :[Debug] Jabatan : []
+14:58:27 :[Debug] Kru/Karyawan : []
+14:58:28 :[Debug] Customer/member : []
+14:58:28 :Finish Import 
+14:58:28 :Export Server Running 0
+14:58:28 :Heartbeat POS Run
+14:58:28 :[Debug] Captured Time : 5/2/2016 2:58:28 PM
+14:58:28 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:58:28 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:58:28 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:58:28 :[Debug] Selected Record : 0
+14:58:40 :Export Server Running 0
+14:58:40 :Heartbeat POS Run
+14:58:40 :[Debug] Captured Time : 5/2/2016 2:58:40 PM
+14:58:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:58:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:58:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:58:40 :[Debug] Selected Record : 0
+14:58:40 :Import Server Running 0
+14:58:40 :Import Server Run
+14:58:40 :Start Import 
+14:58:42 :[Debug] {"hbe_exportedtoken":"Hr5tGhOjII516PVAwAKDJmu3EBtU3E","hbe_currexporteddt":"2016-05-02 07:58:42"}
+14:58:42 :Token : Hr5tGhOjII516PVAwAKDJmu3EBtU3E
+14:58:42 :[Debug] Kitchen : []
+14:58:43 :[Debug] Locations : []
+14:58:45 :[Debug] Tables : []
+14:58:46 :[Debug] EDCs : []
+14:58:47 :[Debug] Jabatan : []
+14:58:48 :[Debug] Kru/Karyawan : []
+14:58:48 :[Debug] Customer/member : []
+14:58:48 :Finish Import 
+14:59:00 :Import Server Running 0
+14:59:00 :Import Server Run
+14:59:00 :Start Import 
+14:59:01 :[Debug] {"hbe_exportedtoken":"e180HrxYSxlgxUXM9BNlkIS8hDv5RI","hbe_currexporteddt":"2016-05-02 07:59:01"}
+14:59:01 :Token : e180HrxYSxlgxUXM9BNlkIS8hDv5RI
+14:59:02 :[Debug] Kitchen : []
+14:59:02 :[Debug] Locations : []
+14:59:02 :[Debug] Tables : []
+14:59:03 :[Debug] EDCs : []
+14:59:04 :[Debug] Jabatan : []
+14:59:04 :[Debug] Kru/Karyawan : []
+14:59:05 :[Debug] Customer/member : []
+14:59:05 :Finish Import 
+14:59:05 :Export Server Running 0
+14:59:05 :Heartbeat POS Run
+14:59:05 :[Debug] Captured Time : 5/2/2016 2:59:05 PM
+14:59:05 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:59:05 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:59:05 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:59:05 :[Debug] Selected Record : 0
+14:59:20 :Export Server Running 0
+14:59:20 :Heartbeat POS Run
+14:59:20 :[Debug] Captured Time : 5/2/2016 2:59:20 PM
+14:59:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:59:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:59:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:59:20 :[Debug] Selected Record : 0
+14:59:20 :Import Server Running 0
+14:59:20 :Import Server Run
+14:59:20 :Start Import 
+14:59:21 :[Debug] {"hbe_exportedtoken":"bNtL1v2ZTCTr1F8T6l5EN4YlYQozXe","hbe_currexporteddt":"2016-05-02 07:59:21"}
+14:59:21 :Token : bNtL1v2ZTCTr1F8T6l5EN4YlYQozXe
+14:59:22 :[Debug] Kitchen : []
+14:59:22 :[Debug] Locations : []
+14:59:22 :[Debug] Tables : []
+14:59:24 :[Debug] EDCs : []
+14:59:24 :[Debug] Jabatan : []
+14:59:24 :[Debug] Kru/Karyawan : []
+14:59:25 :[Debug] Customer/member : []
+14:59:25 :Finish Import 
+14:59:40 :Import Server Running 0
+14:59:40 :Import Server Run
+14:59:40 :Start Import 
+14:59:41 :[Debug] {"hbe_exportedtoken":"tqr6WMPKA66RP4ntN3doDQ5yEHKNcG","hbe_currexporteddt":"2016-05-02 07:59:41"}
+14:59:41 :Token : tqr6WMPKA66RP4ntN3doDQ5yEHKNcG
+14:59:42 :[Debug] Kitchen : []
+14:59:42 :[Debug] Locations : []
+14:59:42 :[Debug] Tables : []
+14:59:44 :[Debug] EDCs : []
+14:59:44 :[Debug] Jabatan : []
+14:59:44 :[Debug] Kru/Karyawan : []
+14:59:45 :[Debug] Customer/member : []
+14:59:45 :Finish Import 
+14:59:45 :Export Server Running 0
+14:59:45 :Heartbeat POS Run
+14:59:45 :[Debug] Captured Time : 5/2/2016 2:59:45 PM
+14:59:45 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:59:45 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 2:59:45 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+14:59:45 :[Debug] Selected Record : 0
+15:00:00 :Export Server Running 0
+15:00:00 :Heartbeat POS Run
+15:00:00 :[Debug] Captured Time : 5/2/2016 3:00:00 PM
+15:00:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:00:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:00:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:00:00 :[Debug] Selected Record : 0
+15:00:00 :Import Server Running 0
+15:00:00 :Import Server Run
+15:00:00 :Start Import 
+15:00:01 :[Debug] {"hbe_exportedtoken":"HGddmhzu81EH7zA52CiMKDUArq82Y6","hbe_currexporteddt":"2016-05-02 08:00:01"}
+15:00:01 :Token : HGddmhzu81EH7zA52CiMKDUArq82Y6
+15:00:02 :[Debug] Kitchen : []
+15:00:02 :[Debug] Locations : []
+15:00:02 :[Debug] Tables : []
+15:00:04 :[Debug] EDCs : []
+15:00:04 :[Debug] Jabatan : []
+15:00:04 :[Debug] Kru/Karyawan : []
+15:00:05 :[Debug] Customer/member : []
+15:00:05 :Finish Import 
+15:00:20 :Import Server Running 0
+15:00:20 :Import Server Run
+15:00:20 :Start Import 
+15:00:21 :[Debug] {"hbe_exportedtoken":"R47SIldWpbHzLHuDmQ6CNjtrIRUYM1","hbe_currexporteddt":"2016-05-02 08:00:21"}
+15:00:21 :Token : R47SIldWpbHzLHuDmQ6CNjtrIRUYM1
+15:00:22 :[Debug] Kitchen : []
+15:00:22 :[Debug] Locations : []
+15:00:22 :[Debug] Tables : []
+15:00:26 :[Debug] EDCs : []
+15:00:27 :[Debug] Jabatan : []
+15:00:28 :[Debug] Kru/Karyawan : []
+15:00:28 :[Debug] Customer/member : []
+15:00:28 :Finish Import 
+15:00:29 :Export Server Running 0
+15:00:29 :Heartbeat POS Run
+15:00:29 :[Debug] Captured Time : 5/2/2016 3:00:29 PM
+15:00:29 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:00:29 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:00:29 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:00:29 :[Debug] Selected Record : 0
+15:00:40 :Export Server Running 0
+15:00:40 :Heartbeat POS Run
+15:00:40 :[Debug] Captured Time : 5/2/2016 3:00:40 PM
+15:00:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:00:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:00:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:00:40 :[Debug] Selected Record : 0
+15:00:40 :Import Server Running 0
+15:00:40 :Import Server Run
+15:00:40 :Start Import 
+15:00:41 :[Debug] {"hbe_exportedtoken":"Clw00LcMnkIkqpDnftS9d7eezbWpfn","hbe_currexporteddt":"2016-05-02 08:00:41"}
+15:00:41 :Token : Clw00LcMnkIkqpDnftS9d7eezbWpfn
+15:00:41 :[Debug] Kitchen : []
+15:00:42 :[Debug] Locations : []
+15:00:42 :[Debug] Tables : []
+15:00:43 :[Debug] EDCs : []
+15:00:44 :[Debug] Jabatan : []
+15:00:44 :[Debug] Kru/Karyawan : []
+15:00:45 :[Debug] Customer/member : []
+15:00:45 :Finish Import 
+15:01:00 :Import Server Running 0
+15:01:00 :Import Server Run
+15:01:00 :Start Import 
+15:01:01 :[Debug] {"hbe_exportedtoken":"XAKMtJV1fmPpENBgKyPGbkVcUqjSp5","hbe_currexporteddt":"2016-05-02 08:01:01"}
+15:01:01 :Token : XAKMtJV1fmPpENBgKyPGbkVcUqjSp5
+15:01:01 :[Debug] Kitchen : []
+15:01:02 :[Debug] Locations : []
+15:01:02 :[Debug] Tables : []
+15:01:05 :[Debug] EDCs : []
+15:01:05 :[Debug] Jabatan : []
+15:01:06 :[Debug] Kru/Karyawan : []
+15:01:08 :[Debug] Customer/member : []
+15:01:08 :Finish Import 
+15:01:08 :Export Server Running 0
+15:01:08 :Heartbeat POS Run
+15:01:08 :[Debug] Captured Time : 5/2/2016 3:01:08 PM
+15:01:09 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:01:08 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:01:08 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:01:09 :[Debug] Selected Record : 0
+15:01:20 :Export Server Running 0
+15:01:20 :Heartbeat POS Run
+15:01:20 :[Debug] Captured Time : 5/2/2016 3:01:20 PM
+15:01:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:01:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:01:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:01:20 :[Debug] Selected Record : 0
+15:01:20 :Import Server Running 0
+15:01:20 :Import Server Run
+15:01:20 :Start Import 
+15:01:21 :[Debug] {"hbe_exportedtoken":"elQ23vv2PhcspPpQP2o8UKLJkPbXEk","hbe_currexporteddt":"2016-05-02 08:01:21"}
+15:01:21 :Token : elQ23vv2PhcspPpQP2o8UKLJkPbXEk
+15:01:21 :[Debug] Kitchen : []
+15:01:21 :[Debug] Locations : []
+15:01:22 :[Debug] Tables : []
+15:01:22 :[Debug] EDCs : []
+15:01:23 :[Debug] Jabatan : []
+15:01:24 :[Debug] Kru/Karyawan : []
+15:01:24 :[Debug] Customer/member : []
+15:01:24 :Finish Import 
+15:01:40 :Import Server Running 0
+15:01:40 :Import Server Run
+15:01:40 :Start Import 
+15:01:41 :[Debug] {"hbe_exportedtoken":"R1cBS6RbyHmkF520dBt3Qgc7bwwmXR","hbe_currexporteddt":"2016-05-02 08:01:41"}
+15:01:41 :Token : R1cBS6RbyHmkF520dBt3Qgc7bwwmXR
+15:01:41 :[Debug] Kitchen : []
+15:01:42 :[Debug] Locations : []
+15:01:42 :[Debug] Tables : []
+15:01:43 :[Debug] EDCs : []
+15:01:44 :[Debug] Jabatan : []
+15:01:45 :[Debug] Kru/Karyawan : []
+15:01:45 :[Debug] Customer/member : []
+15:01:45 :Finish Import 
+15:01:46 :Export Server Running 0
+15:01:46 :Heartbeat POS Run
+15:01:46 :[Debug] Captured Time : 5/2/2016 3:01:46 PM
+15:01:46 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:01:46 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:01:46 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:01:46 :[Debug] Selected Record : 0
+15:02:00 :Export Server Running 0
+15:02:00 :Heartbeat POS Run
+15:02:00 :[Debug] Captured Time : 5/2/2016 3:02:00 PM
+15:02:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:02:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:02:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:02:00 :[Debug] Selected Record : 0
+15:02:00 :Import Server Running 0
+15:02:00 :Import Server Run
+15:02:00 :Start Import 
+15:02:01 :[Debug] {"hbe_exportedtoken":"0yGWlnSOF14tGp6DaCxqKtdApwUpGv","hbe_currexporteddt":"2016-05-02 08:02:01"}
+15:02:01 :Token : 0yGWlnSOF14tGp6DaCxqKtdApwUpGv
+15:02:01 :[Debug] Kitchen : []
+15:02:01 :[Debug] Locations : []
+15:02:02 :[Debug] Tables : []
+15:02:02 :[Debug] EDCs : []
+15:02:06 :[Debug] Jabatan : []
+15:02:07 :[Debug] Kru/Karyawan : []
+15:02:07 :[Debug] Customer/member : []
+15:02:07 :Finish Import 
+15:02:20 :Import Server Running 0
+15:02:20 :Import Server Run
+15:02:20 :Start Import 
+15:02:21 :[Debug] {"hbe_exportedtoken":"we7raLkU13FrOWFwV37AWomXtJx4hC","hbe_currexporteddt":"2016-05-02 08:02:21"}
+15:02:21 :Token : we7raLkU13FrOWFwV37AWomXtJx4hC
+15:02:21 :[Debug] Kitchen : []
+15:02:21 :[Debug] Locations : []
+15:02:22 :[Debug] Tables : []
+15:02:22 :[Debug] EDCs : []
+15:02:23 :[Debug] Jabatan : []
+15:02:24 :[Debug] Kru/Karyawan : []
+15:02:24 :[Debug] Customer/member : []
+15:02:24 :Finish Import 
+15:02:25 :Export Server Running 0
+15:02:25 :Heartbeat POS Run
+15:02:25 :[Debug] Captured Time : 5/2/2016 3:02:25 PM
+15:02:25 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:02:25 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:02:25 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:02:25 :[Debug] Selected Record : 0
+15:02:40 :Export Server Running 0
+15:02:40 :Heartbeat POS Run
+15:02:40 :[Debug] Captured Time : 5/2/2016 3:02:40 PM
+15:02:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:02:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:02:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:02:40 :[Debug] Selected Record : 0
+15:02:40 :Import Server Running 0
+15:02:40 :Import Server Run
+15:02:40 :Start Import 
+15:02:41 :[Debug] {"hbe_exportedtoken":"edOZj6E6VIdIa4DgNOIGFI1gHwUQl2","hbe_currexporteddt":"2016-05-02 08:02:41"}
+15:02:41 :Token : edOZj6E6VIdIa4DgNOIGFI1gHwUQl2
+15:02:41 :[Debug] Kitchen : []
+15:02:42 :[Debug] Locations : []
+15:02:42 :[Debug] Tables : []
+15:02:43 :[Debug] EDCs : []
+15:02:44 :[Debug] Jabatan : []
+15:02:45 :[Debug] Kru/Karyawan : []
+15:02:45 :[Debug] Customer/member : []
+15:02:45 :Finish Import 
+15:03:00 :Import Server Running 0
+15:03:00 :Import Server Run
+15:03:00 :Start Import 
+15:03:01 :[Debug] {"hbe_exportedtoken":"shHMByahKpMGAilZZZvzoOsfxL7cse","hbe_currexporteddt":"2016-05-02 08:03:01"}
+15:03:01 :Token : shHMByahKpMGAilZZZvzoOsfxL7cse
+15:03:01 :[Debug] Kitchen : []
+15:03:01 :[Debug] Locations : []
+15:03:02 :[Debug] Tables : []
+15:03:02 :[Debug] EDCs : []
+15:03:03 :[Debug] Jabatan : []
+15:03:04 :[Debug] Kru/Karyawan : []
+15:03:04 :[Debug] Customer/member : []
+15:03:04 :Finish Import 
+15:03:05 :Export Server Running 0
+15:03:05 :Heartbeat POS Run
+15:03:05 :[Debug] Captured Time : 5/2/2016 3:03:05 PM
+15:03:05 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:03:05 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:03:05 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:03:05 :[Debug] Selected Record : 0
+15:03:20 :Export Server Running 0
+15:03:20 :Heartbeat POS Run
+15:03:20 :[Debug] Captured Time : 5/2/2016 3:03:20 PM
+15:03:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:03:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:03:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:03:20 :[Debug] Selected Record : 0
+15:03:20 :Import Server Running 0
+15:03:20 :Import Server Run
+15:03:20 :Start Import 
+15:03:21 :[Debug] {"hbe_exportedtoken":"BBG8TrFkVq0No7U0u44r6sKzNls4ej","hbe_currexporteddt":"2016-05-02 08:03:21"}
+15:03:21 :Token : BBG8TrFkVq0No7U0u44r6sKzNls4ej
+15:03:21 :[Debug] Kitchen : []
+15:03:22 :[Debug] Locations : []
+15:03:22 :[Debug] Tables : []
+15:03:22 :[Debug] EDCs : []
+15:03:23 :[Debug] Jabatan : []
+15:03:24 :[Debug] Kru/Karyawan : []
+15:03:24 :[Debug] Customer/member : []
+15:03:24 :Finish Import 
+15:03:40 :Export Server Running 0
+15:03:40 :Heartbeat POS Run
+15:03:40 :[Debug] Captured Time : 5/2/2016 3:03:40 PM
+15:03:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:03:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:03:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:03:40 :[Debug] Selected Record : 0
+15:03:40 :Import Server Running 0
+15:03:40 :Import Server Run
+15:03:40 :Start Import 
+15:03:41 :[Debug] {"hbe_exportedtoken":"12dgCPCDtsbtWyCB8pAbfYjE1vbT7z","hbe_currexporteddt":"2016-05-02 08:03:41"}
+15:03:41 :Token : 12dgCPCDtsbtWyCB8pAbfYjE1vbT7z
+15:03:41 :[Debug] Kitchen : []
+15:03:41 :[Debug] Locations : []
+15:03:42 :[Debug] Tables : []
+15:03:42 :[Debug] EDCs : []
+15:03:43 :[Debug] Jabatan : []
+15:03:44 :[Debug] Kru/Karyawan : []
+15:03:44 :[Debug] Customer/member : []
+15:03:44 :Finish Import 
+15:04:00 :Export Server Running 0
+15:04:00 :Heartbeat POS Run
+15:04:00 :[Debug] Captured Time : 5/2/2016 3:04:00 PM
+15:04:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:04:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:04:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:04:00 :[Debug] Selected Record : 0
+15:04:00 :Import Server Running 0
+15:04:00 :Import Server Run
+15:04:00 :Start Import 
+15:04:01 :[Debug] {"hbe_exportedtoken":"PqcmHOzo0XsYIHxYLpaXM2Xo5O6syg","hbe_currexporteddt":"2016-05-02 08:04:01"}
+15:04:01 :Token : PqcmHOzo0XsYIHxYLpaXM2Xo5O6syg
+15:04:01 :[Debug] Kitchen : []
+15:04:02 :[Debug] Locations : []
+15:04:02 :[Debug] Tables : []
+15:04:02 :[Debug] EDCs : []
+15:04:03 :[Debug] Jabatan : []
+15:04:04 :[Debug] Kru/Karyawan : []
+15:04:04 :[Debug] Customer/member : []
+15:04:04 :Finish Import 
+15:04:20 :Export Server Running 0
+15:04:20 :Heartbeat POS Run
+15:04:20 :[Debug] Captured Time : 5/2/2016 3:04:20 PM
+15:04:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:04:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:04:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:04:20 :[Debug] Selected Record : 0
+15:04:20 :Import Server Running 0
+15:04:20 :Import Server Run
+15:04:20 :Start Import 
+15:04:21 :[Debug] {"hbe_exportedtoken":"lvXVC2badZCehZmpaHVgghMejIoxpd","hbe_currexporteddt":"2016-05-02 08:04:21"}
+15:04:21 :Token : lvXVC2badZCehZmpaHVgghMejIoxpd
+15:04:21 :[Debug] Kitchen : []
+15:04:21 :[Debug] Locations : []
+15:04:22 :[Debug] Tables : []
+15:04:22 :[Debug] EDCs : []
+15:04:23 :[Debug] Jabatan : []
+15:04:24 :[Debug] Kru/Karyawan : []
+15:04:24 :[Debug] Customer/member : []
+15:04:24 :Finish Import 
+15:04:40 :Export Server Running 0
+15:04:40 :Heartbeat POS Run
+15:04:40 :[Debug] Captured Time : 5/2/2016 3:04:40 PM
+15:04:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:04:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:04:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:04:40 :[Debug] Selected Record : 0
+15:04:40 :Import Server Running 0
+15:04:40 :Import Server Run
+15:04:40 :Start Import 
+15:04:41 :[Debug] {"hbe_exportedtoken":"5wsU6qwdhsRghHGwhOC0kBMbVd8smP","hbe_currexporteddt":"2016-05-02 08:04:41"}
+15:04:41 :Token : 5wsU6qwdhsRghHGwhOC0kBMbVd8smP
+15:04:41 :[Debug] Kitchen : []
+15:04:41 :[Debug] Locations : []
+15:04:42 :[Debug] Tables : []
+15:04:42 :[Debug] EDCs : []
+15:04:43 :[Debug] Jabatan : []
+15:04:44 :[Debug] Kru/Karyawan : []
+15:04:44 :[Debug] Customer/member : []
+15:04:44 :Finish Import 
+15:05:00 :Export Server Running 0
+15:05:00 :Heartbeat POS Run
+15:05:00 :[Debug] Captured Time : 5/2/2016 3:05:00 PM
+15:05:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:05:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:05:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:05:00 :[Debug] Selected Record : 0
+15:05:00 :Import Server Running 0
+15:05:00 :Import Server Run
+15:05:00 :Start Import 
+15:05:01 :[Debug] {"hbe_exportedtoken":"E9vslfseM7xFqChnuWALmZGBWTQf7X","hbe_currexporteddt":"2016-05-02 08:05:01"}
+15:05:01 :Token : E9vslfseM7xFqChnuWALmZGBWTQf7X
+15:05:01 :[Debug] Kitchen : []
+15:05:02 :[Debug] Locations : []
+15:05:02 :[Debug] Tables : []
+15:05:02 :[Debug] EDCs : []
+15:05:04 :[Debug] Jabatan : []
+15:05:04 :[Debug] Kru/Karyawan : []
+15:05:04 :[Debug] Customer/member : []
+15:05:04 :Finish Import 
+15:05:20 :Export Server Running 0
+15:05:20 :Heartbeat POS Run
+15:05:20 :[Debug] Captured Time : 5/2/2016 3:05:20 PM
+15:05:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:05:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:05:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:05:20 :[Debug] Selected Record : 0
+15:05:20 :Import Server Running 0
+15:05:20 :Import Server Run
+15:05:20 :Start Import 
+15:05:21 :[Debug] {"hbe_exportedtoken":"pvg1HTftEFL6vuJbmtXLn6ndtIr0Sc","hbe_currexporteddt":"2016-05-02 08:05:21"}
+15:05:21 :Token : pvg1HTftEFL6vuJbmtXLn6ndtIr0Sc
+15:05:21 :[Debug] Kitchen : []
+15:05:21 :[Debug] Locations : []
+15:05:22 :[Debug] Tables : []
+15:05:22 :[Debug] EDCs : []
+15:05:23 :[Debug] Jabatan : []
+15:05:24 :[Debug] Kru/Karyawan : []
+15:05:24 :[Debug] Customer/member : []
+15:05:24 :Finish Import 
+15:05:40 :Export Server Running 0
+15:05:40 :Heartbeat POS Run
+15:05:40 :[Debug] Captured Time : 5/2/2016 3:05:40 PM
+15:05:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:05:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:05:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:05:40 :[Debug] Selected Record : 0
+15:05:40 :Import Server Running 0
+15:05:40 :Import Server Run
+15:05:40 :Start Import 
+15:05:41 :[Debug] {"hbe_exportedtoken":"U5vEXpZrANrajHFaRjoEouunOeTFTK","hbe_currexporteddt":"2016-05-02 08:05:41"}
+15:05:41 :Token : U5vEXpZrANrajHFaRjoEouunOeTFTK
+15:05:41 :[Debug] Kitchen : []
+15:05:41 :[Debug] Locations : []
+15:05:42 :[Debug] Tables : []
+15:05:42 :[Debug] EDCs : []
+15:05:43 :[Debug] Jabatan : []
+15:05:44 :[Debug] Kru/Karyawan : []
+15:05:44 :[Debug] Customer/member : []
+15:05:44 :Finish Import 
+15:06:00 :Import Server Running 0
+15:06:00 :Import Server Run
+15:06:00 :Start Import 
+15:06:01 :[Debug] {"hbe_exportedtoken":"qEmeTYkcuUBHMDcEKiB55vPV59ygoM","hbe_currexporteddt":"2016-05-02 08:06:01"}
+15:06:01 :Token : qEmeTYkcuUBHMDcEKiB55vPV59ygoM
+15:06:01 :[Debug] Kitchen : []
+15:06:02 :[Debug] Locations : []
+15:06:02 :[Debug] Tables : []
+15:06:03 :[Debug] EDCs : []
+15:06:04 :[Debug] Jabatan : []
+15:06:05 :[Debug] Kru/Karyawan : []
+15:06:05 :[Debug] Customer/member : []
+15:06:05 :Finish Import 
+15:06:06 :Export Server Running 0
+15:06:06 :Heartbeat POS Run
+15:06:06 :[Debug] Captured Time : 5/2/2016 3:06:06 PM
+15:06:06 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:06:06 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:06:06 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:06:06 :[Debug] Selected Record : 0
+15:06:20 :Export Server Running 0
+15:06:20 :Heartbeat POS Run
+15:06:20 :[Debug] Captured Time : 5/2/2016 3:06:20 PM
+15:06:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:06:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:06:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:06:20 :[Debug] Selected Record : 0
+15:06:20 :Import Server Running 0
+15:06:20 :Import Server Run
+15:06:20 :Start Import 
+15:06:21 :[Debug] {"hbe_exportedtoken":"D7MhCVP8eiIDstdmdVf57SMhmILaX5","hbe_currexporteddt":"2016-05-02 08:06:21"}
+15:06:21 :Token : D7MhCVP8eiIDstdmdVf57SMhmILaX5
+15:06:21 :[Debug] Kitchen : []
+15:06:21 :[Debug] Locations : []
+15:06:22 :[Debug] Tables : []
+15:06:22 :[Debug] EDCs : []
+15:06:23 :[Debug] Jabatan : []
+15:06:24 :[Debug] Kru/Karyawan : []
+15:06:24 :[Debug] Customer/member : []
+15:06:24 :Finish Import 
+15:06:40 :Export Server Running 0
+15:06:40 :Heartbeat POS Run
+15:06:40 :[Debug] Captured Time : 5/2/2016 3:06:40 PM
+15:06:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:06:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:06:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:06:40 :[Debug] Selected Record : 0
+15:06:40 :Import Server Running 0
+15:06:40 :Import Server Run
+15:06:40 :Start Import 
+15:06:41 :[Debug] {"hbe_exportedtoken":"sGK98nBvDyIMP6wFDvPMRCg4WZR5lm","hbe_currexporteddt":"2016-05-02 08:06:41"}
+15:06:41 :Token : sGK98nBvDyIMP6wFDvPMRCg4WZR5lm
+15:06:41 :[Debug] Kitchen : []
+15:06:41 :[Debug] Locations : []
+15:06:42 :[Debug] Tables : []
+15:06:42 :[Debug] EDCs : []
+15:06:43 :[Debug] Jabatan : []
+15:06:44 :[Debug] Kru/Karyawan : []
+15:06:44 :[Debug] Customer/member : []
+15:06:44 :Finish Import 
+15:07:00 :Import Server Running 0
+15:07:00 :Import Server Run
+15:07:00 :Start Import 
+15:07:01 :[Debug] {"hbe_exportedtoken":"qljuqp2YML1tVDI8KozTnt3SRsyo1D","hbe_currexporteddt":"2016-05-02 08:07:01"}
+15:07:01 :Token : qljuqp2YML1tVDI8KozTnt3SRsyo1D
+15:07:01 :[Debug] Kitchen : []
+15:07:01 :[Debug] Locations : []
+15:07:02 :[Debug] Tables : []
+15:07:02 :[Debug] EDCs : []
+15:07:03 :[Debug] Jabatan : []
+15:07:04 :[Debug] Kru/Karyawan : []
+15:07:04 :[Debug] Customer/member : []
+15:07:04 :Finish Import 
+15:07:05 :Export Server Running 0
+15:07:05 :Heartbeat POS Run
+15:07:05 :[Debug] Captured Time : 5/2/2016 3:07:05 PM
+15:07:05 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:07:05 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:07:05 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:07:05 :[Debug] Selected Record : 0
+15:07:20 :Export Server Running 0
+15:07:20 :Heartbeat POS Run
+15:07:20 :[Debug] Captured Time : 5/2/2016 3:07:20 PM
+15:07:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:07:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:07:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:07:20 :[Debug] Selected Record : 0
+15:07:20 :Import Server Running 0
+15:07:20 :Import Server Run
+15:07:20 :Start Import 
+15:07:21 :[Debug] {"hbe_exportedtoken":"hVXPx3SJNFMN6co1sfi98EiqOoUmuD","hbe_currexporteddt":"2016-05-02 08:07:21"}
+15:07:21 :Token : hVXPx3SJNFMN6co1sfi98EiqOoUmuD
+15:07:21 :[Debug] Kitchen : []
+15:07:21 :[Debug] Locations : []
+15:07:22 :[Debug] Tables : []
+15:07:22 :[Debug] EDCs : []
+15:07:23 :[Debug] Jabatan : []
+15:07:24 :[Debug] Kru/Karyawan : []
+15:07:24 :[Debug] Customer/member : []
+15:07:24 :Finish Import 
+15:07:40 :Import Server Running 0
+15:07:40 :Import Server Run
+15:07:40 :Start Import 
+15:07:41 :[Debug] {"hbe_exportedtoken":"7aTiffsNlNqrZ8YAgDpRQJl8pxCVLS","hbe_currexporteddt":"2016-05-02 08:07:41"}
+15:07:41 :Token : 7aTiffsNlNqrZ8YAgDpRQJl8pxCVLS
+15:07:41 :[Debug] Kitchen : []
+15:07:41 :[Debug] Locations : []
+15:07:42 :[Debug] Tables : []
+15:07:42 :[Debug] EDCs : []
+15:07:43 :[Debug] Jabatan : []
+15:07:44 :[Debug] Kru/Karyawan : []
+15:07:44 :[Debug] Customer/member : []
+15:07:44 :Finish Import 
+15:07:45 :Export Server Running 0
+15:07:45 :Heartbeat POS Run
+15:07:45 :[Debug] Captured Time : 5/2/2016 3:07:45 PM
+15:07:45 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:07:45 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:07:45 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:07:45 :[Debug] Selected Record : 0
+15:08:00 :Import Server Running 0
+15:08:00 :Import Server Run
+15:08:00 :Start Import 
+15:08:01 :[Debug] {"hbe_exportedtoken":"5Ca1Af1y6MMmNUMhpEtPEMnVbraXds","hbe_currexporteddt":"2016-05-02 08:08:01"}
+15:08:01 :Token : 5Ca1Af1y6MMmNUMhpEtPEMnVbraXds
+15:08:01 :[Debug] Kitchen : []
+15:08:01 :[Debug] Locations : []
+15:08:02 :[Debug] Tables : []
+15:08:02 :[Debug] EDCs : []
+15:08:03 :[Debug] Jabatan : []
+15:08:04 :[Debug] Kru/Karyawan : []
+15:08:04 :[Debug] Customer/member : []
+15:08:04 :Finish Import 
+15:08:05 :Export Server Running 0
+15:08:05 :Heartbeat POS Run
+15:08:05 :[Debug] Captured Time : 5/2/2016 3:08:05 PM
+15:08:05 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:08:05 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:08:05 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:08:05 :[Debug] Selected Record : 0
+15:08:20 :Import Server Running 0
+15:08:20 :Import Server Run
+15:08:20 :Start Import 
+15:08:21 :[Debug] {"hbe_exportedtoken":"hSbDPc8ENRiE9qCSJgCQU8RvdMSvHw","hbe_currexporteddt":"2016-05-02 08:08:21"}
+15:08:21 :Token : hSbDPc8ENRiE9qCSJgCQU8RvdMSvHw
+15:08:21 :[Debug] Kitchen : []
+15:08:21 :[Debug] Locations : []
+15:08:22 :[Debug] Tables : []
+15:08:22 :[Debug] EDCs : []
+15:08:23 :[Debug] Jabatan : []
+15:08:24 :[Debug] Kru/Karyawan : []
+15:08:24 :[Debug] Customer/member : []
+15:08:24 :Finish Import 
+15:08:25 :Export Server Running 0
+15:08:25 :Heartbeat POS Run
+15:08:25 :[Debug] Captured Time : 5/2/2016 3:08:25 PM
+15:08:25 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:08:25 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:08:25 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:08:25 :[Debug] Selected Record : 0
+15:08:40 :Import Server Running 0
+15:08:40 :Import Server Run
+15:08:40 :Start Import 
+15:08:41 :[Debug] {"hbe_exportedtoken":"bXLmnimpFFGXRRROmvurHRzPryuvKB","hbe_currexporteddt":"2016-05-02 08:08:41"}
+15:08:41 :Token : bXLmnimpFFGXRRROmvurHRzPryuvKB
+15:08:41 :[Debug] Kitchen : []
+15:08:41 :[Debug] Locations : []
+15:08:42 :[Debug] Tables : []
+15:08:42 :[Debug] EDCs : []
+15:08:43 :[Debug] Jabatan : []
+15:08:44 :[Debug] Kru/Karyawan : []
+15:08:44 :[Debug] Customer/member : []
+15:08:44 :Finish Import 
+15:08:45 :Export Server Running 0
+15:08:45 :Heartbeat POS Run
+15:08:45 :[Debug] Captured Time : 5/2/2016 3:08:45 PM
+15:08:45 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:08:45 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:08:45 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:08:45 :[Debug] Selected Record : 0
+15:09:00 :Export Server Running 0
+15:09:00 :Heartbeat POS Run
+15:09:00 :[Debug] Captured Time : 5/2/2016 3:09:00 PM
+15:09:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:09:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:09:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:09:00 :[Debug] Selected Record : 0
+15:09:00 :Import Server Running 0
+15:09:00 :Import Server Run
+15:09:00 :Start Import 
+15:09:01 :[Debug] {"hbe_exportedtoken":"8UyGw60z4JpFrySIFhU90ePCA0w3UT","hbe_currexporteddt":"2016-05-02 08:09:01"}
+15:09:01 :Token : 8UyGw60z4JpFrySIFhU90ePCA0w3UT
+15:09:01 :[Debug] Kitchen : []
+15:09:02 :[Debug] Locations : []
+15:09:02 :[Debug] Tables : []
+15:09:02 :[Debug] EDCs : []
+15:09:03 :[Debug] Jabatan : []
+15:09:04 :[Debug] Kru/Karyawan : []
+15:09:04 :[Debug] Customer/member : []
+15:09:04 :Finish Import 
+15:09:20 :Import Server Running 0
+15:09:20 :Import Server Run
+15:09:20 :Start Import 
+15:09:21 :[Debug] {"hbe_exportedtoken":"FJVZIO5RIWXcRD2DEDN342s27GHbef","hbe_currexporteddt":"2016-05-02 08:09:21"}
+15:09:21 :Token : FJVZIO5RIWXcRD2DEDN342s27GHbef
+15:09:21 :[Debug] Kitchen : []
+15:09:21 :[Debug] Locations : []
+15:09:22 :[Debug] Tables : []
+15:09:22 :[Debug] EDCs : []
+15:09:23 :[Debug] Jabatan : []
+15:09:24 :[Debug] Kru/Karyawan : []
+15:09:24 :[Debug] Customer/member : []
+15:09:24 :Finish Import 
+15:09:25 :Export Server Running 0
+15:09:25 :Heartbeat POS Run
+15:09:25 :[Debug] Captured Time : 5/2/2016 3:09:25 PM
+15:09:25 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:09:25 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:09:25 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:09:25 :[Debug] Selected Record : 0
+15:09:40 :Export Server Running 0
+15:09:40 :Heartbeat POS Run
+15:09:40 :[Debug] Captured Time : 5/2/2016 3:09:40 PM
+15:09:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:09:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:09:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:09:40 :[Debug] Selected Record : 0
+15:09:40 :Import Server Running 0
+15:09:40 :Import Server Run
+15:09:40 :Start Import 
+15:09:41 :[Debug] {"hbe_exportedtoken":"qA6BuNje1EP9R2moufMsjCuKCwanxF","hbe_currexporteddt":"2016-05-02 08:09:41"}
+15:09:41 :Token : qA6BuNje1EP9R2moufMsjCuKCwanxF
+15:09:41 :[Debug] Kitchen : []
+15:09:41 :[Debug] Locations : []
+15:09:42 :[Debug] Tables : []
+15:09:42 :[Debug] EDCs : []
+15:09:43 :[Debug] Jabatan : []
+15:09:47 :[Debug] Kru/Karyawan : []
+15:09:48 :[Debug] Customer/member : []
+15:09:48 :Finish Import 
+15:10:00 :Import Server Running 0
+15:10:00 :Import Server Run
+15:10:00 :Start Import 
+15:10:02 :[Debug] {"hbe_exportedtoken":"FHQ1DE93NGsCQuyisoY2r8ZYoeIark","hbe_currexporteddt":"2016-05-02 08:10:02"}
+15:10:02 :Token : FHQ1DE93NGsCQuyisoY2r8ZYoeIark
+15:10:02 :[Debug] Kitchen : []
+15:10:03 :[Debug] Locations : []
+15:10:09 :[Debug] Tables : []
+15:10:10 :[Debug] EDCs : []
+15:10:10 :[Debug] Jabatan : []
+15:10:11 :[Debug] Kru/Karyawan : []
+15:10:11 :[Debug] Customer/member : []
+15:10:11 :Finish Import 
+15:10:12 :Export Server Running 0
+15:10:12 :Heartbeat POS Run
+15:10:12 :[Debug] Captured Time : 5/2/2016 3:10:12 PM
+15:10:12 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:10:12 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:10:12 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:10:12 :[Debug] Selected Record : 0
+15:10:20 :Export Server Running 0
+15:10:20 :Heartbeat POS Run
+15:10:20 :[Debug] Captured Time : 5/2/2016 3:10:20 PM
+15:10:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:10:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:10:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:10:20 :[Debug] Selected Record : 0
+15:10:20 :Import Server Running 0
+15:10:20 :Import Server Run
+15:10:20 :Start Import 
+15:10:21 :[Debug] {"hbe_exportedtoken":"5EbM2pp7XopCDzHXvzCpoYe0cwGbyK","hbe_currexporteddt":"2016-05-02 08:10:21"}
+15:10:21 :Token : 5EbM2pp7XopCDzHXvzCpoYe0cwGbyK
+15:10:21 :[Debug] Kitchen : []
+15:10:22 :[Debug] Locations : []
+15:10:22 :[Debug] Tables : []
+15:10:23 :[Debug] EDCs : []
+15:10:24 :[Debug] Jabatan : []
+15:10:24 :[Debug] Kru/Karyawan : []
+15:10:25 :[Debug] Customer/member : []
+15:10:25 :Finish Import 
+15:10:40 :Import Server Running 0
+15:10:40 :Import Server Run
+15:10:40 :Start Import 
+15:10:41 :[Debug] {"hbe_exportedtoken":"n5SO0702StiPt9KK8ZtOjcFxN8ajRo","hbe_currexporteddt":"2016-05-02 08:10:41"}
+15:10:41 :Token : n5SO0702StiPt9KK8ZtOjcFxN8ajRo
+15:10:42 :[Debug] Kitchen : []
+15:10:42 :[Debug] Locations : []
+15:10:43 :[Debug] Tables : []
+15:10:44 :[Debug] EDCs : []
+15:10:44 :[Debug] Jabatan : []
+15:10:45 :[Debug] Kru/Karyawan : []
+15:10:45 :[Debug] Customer/member : []
+15:10:45 :Finish Import 
+15:10:46 :Export Server Running 0
+15:10:46 :Heartbeat POS Run
+15:10:46 :[Debug] Captured Time : 5/2/2016 3:10:46 PM
+15:10:46 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:10:46 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:10:46 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:10:46 :[Debug] Selected Record : 0
+15:11:00 :Export Server Running 0
+15:11:00 :Heartbeat POS Run
+15:11:00 :[Debug] Captured Time : 5/2/2016 3:11:00 PM
+15:11:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:11:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:11:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:11:00 :[Debug] Selected Record : 0
+15:11:00 :Import Server Running 0
+15:11:00 :Import Server Run
+15:11:00 :Start Import 
+15:11:01 :[Debug] {"hbe_exportedtoken":"GyOW6Witmgk80nlJRmbx6NLMQABPgb","hbe_currexporteddt":"2016-05-02 08:11:01"}
+15:11:01 :Token : GyOW6Witmgk80nlJRmbx6NLMQABPgb
+15:11:01 :[Debug] Kitchen : []
+15:11:02 :[Debug] Locations : []
+15:11:02 :[Debug] Tables : []
+15:11:03 :[Debug] EDCs : []
+15:11:04 :[Debug] Jabatan : []
+15:11:04 :[Debug] Kru/Karyawan : []
+15:11:04 :[Debug] Customer/member : []
+15:11:04 :Finish Import 
+15:11:20 :Import Server Running 0
+15:11:20 :Import Server Run
+15:11:20 :Start Import 
+15:11:21 :[Debug] {"hbe_exportedtoken":"osNc9SvGbd8LgkGVfeFejk9pjPf4SS","hbe_currexporteddt":"2016-05-02 08:11:21"}
+15:11:21 :Token : osNc9SvGbd8LgkGVfeFejk9pjPf4SS
+15:11:21 :[Debug] Kitchen : []
+15:11:22 :[Debug] Locations : []
+15:11:22 :[Debug] Tables : []
+15:11:23 :[Debug] EDCs : []
+15:11:24 :[Debug] Jabatan : []
+15:11:24 :[Debug] Kru/Karyawan : []
+15:11:24 :[Debug] Customer/member : []
+15:11:24 :Finish Import 
+15:11:25 :Export Server Running 0
+15:11:25 :Heartbeat POS Run
+15:11:25 :[Debug] Captured Time : 5/2/2016 3:11:25 PM
+15:11:25 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:11:25 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:11:25 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:11:25 :[Debug] Selected Record : 0
+15:11:40 :Export Server Running 0
+15:11:40 :Heartbeat POS Run
+15:11:40 :[Debug] Captured Time : 5/2/2016 3:11:40 PM
+15:11:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:11:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:11:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:11:40 :[Debug] Selected Record : 0
+15:11:40 :Import Server Running 0
+15:11:40 :Import Server Run
+15:11:40 :Start Import 
+15:11:41 :[Debug] {"hbe_exportedtoken":"eYwxsH1CBfqh5qcFEZeJwzbqV9EOWT","hbe_currexporteddt":"2016-05-02 08:11:41"}
+15:11:41 :Token : eYwxsH1CBfqh5qcFEZeJwzbqV9EOWT
+15:11:41 :[Debug] Kitchen : []
+15:11:42 :[Debug] Locations : []
+15:11:42 :[Debug] Tables : []
+15:11:43 :[Debug] EDCs : []
+15:11:44 :[Debug] Jabatan : []
+15:11:44 :[Debug] Kru/Karyawan : []
+15:11:44 :[Debug] Customer/member : []
+15:11:44 :Finish Import 
+15:12:00 :Import Server Running 0
+15:12:00 :Import Server Run
+15:12:00 :Start Import 
+15:12:01 :[Debug] {"hbe_exportedtoken":"wIF5BMvgbvJfyshcdQqw16AZKws6vc","hbe_currexporteddt":"2016-05-02 08:12:01"}
+15:12:01 :Token : wIF5BMvgbvJfyshcdQqw16AZKws6vc
+15:12:01 :[Debug] Kitchen : []
+15:12:02 :[Debug] Locations : []
+15:12:02 :[Debug] Tables : []
+15:12:03 :[Debug] EDCs : []
+15:12:04 :[Debug] Jabatan : []
+15:12:04 :[Debug] Kru/Karyawan : []
+15:12:04 :[Debug] Customer/member : []
+15:12:04 :Finish Import 
+15:12:05 :Export Server Running 0
+15:12:05 :Heartbeat POS Run
+15:12:05 :[Debug] Captured Time : 5/2/2016 3:12:05 PM
+15:12:05 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:12:05 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:12:05 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:12:05 :[Debug] Selected Record : 0
+15:12:20 :Export Server Running 0
+15:12:20 :Heartbeat POS Run
+15:12:20 :[Debug] Captured Time : 5/2/2016 3:12:20 PM
+15:12:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:12:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:12:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:12:20 :[Debug] Selected Record : 0
+15:12:20 :Import Server Running 0
+15:12:20 :Import Server Run
+15:12:20 :Start Import 
+15:12:21 :[Debug] {"hbe_exportedtoken":"FOS2YIKXvjh12Is7I6sXEsYH7ytn2V","hbe_currexporteddt":"2016-05-02 08:12:21"}
+15:12:21 :Token : FOS2YIKXvjh12Is7I6sXEsYH7ytn2V
+15:12:21 :[Debug] Kitchen : []
+15:12:22 :[Debug] Locations : []
+15:12:22 :[Debug] Tables : []
+15:12:22 :[Debug] EDCs : []
+15:12:23 :[Debug] Jabatan : []
+15:12:24 :[Debug] Kru/Karyawan : []
+15:12:24 :[Debug] Customer/member : []
+15:12:24 :Finish Import 
+15:12:40 :Import Server Running 0
+15:12:40 :Import Server Run
+15:12:40 :Start Import 
+15:12:41 :[Debug] {"hbe_exportedtoken":"KX0NUzQzJIZOsko3gfaKgOwsl3EaOJ","hbe_currexporteddt":"2016-05-02 08:12:41"}
+15:12:41 :Token : KX0NUzQzJIZOsko3gfaKgOwsl3EaOJ
+15:12:41 :[Debug] Kitchen : []
+15:12:41 :[Debug] Locations : []
+15:12:42 :[Debug] Tables : []
+15:12:42 :[Debug] EDCs : []
+15:12:43 :[Debug] Jabatan : []
+15:12:44 :[Debug] Kru/Karyawan : []
+15:12:44 :[Debug] Customer/member : []
+15:12:44 :Finish Import 
+15:12:44 :Export Server Running 0
+15:12:44 :Heartbeat POS Run
+15:12:44 :[Debug] Captured Time : 5/2/2016 3:12:44 PM
+15:12:44 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:12:44 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:12:44 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:12:44 :[Debug] Selected Record : 0
+15:13:00 :Import Server Running 0
+15:13:00 :Import Server Run
+15:13:00 :Start Import 
+15:13:01 :[Debug] {"hbe_exportedtoken":"lWe6Xl22NzgiXk6V2XX4YHLxz3bto9","hbe_currexporteddt":"2016-05-02 08:13:01"}
+15:13:01 :Token : lWe6Xl22NzgiXk6V2XX4YHLxz3bto9
+15:13:01 :[Debug] Kitchen : []
+15:13:02 :[Debug] Locations : []
+15:13:02 :[Debug] Tables : []
+15:13:03 :[Debug] EDCs : []
+15:13:04 :[Debug] Jabatan : []
+15:13:04 :[Debug] Kru/Karyawan : []
+15:13:05 :[Debug] Customer/member : []
+15:13:05 :Finish Import 
+15:13:05 :Export Server Running 0
+15:13:06 :Heartbeat POS Run
+15:13:06 :[Debug] Captured Time : 5/2/2016 3:13:06 PM
+15:13:06 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:13:06 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:13:06 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:13:06 :[Debug] Selected Record : 0
+15:13:20 :Import Server Running 0
+15:13:20 :Import Server Run
+15:13:20 :Start Import 
+15:13:23 :[Debug] {"hbe_exportedtoken":"OjXddB0T5wb0QVZxz6qcPiXH7ZQsYq","hbe_currexporteddt":"2016-05-02 08:13:21"}
+15:13:23 :Token : OjXddB0T5wb0QVZxz6qcPiXH7ZQsYq
+15:13:24 :[Debug] Kitchen : []
+15:13:25 :[Debug] Locations : []
+15:13:25 :[Debug] Tables : []
+15:13:26 :[Debug] EDCs : []
+15:13:26 :[Debug] Jabatan : []
+15:13:27 :[Debug] Kru/Karyawan : []
+15:13:28 :[Debug] Customer/member : []
+15:13:28 :Finish Import 
+15:13:28 :Export Server Running 0
+15:13:28 :Heartbeat POS Run
+15:13:28 :[Debug] Captured Time : 5/2/2016 3:13:28 PM
+15:13:28 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:13:28 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:13:28 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:13:28 :[Debug] Selected Record : 0
+15:13:40 :Import Server Running 0
+15:13:40 :Import Server Run
+15:13:40 :Start Import 
+15:13:41 :[Debug] {"hbe_exportedtoken":"bXQ9VGPjzHQDqbrOC5Tzt2ZKCgwytA","hbe_currexporteddt":"2016-05-02 08:13:41"}
+15:13:41 :Token : bXQ9VGPjzHQDqbrOC5Tzt2ZKCgwytA
+15:13:42 :[Debug] Kitchen : []
+15:13:42 :[Debug] Locations : []
+15:13:48 :[Debug] Tables : []
+15:13:50 :[Debug] EDCs : []
+15:13:50 :[Debug] Jabatan : []
+15:13:51 :[Debug] Kru/Karyawan : []
+15:13:52 :[Debug] Customer/member : []
+15:13:52 :Finish Import 
+15:13:53 :Export Server Running 0
+15:13:53 :Heartbeat POS Run
+15:13:53 :[Debug] Captured Time : 5/2/2016 3:13:53 PM
+15:13:53 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:13:53 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:13:53 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:13:53 :[Debug] Selected Record : 0
+15:14:00 :Import Server Running 0
+15:14:00 :Import Server Run
+15:14:00 :Start Import 
+15:14:01 :[Debug] {"hbe_exportedtoken":"6wIGstF4UUdsXBTO6msgIgq7IsK2nV","hbe_currexporteddt":"2016-05-02 08:14:01"}
+15:14:01 :Token : 6wIGstF4UUdsXBTO6msgIgq7IsK2nV
+15:14:02 :[Debug] Kitchen : []
+15:14:02 :[Debug] Locations : []
+15:14:02 :[Debug] Tables : []
+15:14:03 :[Debug] EDCs : []
+15:14:04 :[Debug] Jabatan : []
+15:14:04 :[Debug] Kru/Karyawan : []
+15:14:05 :[Debug] Customer/member : []
+15:14:05 :Finish Import 
+15:14:05 :Export Server Running 0
+15:14:05 :Heartbeat POS Run
+15:14:05 :[Debug] Captured Time : 5/2/2016 3:14:05 PM
+15:14:05 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:14:05 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:14:05 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:14:05 :[Debug] Selected Record : 0
+15:14:20 :Import Server Running 0
+15:14:20 :Import Server Run
+15:14:20 :Start Import 
+15:14:21 :[Debug] {"hbe_exportedtoken":"BWISeni7roSgqJjGeUoyIS8g7X7iJY","hbe_currexporteddt":"2016-05-02 08:14:21"}
+15:14:21 :Token : BWISeni7roSgqJjGeUoyIS8g7X7iJY
+15:14:22 :[Debug] Kitchen : []
+15:14:22 :[Debug] Locations : []
+15:14:22 :[Debug] Tables : []
+15:14:23 :[Debug] EDCs : []
+15:14:24 :[Debug] Jabatan : []
+15:14:24 :[Debug] Kru/Karyawan : []
+15:14:25 :[Debug] Customer/member : []
+15:14:25 :Finish Import 
+15:14:25 :Export Server Running 0
+15:14:25 :Heartbeat POS Run
+15:14:25 :[Debug] Captured Time : 5/2/2016 3:14:25 PM
+15:14:25 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:14:25 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:14:25 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:14:25 :[Debug] Selected Record : 0
+15:14:40 :Import Server Running 0
+15:14:40 :Import Server Run
+15:14:40 :Start Import 
+15:14:41 :[Debug] {"hbe_exportedtoken":"xREleDDjcQ4wtt52U9bt1pnARafir0","hbe_currexporteddt":"2016-05-02 08:14:41"}
+15:14:41 :Token : xREleDDjcQ4wtt52U9bt1pnARafir0
+15:14:42 :[Debug] Kitchen : []
+15:14:45 :[Debug] Locations : []
+15:14:47 :[Debug] Tables : []
+15:14:48 :[Debug] EDCs : []
+15:14:48 :[Debug] Jabatan : []
+15:14:49 :[Debug] Kru/Karyawan : []
+15:14:50 :[Debug] Customer/member : []
+15:14:50 :Finish Import 
+15:14:50 :Export Server Running 0
+15:14:50 :Heartbeat POS Run
+15:14:50 :[Debug] Captured Time : 5/2/2016 3:14:50 PM
+15:14:50 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:14:50 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:14:50 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:14:50 :[Debug] Selected Record : 0
+15:15:00 :Import Server Running 0
+15:15:00 :Import Server Run
+15:15:00 :Start Import 
+15:15:01 :[Debug] {"hbe_exportedtoken":"KB0z6fDI5wFA6HAUgDjTSz0c4F7lhw","hbe_currexporteddt":"2016-05-02 08:15:01"}
+15:15:01 :Token : KB0z6fDI5wFA6HAUgDjTSz0c4F7lhw
+15:15:02 :[Debug] Kitchen : []
+15:15:02 :[Debug] Locations : []
+15:15:02 :[Debug] Tables : []
+15:15:04 :[Debug] EDCs : []
+15:15:04 :[Debug] Jabatan : []
+15:15:04 :[Debug] Kru/Karyawan : []
+15:15:05 :[Debug] Customer/member : []
+15:15:05 :Finish Import 
+15:15:05 :Export Server Running 0
+15:15:05 :Heartbeat POS Run
+15:15:05 :[Debug] Captured Time : 5/2/2016 3:15:05 PM
+15:15:05 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:15:05 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:15:05 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:15:05 :[Debug] Selected Record : 0
+15:15:20 :Import Server Running 0
+15:15:20 :Import Server Run
+15:15:20 :Start Import 
+15:15:21 :[Debug] {"hbe_exportedtoken":"7sDGwERRRZw11B0IhpUKPMvvMunNC7","hbe_currexporteddt":"2016-05-02 08:15:21"}
+15:15:21 :Token : 7sDGwERRRZw11B0IhpUKPMvvMunNC7
+15:15:22 :[Debug] Kitchen : []
+15:15:22 :[Debug] Locations : []
+15:15:22 :[Debug] Tables : []
+15:15:23 :[Debug] EDCs : []
+15:15:24 :[Debug] Jabatan : []
+15:15:24 :[Debug] Kru/Karyawan : []
+15:15:25 :[Debug] Customer/member : []
+15:15:25 :Finish Import 
+15:15:25 :Export Server Running 0
+15:15:25 :Heartbeat POS Run
+15:15:25 :[Debug] Captured Time : 5/2/2016 3:15:25 PM
+15:15:25 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:15:25 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:15:25 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:15:25 :[Debug] Selected Record : 0
+15:15:40 :Import Server Running 0
+15:15:40 :Import Server Run
+15:15:40 :Start Import 
+15:15:41 :[Debug] {"hbe_exportedtoken":"dD4mcJPoZgVIFGNEAorpAlXEL75Cu3","hbe_currexporteddt":"2016-05-02 08:15:41"}
+15:15:41 :Token : dD4mcJPoZgVIFGNEAorpAlXEL75Cu3
+15:15:42 :[Debug] Kitchen : []
+15:15:42 :[Debug] Locations : []
+15:15:42 :[Debug] Tables : []
+15:15:43 :[Debug] EDCs : []
+15:15:44 :[Debug] Jabatan : []
+15:15:44 :[Debug] Kru/Karyawan : []
+15:15:45 :[Debug] Customer/member : []
+15:15:45 :Finish Import 
+15:15:45 :Export Server Running 0
+15:15:45 :Heartbeat POS Run
+15:15:45 :[Debug] Captured Time : 5/2/2016 3:15:45 PM
+15:15:45 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:15:45 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:15:45 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:15:45 :[Debug] Selected Record : 0
+15:16:00 :Import Server Running 0
+15:16:00 :Import Server Run
+15:16:00 :Start Import 
+15:16:01 :[Debug] {"hbe_exportedtoken":"XjN5p7IctTLXq7dniwxyOkYUBDxppV","hbe_currexporteddt":"2016-05-02 08:16:01"}
+15:16:01 :Token : XjN5p7IctTLXq7dniwxyOkYUBDxppV
+15:16:01 :[Debug] Kitchen : []
+15:16:01 :[Debug] Locations : []
+15:16:02 :[Debug] Tables : []
+15:16:02 :[Debug] EDCs : []
+15:16:03 :[Debug] Jabatan : []
+15:16:04 :[Debug] Kru/Karyawan : []
+15:16:04 :[Debug] Customer/member : []
+15:16:04 :Finish Import 
+15:16:05 :Export Server Running 0
+15:16:05 :Heartbeat POS Run
+15:16:05 :[Debug] Captured Time : 5/2/2016 3:16:05 PM
+15:16:05 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:16:05 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:16:05 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:16:05 :[Debug] Selected Record : 0
+15:16:20 :Import Server Running 0
+15:16:20 :Import Server Run
+15:16:20 :Start Import 
+15:16:21 :[Debug] {"hbe_exportedtoken":"Kg1CHagZK2yoqJ50k6AKk7hLydx4oM","hbe_currexporteddt":"2016-05-02 08:16:21"}
+15:16:21 :Token : Kg1CHagZK2yoqJ50k6AKk7hLydx4oM
+15:16:21 :[Debug] Kitchen : []
+15:16:21 :[Debug] Locations : []
+15:16:22 :[Debug] Tables : []
+15:16:22 :[Debug] EDCs : []
+15:16:23 :[Debug] Jabatan : []
+15:16:24 :[Debug] Kru/Karyawan : []
+15:16:24 :[Debug] Customer/member : []
+15:16:24 :Finish Import 
+15:16:24 :Export Server Running 0
+15:16:24 :Heartbeat POS Run
+15:16:24 :[Debug] Captured Time : 5/2/2016 3:16:24 PM
+15:16:24 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:16:24 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:16:24 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:16:24 :[Debug] Selected Record : 0
+15:16:40 :Import Server Running 0
+15:16:40 :Import Server Run
+15:16:40 :Start Import 
+15:16:41 :[Debug] {"hbe_exportedtoken":"SKUAaKn3iucclKTWHlLc2i92HEiQ4w","hbe_currexporteddt":"2016-05-02 08:16:41"}
+15:16:41 :Token : SKUAaKn3iucclKTWHlLc2i92HEiQ4w
+15:16:42 :[Debug] Kitchen : []
+15:16:42 :[Debug] Locations : []
+15:16:43 :[Debug] Tables : []
+15:16:44 :[Debug] EDCs : []
+15:16:44 :[Debug] Jabatan : []
+15:16:44 :[Debug] Kru/Karyawan : []
+15:16:45 :[Debug] Customer/member : []
+15:16:45 :Finish Import 
+15:16:45 :Export Server Running 0
+15:16:45 :Heartbeat POS Run
+15:16:45 :[Debug] Captured Time : 5/2/2016 3:16:45 PM
+15:16:45 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:16:45 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:16:45 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:16:45 :[Debug] Selected Record : 0
+15:17:00 :Import Server Running 0
+15:17:00 :Import Server Run
+15:17:00 :Start Import 
+15:17:01 :[Debug] {"hbe_exportedtoken":"Fgbw1lEUaG0CuD8tTM18JpODPNt7hL","hbe_currexporteddt":"2016-05-02 08:17:01"}
+15:17:01 :Token : Fgbw1lEUaG0CuD8tTM18JpODPNt7hL
+15:17:01 :[Debug] Kitchen : []
+15:17:01 :[Debug] Locations : []
+15:17:02 :[Debug] Tables : []
+15:17:02 :[Debug] EDCs : []
+15:17:03 :[Debug] Jabatan : []
+15:17:04 :[Debug] Kru/Karyawan : []
+15:17:04 :[Debug] Customer/member : []
+15:17:04 :Finish Import 
+15:17:08 :Export Server Running 0
+15:17:08 :Heartbeat POS Run
+15:17:08 :[Debug] Captured Time : 5/2/2016 3:17:08 PM
+15:17:08 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:17:08 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:17:08 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:17:08 :[Debug] Selected Record : 0
+15:17:20 :Export Server Running 0
+15:17:20 :Heartbeat POS Run
+15:17:20 :[Debug] Captured Time : 5/2/2016 3:17:20 PM
+15:17:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:17:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:17:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:17:20 :[Debug] Selected Record : 0
+15:17:20 :Import Server Running 0
+15:17:20 :Import Server Run
+15:17:20 :Start Import 
+15:17:21 :[Debug] {"hbe_exportedtoken":"KfZ8RUS6z1Q5POkhSoDnXPMUXl95ig","hbe_currexporteddt":"2016-05-02 08:17:21"}
+15:17:21 :Token : KfZ8RUS6z1Q5POkhSoDnXPMUXl95ig
+15:17:21 :[Debug] Kitchen : []
+15:17:22 :[Debug] Locations : []
+15:17:22 :[Debug] Tables : []
+15:17:22 :[Debug] EDCs : []
+15:17:24 :[Debug] Jabatan : []
+15:17:24 :[Debug] Kru/Karyawan : []
+15:17:25 :[Debug] Customer/member : []
+15:17:25 :Finish Import 
+15:17:40 :Import Server Running 0
+15:17:40 :Import Server Run
+15:17:40 :Start Import 
+15:17:41 :[Debug] {"hbe_exportedtoken":"JKMHXaYQnPeIlX1nEhg5c1FgCBiLkR","hbe_currexporteddt":"2016-05-02 08:17:41"}
+15:17:41 :Token : JKMHXaYQnPeIlX1nEhg5c1FgCBiLkR
+15:17:41 :[Debug] Kitchen : []
+15:17:41 :[Debug] Locations : []
+15:17:42 :[Debug] Tables : []
+15:17:42 :[Debug] EDCs : []
+15:17:43 :[Debug] Jabatan : []
+15:17:44 :[Debug] Kru/Karyawan : []
+15:17:44 :[Debug] Customer/member : []
+15:17:44 :Finish Import 
+15:17:44 :Export Server Running 0
+15:17:44 :Heartbeat POS Run
+15:17:44 :[Debug] Captured Time : 5/2/2016 3:17:44 PM
+15:17:44 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:17:44 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:17:44 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:17:44 :[Debug] Selected Record : 0
+15:18:00 :Export Server Running 0
+15:18:00 :Heartbeat POS Run
+15:18:00 :[Debug] Captured Time : 5/2/2016 3:18:00 PM
+15:18:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:18:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:18:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:18:00 :[Debug] Selected Record : 0
+15:18:00 :Import Server Running 0
+15:18:00 :Import Server Run
+15:18:00 :Start Import 
+15:18:01 :[Debug] {"hbe_exportedtoken":"rhZOktGpPpebN3ojgPekxMDZqqzljk","hbe_currexporteddt":"2016-05-02 08:18:01"}
+15:18:02 :Token : rhZOktGpPpebN3ojgPekxMDZqqzljk
+15:18:02 :[Debug] Kitchen : []
+15:18:03 :[Debug] Locations : []
+15:18:05 :[Debug] Tables : []
+15:18:06 :[Debug] EDCs : []
+15:18:08 :[Debug] Jabatan : []
+15:18:08 :[Debug] Kru/Karyawan : []
+15:18:09 :[Debug] Customer/member : []
+15:18:09 :Finish Import 
+15:18:20 :Import Server Running 0
+15:18:20 :Import Server Run
+15:18:20 :Start Import 
+15:18:21 :[Debug] {"hbe_exportedtoken":"ETOS2qFVQNpQODPfqJ0KpdYoQwj2xe","hbe_currexporteddt":"2016-05-02 08:18:21"}
+15:18:21 :Token : ETOS2qFVQNpQODPfqJ0KpdYoQwj2xe
+15:18:21 :[Debug] Kitchen : []
+15:18:21 :[Debug] Locations : []
+15:18:22 :[Debug] Tables : []
+15:18:22 :[Debug] EDCs : []
+15:18:23 :[Debug] Jabatan : []
+15:18:24 :[Debug] Kru/Karyawan : []
+15:18:24 :[Debug] Customer/member : []
+15:18:24 :Finish Import 
+15:18:25 :Export Server Running 0
+15:18:25 :Heartbeat POS Run
+15:18:25 :[Debug] Captured Time : 5/2/2016 3:18:25 PM
+15:18:25 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:18:25 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:18:25 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:18:25 :[Debug] Selected Record : 0
+15:18:40 :Export Server Running 0
+15:18:40 :Heartbeat POS Run
+15:18:40 :[Debug] Captured Time : 5/2/2016 3:18:40 PM
+15:18:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:18:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:18:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:18:40 :[Debug] Selected Record : 0
+15:18:40 :Import Server Running 0
+15:18:40 :Import Server Run
+15:18:40 :Start Import 
+15:18:41 :[Debug] {"hbe_exportedtoken":"a7TDuDvlvMemwa52RGBYmohch7qwFV","hbe_currexporteddt":"2016-05-02 08:18:41"}
+15:18:41 :Token : a7TDuDvlvMemwa52RGBYmohch7qwFV
+15:18:41 :[Debug] Kitchen : []
+15:18:41 :[Debug] Locations : []
+15:18:42 :[Debug] Tables : []
+15:18:42 :[Debug] EDCs : []
+15:18:43 :[Debug] Jabatan : []
+15:18:44 :[Debug] Kru/Karyawan : []
+15:18:44 :[Debug] Customer/member : []
+15:18:44 :Finish Import 
+15:19:00 :Import Server Running 0
+15:19:00 :Import Server Run
+15:19:00 :Start Import 
+15:19:01 :[Debug] {"hbe_exportedtoken":"zADhsZKv1apxgZOCGQ9gOLxq3IFuDu","hbe_currexporteddt":"2016-05-02 08:19:01"}
+15:19:01 :Token : zADhsZKv1apxgZOCGQ9gOLxq3IFuDu
+15:19:01 :[Debug] Kitchen : []
+15:19:01 :[Debug] Locations : []
+15:19:02 :[Debug] Tables : []
+15:19:02 :[Debug] EDCs : []
+15:19:03 :[Debug] Jabatan : []
+15:19:04 :[Debug] Kru/Karyawan : []
+15:19:04 :[Debug] Customer/member : []
+15:19:04 :Finish Import 
+15:19:05 :Export Server Running 0
+15:19:05 :Heartbeat POS Run
+15:19:05 :[Debug] Captured Time : 5/2/2016 3:19:05 PM
+15:19:05 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:19:05 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:19:05 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:19:05 :[Debug] Selected Record : 0
+15:19:20 :Export Server Running 0
+15:19:20 :Heartbeat POS Run
+15:19:20 :[Debug] Captured Time : 5/2/2016 3:19:20 PM
+15:19:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:19:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:19:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:19:20 :[Debug] Selected Record : 0
+15:19:20 :Import Server Running 0
+15:19:20 :Import Server Run
+15:19:20 :Start Import 
+15:19:21 :[Debug] {"hbe_exportedtoken":"Fs4roO9tT300h6iSFgb0C5tIuYRyYb","hbe_currexporteddt":"2016-05-02 08:19:21"}
+15:19:21 :Token : Fs4roO9tT300h6iSFgb0C5tIuYRyYb
+15:19:22 :[Debug] Kitchen : []
+15:19:22 :[Debug] Locations : []
+15:19:22 :[Debug] Tables : []
+15:19:23 :[Debug] EDCs : []
+15:19:24 :[Debug] Jabatan : []
+15:19:24 :[Debug] Kru/Karyawan : []
+15:19:25 :[Debug] Customer/member : []
+15:19:25 :Finish Import 
+15:19:40 :Import Server Running 0
+15:19:40 :Import Server Run
+15:19:40 :Start Import 
+15:19:41 :[Debug] {"hbe_exportedtoken":"6MnuYam3a7To7msKfPJTxnBJkdfo0L","hbe_currexporteddt":"2016-05-02 08:19:41"}
+15:19:41 :Token : 6MnuYam3a7To7msKfPJTxnBJkdfo0L
+15:19:41 :[Debug] Kitchen : []
+15:19:41 :[Debug] Locations : []
+15:19:42 :[Debug] Tables : []
+15:19:46 :[Debug] EDCs : []
+15:19:47 :[Debug] Jabatan : []
+15:19:47 :[Debug] Kru/Karyawan : []
+15:19:48 :[Debug] Customer/member : []
+15:19:48 :Finish Import 
+15:19:48 :Export Server Running 0
+15:19:48 :Heartbeat POS Run
+15:19:48 :[Debug] Captured Time : 5/2/2016 3:19:48 PM
+15:19:48 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:19:48 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:19:48 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:19:48 :[Debug] Selected Record : 0
+15:20:00 :Export Server Running 0
+15:20:00 :Heartbeat POS Run
+15:20:00 :[Debug] Captured Time : 5/2/2016 3:20:00 PM
+15:20:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:20:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:20:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:20:00 :[Debug] Selected Record : 0
+15:20:00 :Import Server Running 0
+15:20:00 :Import Server Run
+15:20:00 :Start Import 
+15:20:01 :[Debug] {"hbe_exportedtoken":"AVjloeqTo1N2aSxx4mtrYlPckfmTN3","hbe_currexporteddt":"2016-05-02 08:20:01"}
+15:20:01 :Token : AVjloeqTo1N2aSxx4mtrYlPckfmTN3
+15:20:02 :[Debug] Kitchen : []
+15:20:02 :[Debug] Locations : []
+15:20:03 :[Debug] Tables : []
+15:20:05 :[Debug] EDCs : []
+15:20:05 :[Debug] Jabatan : []
+15:20:06 :[Debug] Kru/Karyawan : []
+15:20:07 :[Debug] Customer/member : []
+15:20:07 :Finish Import 
+15:20:20 :Import Server Running 0
+15:20:20 :Import Server Run
+15:20:20 :Start Import 
+15:20:21 :[Debug] {"hbe_exportedtoken":"kbDgJYXp5Gt0bprp7HwOaU46q2r9Ni","hbe_currexporteddt":"2016-05-02 08:20:21"}
+15:20:21 :Token : kbDgJYXp5Gt0bprp7HwOaU46q2r9Ni
+15:20:21 :[Debug] Kitchen : []
+15:20:22 :[Debug] Locations : []
+15:20:22 :[Debug] Tables : []
+15:20:22 :[Debug] EDCs : []
+15:20:23 :[Debug] Jabatan : []
+15:20:24 :[Debug] Kru/Karyawan : []
+15:20:24 :[Debug] Customer/member : []
+15:20:24 :Finish Import 
+15:20:25 :Export Server Running 0
+15:20:25 :Heartbeat POS Run
+15:20:25 :[Debug] Captured Time : 5/2/2016 3:20:25 PM
+15:20:25 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:20:25 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:20:25 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:20:25 :[Debug] Selected Record : 0
+15:20:40 :Export Server Running 0
+15:20:40 :Heartbeat POS Run
+15:20:40 :[Debug] Captured Time : 5/2/2016 3:20:40 PM
+15:20:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:20:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:20:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:20:40 :[Debug] Selected Record : 0
+15:20:40 :Import Server Running 0
+15:20:40 :Import Server Run
+15:20:40 :Start Import 
+15:20:41 :[Debug] {"hbe_exportedtoken":"7igGiW9bzW6DrItYWYvfpGYutarFfY","hbe_currexporteddt":"2016-05-02 08:20:41"}
+15:20:41 :Token : 7igGiW9bzW6DrItYWYvfpGYutarFfY
+15:20:42 :[Debug] Kitchen : []
+15:20:42 :[Debug] Locations : []
+15:20:43 :[Debug] Tables : []
+15:20:45 :[Debug] EDCs : []
+15:20:45 :[Debug] Jabatan : []
+15:20:46 :[Debug] Kru/Karyawan : []
+15:20:47 :[Debug] Customer/member : []
+15:20:47 :Finish Import 
+15:21:00 :Import Server Running 0
+15:21:00 :Import Server Run
+15:21:00 :Start Import 
+15:21:01 :[Debug] {"hbe_exportedtoken":"1oTvhgRaRmwvuaV1NWTFDQ1MIljUQn","hbe_currexporteddt":"2016-05-02 08:21:01"}
+15:21:01 :Token : 1oTvhgRaRmwvuaV1NWTFDQ1MIljUQn
+15:21:01 :[Debug] Kitchen : []
+15:21:01 :[Debug] Locations : []
+15:21:02 :[Debug] Tables : []
+15:21:02 :[Debug] EDCs : []
+15:21:03 :[Debug] Jabatan : []
+15:21:04 :[Debug] Kru/Karyawan : []
+15:21:04 :[Debug] Customer/member : []
+15:21:04 :Finish Import 
+15:21:05 :Export Server Running 0
+15:21:05 :Heartbeat POS Run
+15:21:05 :[Debug] Captured Time : 5/2/2016 3:21:05 PM
+15:21:05 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:21:05 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:21:05 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:21:05 :[Debug] Selected Record : 0
+15:21:20 :Import Server Running 0
+15:21:20 :Import Server Run
+15:21:20 :Start Import 
+15:21:21 :[Debug] {"hbe_exportedtoken":"gzu4ZV1et7XSPaGU2ERF745KfXs9qw","hbe_currexporteddt":"2016-05-02 08:21:21"}
+15:21:21 :Token : gzu4ZV1et7XSPaGU2ERF745KfXs9qw
+15:21:21 :[Debug] Kitchen : []
+15:21:21 :[Debug] Locations : []
+15:21:22 :[Debug] Tables : []
+15:21:22 :[Debug] EDCs : []
+15:21:23 :[Debug] Jabatan : []
+15:21:24 :[Debug] Kru/Karyawan : []
+15:21:24 :[Debug] Customer/member : []
+15:21:24 :Finish Import 
+15:21:25 :Export Server Running 0
+15:21:25 :Heartbeat POS Run
+15:21:25 :[Debug] Captured Time : 5/2/2016 3:21:25 PM
+15:21:25 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:21:25 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:21:25 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:21:25 :[Debug] Selected Record : 0
+15:21:40 :Import Server Running 0
+15:21:40 :Import Server Run
+15:21:40 :Start Import 
+15:21:41 :[Debug] {"hbe_exportedtoken":"llkemyUv78fox26fgHKETQv9cfYqUY","hbe_currexporteddt":"2016-05-02 08:21:41"}
+15:21:41 :Token : llkemyUv78fox26fgHKETQv9cfYqUY
+15:21:41 :[Debug] Kitchen : []
+15:21:41 :[Debug] Locations : []
+15:21:42 :[Debug] Tables : []
+15:21:42 :[Debug] EDCs : []
+15:21:43 :[Debug] Jabatan : []
+15:21:44 :[Debug] Kru/Karyawan : []
+15:21:44 :[Debug] Customer/member : []
+15:21:44 :Finish Import 
+15:21:45 :Export Server Running 0
+15:21:45 :Heartbeat POS Run
+15:21:45 :[Debug] Captured Time : 5/2/2016 3:21:45 PM
+15:21:45 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:21:45 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:21:45 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:21:45 :[Debug] Selected Record : 0
+15:22:00 :Import Server Running 0
+15:22:00 :Import Server Run
+15:22:00 :Start Import 
+15:22:01 :[Debug] {"hbe_exportedtoken":"kI32IkGhqkmzJrIWdDcXP7Fo1NsQSg","hbe_currexporteddt":"2016-05-02 08:22:01"}
+15:22:01 :Token : kI32IkGhqkmzJrIWdDcXP7Fo1NsQSg
+15:22:01 :[Debug] Kitchen : []
+15:22:02 :[Debug] Locations : []
+15:22:06 :[Debug] Tables : []
+15:22:08 :[Debug] EDCs : []
+15:22:08 :[Debug] Jabatan : []
+15:22:09 :[Debug] Kru/Karyawan : []
+15:22:09 :[Debug] Customer/member : []
+15:22:09 :Finish Import 
+15:22:09 :Export Server Running 0
+15:22:09 :Heartbeat POS Run
+15:22:09 :[Debug] Captured Time : 5/2/2016 3:22:09 PM
+15:22:09 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:22:09 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:22:09 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:22:09 :[Debug] Selected Record : 0
+15:22:20 :Import Server Running 0
+15:22:20 :Import Server Run
+15:22:20 :Start Import 
+15:22:25 :[Debug] {"hbe_exportedtoken":"iL7bkTsA40ogTnjj49PTi9T2HR3R0O","hbe_currexporteddt":"2016-05-02 08:22:21"}
+15:22:25 :Token : iL7bkTsA40ogTnjj49PTi9T2HR3R0O
+15:22:26 :[Debug] Kitchen : []
+15:22:33 :[Debug] Locations : []
+15:22:34 :[Debug] Tables : []
+15:22:35 :[Debug] EDCs : []
+15:22:35 :[Debug] Jabatan : []
+15:22:36 :[Debug] Kru/Karyawan : []
+15:22:37 :[Debug] Customer/member : []
+15:22:37 :Finish Import 
+15:22:37 :Export Server Running 0
+15:22:37 :Heartbeat POS Run
+15:22:37 :[Debug] Captured Time : 5/2/2016 3:22:37 PM
+15:22:38 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:22:37 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:22:37 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:22:38 :[Debug] Selected Record : 0
+15:22:40 :Import Server Running 0
+15:22:40 :Import Server Run
+15:22:40 :Start Import 
+15:22:41 :[Debug] {"hbe_exportedtoken":"3XjFitk3ypQdDgID3FpfUCwoPj0OBQ","hbe_currexporteddt":"2016-05-02 08:22:41"}
+15:22:41 :Token : 3XjFitk3ypQdDgID3FpfUCwoPj0OBQ
+15:22:41 :[Debug] Kitchen : []
+15:22:42 :[Debug] Locations : []
+15:22:43 :[Debug] Tables : []
+15:22:44 :[Debug] EDCs : []
+15:22:45 :[Debug] Jabatan : []
+15:22:45 :[Debug] Kru/Karyawan : []
+15:22:45 :[Debug] Customer/member : []
+15:22:46 :Finish Import 
+15:22:47 :Export Server Running 0
+15:22:47 :Heartbeat POS Run
+15:22:47 :[Debug] Captured Time : 5/2/2016 3:22:47 PM
+15:22:47 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:22:47 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:22:47 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:22:47 :[Debug] Selected Record : 0
+15:23:00 :Import Server Running 0
+15:23:00 :Import Server Run
+15:23:00 :Start Import 
+15:23:01 :[Debug] {"hbe_exportedtoken":"4MMCH47rgq6yPrlOLFsRNaW7RIqz4r","hbe_currexporteddt":"2016-05-02 08:23:01"}
+15:23:01 :Token : 4MMCH47rgq6yPrlOLFsRNaW7RIqz4r
+15:23:02 :[Debug] Kitchen : []
+15:23:03 :[Debug] Locations : []
+15:23:04 :[Debug] Tables : []
+15:23:05 :[Debug] EDCs : []
+15:23:05 :[Debug] Jabatan : []
+15:23:05 :[Debug] Kru/Karyawan : []
+15:23:07 :[Debug] Customer/member : []
+15:23:07 :Finish Import 
+15:23:07 :Export Server Running 0
+15:23:08 :Heartbeat POS Run
+15:23:08 :[Debug] Captured Time : 5/2/2016 3:23:08 PM
+15:23:08 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:23:08 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:23:08 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:23:08 :[Debug] Selected Record : 0
+15:23:20 :Import Server Running 0
+15:23:20 :Import Server Run
+15:23:20 :Start Import 
+15:23:21 :[Debug] {"hbe_exportedtoken":"2VP6hadpc7yeamrDQWEVCqRRYx3VeZ","hbe_currexporteddt":"2016-05-02 08:23:21"}
+15:23:21 :Token : 2VP6hadpc7yeamrDQWEVCqRRYx3VeZ
+15:23:21 :[Debug] Kitchen : []
+15:23:21 :[Debug] Locations : []
+15:23:22 :[Debug] Tables : []
+15:23:22 :[Debug] EDCs : []
+15:23:23 :[Debug] Jabatan : []
+15:23:24 :[Debug] Kru/Karyawan : []
+15:23:24 :[Debug] Customer/member : []
+15:23:24 :Finish Import 
+15:23:25 :Export Server Running 0
+15:23:25 :Heartbeat POS Run
+15:23:25 :[Debug] Captured Time : 5/2/2016 3:23:25 PM
+15:23:25 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:23:25 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:23:25 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:23:25 :[Debug] Selected Record : 0
+15:23:40 :Import Server Running 0
+15:23:40 :Import Server Run
+15:23:40 :Start Import 
+15:23:41 :[Debug] {"hbe_exportedtoken":"Hsli8VOQu9CUvm8JUgqk9FRoMMI13a","hbe_currexporteddt":"2016-05-02 08:23:41"}
+15:23:41 :Token : Hsli8VOQu9CUvm8JUgqk9FRoMMI13a
+15:23:41 :[Debug] Kitchen : []
+15:23:42 :[Debug] Locations : []
+15:23:42 :[Debug] Tables : []
+15:23:42 :[Debug] EDCs : []
+15:23:43 :[Debug] Jabatan : []
+15:23:44 :[Debug] Kru/Karyawan : []
+15:23:45 :[Debug] Customer/member : []
+15:23:45 :Finish Import 
+15:23:45 :Export Server Running 0
+15:23:45 :Heartbeat POS Run
+15:23:45 :[Debug] Captured Time : 5/2/2016 3:23:45 PM
+15:23:45 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:23:45 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:23:45 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:23:45 :[Debug] Selected Record : 0
+15:24:00 :Import Server Running 0
+15:24:00 :Import Server Run
+15:24:00 :Start Import 
+15:24:01 :[Debug] {"hbe_exportedtoken":"IlHNDBE2OQxVCZ63pULX12RphzZO66","hbe_currexporteddt":"2016-05-02 08:24:00"}
+15:24:01 :Token : IlHNDBE2OQxVCZ63pULX12RphzZO66
+15:24:01 :[Debug] Kitchen : []
+15:24:02 :[Debug] Locations : []
+15:24:02 :[Debug] Tables : []
+15:24:03 :[Debug] EDCs : []
+15:24:04 :[Debug] Jabatan : []
+15:24:04 :[Debug] Kru/Karyawan : []
+15:24:05 :[Debug] Customer/member : []
+15:24:05 :Finish Import 
+15:24:05 :Export Server Running 0
+15:24:05 :Heartbeat POS Run
+15:24:05 :[Debug] Captured Time : 5/2/2016 3:24:05 PM
+15:24:05 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:24:05 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:24:05 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:24:05 :[Debug] Selected Record : 0
+15:24:20 :Export Server Running 0
+15:24:20 :Heartbeat POS Run
+15:24:20 :[Debug] Captured Time : 5/2/2016 3:24:20 PM
+15:24:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:24:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:24:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:24:20 :[Debug] Selected Record : 0
+15:24:20 :Import Server Running 0
+15:24:20 :Import Server Run
+15:24:20 :Start Import 
+15:24:21 :[Debug] {"hbe_exportedtoken":"UvqrDV6LBfH1mHSQOevQREbeTr9nc8","hbe_currexporteddt":"2016-05-02 08:24:21"}
+15:24:21 :Token : UvqrDV6LBfH1mHSQOevQREbeTr9nc8
+15:24:21 :[Debug] Kitchen : []
+15:24:21 :[Debug] Locations : []
+15:24:22 :[Debug] Tables : []
+15:24:22 :[Debug] EDCs : []
+15:24:23 :[Debug] Jabatan : []
+15:24:24 :[Debug] Kru/Karyawan : []
+15:24:24 :[Debug] Customer/member : []
+15:24:24 :Finish Import 
+15:24:40 :Import Server Running 0
+15:24:40 :Import Server Run
+15:24:40 :Start Import 
+15:24:41 :[Debug] {"hbe_exportedtoken":"oP3qsx4H5tsB4hFLDFZ2lUc25ChTGY","hbe_currexporteddt":"2016-05-02 08:24:41"}
+15:24:41 :Token : oP3qsx4H5tsB4hFLDFZ2lUc25ChTGY
+15:24:42 :[Debug] Kitchen : []
+15:24:42 :[Debug] Locations : []
+15:24:43 :[Debug] Tables : []
+15:24:44 :[Debug] EDCs : []
+15:24:45 :[Debug] Jabatan : []
+15:24:50 :[Debug] Kru/Karyawan : []
+15:24:51 :[Debug] Customer/member : []
+15:24:51 :Finish Import 
+15:24:51 :Export Server Running 0
+15:24:51 :Heartbeat POS Run
+15:24:51 :[Debug] Captured Time : 5/2/2016 3:24:51 PM
+15:24:51 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:24:51 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:24:51 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:24:51 :[Debug] Selected Record : 0
+15:25:00 :Export Server Running 0
+15:25:00 :Heartbeat POS Run
+15:25:00 :[Debug] Captured Time : 5/2/2016 3:25:00 PM
+15:25:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:25:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:25:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:25:00 :[Debug] Selected Record : 0
+15:25:00 :Import Server Running 0
+15:25:00 :Import Server Run
+15:25:00 :Start Import 
+15:25:01 :[Debug] {"hbe_exportedtoken":"aSUDTFGZNdh9cKso5azqqDz2padZsh","hbe_currexporteddt":"2016-05-02 08:25:01"}
+15:25:01 :Token : aSUDTFGZNdh9cKso5azqqDz2padZsh
+15:25:01 :[Debug] Kitchen : []
+15:25:01 :[Debug] Locations : []
+15:25:02 :[Debug] Tables : []
+15:25:02 :[Debug] EDCs : []
+15:25:03 :[Debug] Jabatan : []
+15:25:04 :[Debug] Kru/Karyawan : []
+15:25:04 :[Debug] Customer/member : []
+15:25:04 :Finish Import 
+15:25:20 :Import Server Running 0
+15:25:20 :Import Server Run
+15:25:20 :Start Import 
+15:25:21 :[Debug] {"hbe_exportedtoken":"nzepouVd6eCcvrsKFhJecKJ49W66r8","hbe_currexporteddt":"2016-05-02 08:25:21"}
+15:25:21 :Token : nzepouVd6eCcvrsKFhJecKJ49W66r8
+15:25:21 :[Debug] Kitchen : []
+15:25:22 :[Debug] Locations : []
+15:25:22 :[Debug] Tables : []
+15:25:23 :[Debug] EDCs : []
+15:25:24 :[Debug] Jabatan : []
+15:25:24 :[Debug] Kru/Karyawan : []
+15:25:25 :[Debug] Customer/member : []
+15:25:25 :Finish Import 
+15:25:25 :Export Server Running 0
+15:25:25 :Heartbeat POS Run
+15:25:25 :[Debug] Captured Time : 5/2/2016 3:25:25 PM
+15:25:25 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:25:25 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:25:25 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:25:25 :[Debug] Selected Record : 0
+15:25:40 :Export Server Running 0
+15:25:40 :Heartbeat POS Run
+15:25:40 :[Debug] Captured Time : 5/2/2016 3:25:40 PM
+15:25:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:25:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:25:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:25:40 :[Debug] Selected Record : 0
+15:25:40 :Import Server Running 0
+15:25:40 :Import Server Run
+15:25:40 :Start Import 
+15:25:41 :[Debug] {"hbe_exportedtoken":"ZVDtOyglC8BKURyYZt8jY89kERMmWh","hbe_currexporteddt":"2016-05-02 08:25:41"}
+15:25:41 :Token : ZVDtOyglC8BKURyYZt8jY89kERMmWh
+15:25:41 :[Debug] Kitchen : []
+15:25:41 :[Debug] Locations : []
+15:25:42 :[Debug] Tables : []
+15:25:42 :[Debug] EDCs : []
+15:25:44 :[Debug] Jabatan : []
+15:25:44 :[Debug] Kru/Karyawan : []
+15:25:44 :[Debug] Customer/member : []
+15:25:44 :Finish Import 
+15:26:00 :Export Server Running 0
+15:26:00 :Heartbeat POS Run
+15:26:00 :[Debug] Captured Time : 5/2/2016 3:26:00 PM
+15:26:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:26:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:26:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:26:00 :[Debug] Selected Record : 0
+15:26:00 :Import Server Running 0
+15:26:00 :Import Server Run
+15:26:00 :Start Import 
+15:26:01 :[Debug] {"hbe_exportedtoken":"fIx4pRF3QopHRFvO6XH2KPo04OPG0H","hbe_currexporteddt":"2016-05-02 08:26:01"}
+15:26:01 :Token : fIx4pRF3QopHRFvO6XH2KPo04OPG0H
+15:26:01 :[Debug] Kitchen : []
+15:26:01 :[Debug] Locations : []
+15:26:02 :[Debug] Tables : []
+15:26:02 :[Debug] EDCs : []
+15:26:02 :[Debug] Jabatan : []
+15:26:04 :[Debug] Kru/Karyawan : []
+15:26:04 :[Debug] Customer/member : []
+15:26:04 :Finish Import 
+15:26:20 :Export Server Running 0
+15:26:20 :Heartbeat POS Run
+15:26:20 :[Debug] Captured Time : 5/2/2016 3:26:20 PM
+15:26:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:26:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:26:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:26:20 :[Debug] Selected Record : 0
+15:26:20 :Import Server Running 0
+15:26:20 :Import Server Run
+15:26:20 :Start Import 
+15:26:21 :[Debug] {"hbe_exportedtoken":"5AVRw9F3zEMEa1tE4h6nYOWHFriqly","hbe_currexporteddt":"2016-05-02 08:26:21"}
+15:26:21 :Token : 5AVRw9F3zEMEa1tE4h6nYOWHFriqly
+15:26:22 :[Debug] Kitchen : []
+15:26:22 :[Debug] Locations : []
+15:26:23 :[Debug] Tables : []
+15:26:24 :[Debug] EDCs : []
+15:26:25 :[Debug] Jabatan : []
+15:26:25 :[Debug] Kru/Karyawan : []
+15:26:26 :[Debug] Customer/member : []
+15:26:26 :Finish Import 
+15:26:40 :Export Server Running 0
+15:26:40 :Heartbeat POS Run
+15:26:40 :[Debug] Captured Time : 5/2/2016 3:26:40 PM
+15:26:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:26:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:26:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:26:40 :[Debug] Selected Record : 0
+15:26:40 :Import Server Running 0
+15:26:40 :Import Server Run
+15:26:40 :Start Import 
+15:26:41 :[Debug] {"hbe_exportedtoken":"WjShUzGwfIFFNoYYAzVVyoBBjmdQTR","hbe_currexporteddt":"2016-05-02 08:26:41"}
+15:26:41 :Token : WjShUzGwfIFFNoYYAzVVyoBBjmdQTR
+15:26:41 :[Debug] Kitchen : []
+15:26:41 :[Debug] Locations : []
+15:26:42 :[Debug] Tables : []
+15:26:42 :[Debug] EDCs : []
+15:26:43 :[Debug] Jabatan : []
+15:26:44 :[Debug] Kru/Karyawan : []
+15:26:44 :[Debug] Customer/member : []
+15:26:44 :Finish Import 
+15:27:00 :Export Server Running 0
+15:27:00 :Heartbeat POS Run
+15:27:00 :[Debug] Captured Time : 5/2/2016 3:27:00 PM
+15:27:00 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:27:00 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:27:00 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:27:00 :[Debug] Selected Record : 0
+15:27:00 :Import Server Running 0
+15:27:00 :Import Server Run
+15:27:00 :Start Import 
+15:27:01 :[Debug] {"hbe_exportedtoken":"hBR3SnEr81VglosaExcwIM0Q7tQa9i","hbe_currexporteddt":"2016-05-02 08:27:01"}
+15:27:01 :Token : hBR3SnEr81VglosaExcwIM0Q7tQa9i
+15:27:01 :[Debug] Kitchen : []
+15:27:02 :[Debug] Locations : []
+15:27:02 :[Debug] Tables : []
+15:27:02 :[Debug] EDCs : []
+15:27:03 :[Debug] Jabatan : []
+15:27:04 :[Debug] Kru/Karyawan : []
+15:27:04 :[Debug] Customer/member : []
+15:27:04 :Finish Import 
+15:27:20 :Export Server Running 0
+15:27:20 :Heartbeat POS Run
+15:27:20 :[Debug] Captured Time : 5/2/2016 3:27:20 PM
+15:27:20 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:27:20 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:27:20 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:27:20 :[Debug] Selected Record : 0
+15:27:20 :Import Server Running 0
+15:27:20 :Import Server Run
+15:27:20 :Start Import 
+15:27:21 :[Debug] {"hbe_exportedtoken":"dktjTwteHmMJxtjsdHiGNNzdXAIfIQ","hbe_currexporteddt":"2016-05-02 08:27:21"}
+15:27:21 :Token : dktjTwteHmMJxtjsdHiGNNzdXAIfIQ
+15:27:21 :[Debug] Kitchen : []
+15:27:21 :[Debug] Locations : []
+15:27:22 :[Debug] Tables : []
+15:27:22 :[Debug] EDCs : []
+15:27:23 :[Debug] Jabatan : []
+15:27:24 :[Debug] Kru/Karyawan : []
+15:27:24 :[Debug] Customer/member : []
+15:27:24 :Finish Import 
+15:27:40 :Export Server Running 0
+15:27:40 :Heartbeat POS Run
+15:27:40 :[Debug] Captured Time : 5/2/2016 3:27:40 PM
+15:27:40 :[Debug] SELECT * FROM divipos.y_pos WHERE (branchid, kassa, strukno) in (SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201604  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:27:40 PM'  UNION SELECT 'DDR' as branchid, kassa, refdoc  FROM divipos_log.userlog_201605  WHERE stasend = 0  AND transid = 20  AND log_timestamp < '5/2/2016 3:27:40 PM' ) ORDER BY branchid, kassa, strukno, strukdate 
+15:27:40 :[Debug] Selected Record : 0
+15:27:40 :Import Server Running 0
+15:27:40 :Import Server Run
+15:27:40 :Start Import 
+15:27:41 :[Debug] {"hbe_exportedtoken":"UozknPH7IL3XxJMhIwtTqxHB8QLy6y","hbe_currexporteddt":"2016-05-02 08:27:41"}
+15:27:41 :Token : UozknPH7IL3XxJMhIwtTqxHB8QLy6y
+15:27:41 :[Debug] Kitchen : []
+15:27:42 :[Debug] Locations : []
+15:27:42 :[Debug] Tables : []
+15:27:43 :[Debug] EDCs : []
+15:27:44 :[Debug] Jabatan : []
+15:27:44 :[Debug] Kru/Karyawan : []
+15:27:45 :[Debug] Customer/member : []
+15:27:45 :Finish Import 
+15:27:54 :DiviPOS Backservice Stopped

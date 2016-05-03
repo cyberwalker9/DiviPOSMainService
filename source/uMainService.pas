@@ -34,12 +34,16 @@ type
     procedure initServiceTask();
 
     procedure OnScheduleOneTrigger(Sender: TScheduledEvent);
+    procedure OnScheduleImportTrigger(Sender: TScheduledEvent);
     procedure ShowErrorMsg(AErrorID: Integer);
     procedure SetBranchID(const Value: String);
     procedure SetURLAddress(const Value: String);
     { Private declarations }
   public
     CriticalSection: TRTLCriticalSection;
+
+    isImportRun : Boolean;
+    isExportRun : Boolean;
 
     function GetServiceController: TServiceController; override;
     { Public declarations }
@@ -98,15 +102,34 @@ begin
 
   {run every 15 sec}
   NewSchedule := EventList.Add('HeartBeatPOS');
-  NewSchedule.Schedule.EventPlan := '*/5 * * * * * *';
+  NewSchedule.Schedule.EventPlan := '*/20 * * * * * *';
   NewSchedule.OnScheduleEvent := OnScheduleOneTrigger;
   NewSchedule.Run;
+
+  {run every 5 min later must set to dailly at 0 am and }
+  NewSchedule := EventList.Add('ImportMasterfromServer');
+  NewSchedule.Schedule.EventPlan := '*/20 * * * * * *';
+  NewSchedule.OnScheduleEvent := OnScheduleImportTrigger;
+  NewSchedule.Run;
+
 
   ServiceThread.ProcessRequests(false);
 end;
 
+procedure TDiviPOSMainService.OnScheduleImportTrigger(Sender: TScheduledEvent);
+begin
+  UpdateStatus := 'Import Server Running '+isImportRun.ToString;
+  if isImportRun then exit;
+
+  UpdateStatus := 'Import Server Run';
+  ImportFromServer;
+end;
+
 procedure TDiviPOSMainService.OnScheduleOneTrigger(Sender: TScheduledEvent);
 begin
+  UpdateStatus := 'Export Server Running '+isImportRun.ToString;
+  if isExportRun then exit;
+
   UpdateStatus := 'Heartbeat POS Run';
   SendPOSTransaction();
 end;

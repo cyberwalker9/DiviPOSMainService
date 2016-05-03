@@ -1,0 +1,10 @@
+08:48:43 :Config Path :D:\Projects\DiviPOS_BackService\bin\Win64\Shogun.dbs Found
+08:48:44 :Connect Master Failed
+08:48:44 :DiviPOS Backservice fail to Start, attemp : 1/3
+08:48:47 :Config Path :D:\Projects\DiviPOS_BackService\bin\Win64\Shogun.dbs Found
+08:48:48 :Connect Master Failed
+08:48:48 :DiviPOS Backservice fail to Start, attemp : 2/3
+08:48:51 :Config Path :D:\Projects\DiviPOS_BackService\bin\Win64\Shogun.dbs Found
+08:48:52 :Connect Master Failed
+08:48:52 :DiviPOS Backservice fail to Start, attemp : 3/3
+08:48:52 :[error] Main Database cannot connect, please make sure connection configured properly! 
